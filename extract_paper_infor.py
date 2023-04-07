@@ -13,6 +13,8 @@ code_language = ""
 url_code = ""
 data_database = ""
 url_data = ""
+
+
 # Send a request to obtain page content
 response = requests.get(url_paper)
 
@@ -39,7 +41,7 @@ else:
     journal = soup.find("span", {"data-heap-id": "paper-meta-journal"}).text
     journal_doi = soup.find("a",
                             {"class":
-                            "icon-button button--full-width button--primary flex-paper-actions__button flex-paper-actions__button--primary"})["href"]
+                             "icon-button button--full-width button--primary flex-paper-actions__button flex-paper-actions__button--primary"})["href"]
     # abstract = soup.find("span", {"data-test-id": "text-truncator-text"}).text.strip()
     date = soup.find("span", {"data-test-id": "paper-year"}).text
     date = date[-4:]
@@ -47,7 +49,7 @@ else:
     #     "span", {"class": "scorecard-stat__headline__dark"}).text
     semanticscholar = soup.find("a",
                                 {"class":
-                                "icon-button button--full-width button--primary flex-paper-actions__button flex-paper-actions__button--primary"})["data-heap-paper-id"]
+                                 "icon-button button--full-width button--primary flex-paper-actions__button flex-paper-actions__button--primary"})["data-heap-paper-id"]
 
 # Merge variables as 'Title'
 title = "[" + title + "]" + "(" + journal_doi + ")"
