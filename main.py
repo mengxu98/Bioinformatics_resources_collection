@@ -1,4 +1,5 @@
 
+from extract_paper_information import extract_paper_infor
 
 # URL
 # The URL of paper obtain from: https://www.semanticscholar.org/
@@ -8,3 +9,6 @@ code_language = ""
 url_code = ""
 data_database = ""
 url_data = ""
+
+extract_paper_infor(url_paper, code_language,
+                    url_code, data_database, url_data, file="test.md")
