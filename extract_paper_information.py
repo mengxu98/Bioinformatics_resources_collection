@@ -1,8 +1,5 @@
-# import json
 import os
 import requests
-# import sys
-import time
 from bs4 import BeautifulSoup
 from serch_code_databases import format_data
 from serch_code_databases import format_code
