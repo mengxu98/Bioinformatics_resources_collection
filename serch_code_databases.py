@@ -54,6 +54,8 @@ def check_code_link_class(code_link):
         return code_infor
     else:
         print("No repository information......")
+        code_infor = ["unknown", code_link]
+        return code_infor
 
 
 def github_filter(code_link):
