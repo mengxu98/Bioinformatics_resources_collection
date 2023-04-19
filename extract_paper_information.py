@@ -54,7 +54,6 @@ def extract_paper_infor(url_paper, code_language, url_code, data_database, url_d
     semanticscholar_api = "https://img.shields.io/badge/dynamic/json?label=citation&query=citationCount&url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2F" + \
         semanticscholar + \
         "%3Ffields%3DcitationCount"
-    semanticscholar_url = ""
 
     # Merge variables as 'Citation'
     citation = "[" + "!" + "[" + "citation" + "]" + \
@@ -68,8 +67,7 @@ def extract_paper_infor(url_paper, code_language, url_code, data_database, url_d
                         str(data),
                         str(citation)])
     result = "| " + result + " |"
-    # result = "| scientific data | 27 March 2023 | [An integrated single-cell transcriptomic dataset for non-small cell lung cancer](https://www.nature.com/articles/s41597-023-02074-6) | [![R](https://img.shields.io/badge/-R-75aadb)](https://figshare.com/articles/online_resource/NSCLC_data_reanalysis_codes/22106201?backTo=/collections/An_integrated_single-cell_transcriptomic_dataset_for1_non-small_cell_lung_cancer/6222221?backTo=/collections/An_integrated_single-cell_transcriptomic_dataset_for1_non-small_cell_lung_cancer/6222221?backTo=/collections/An_integrated_single-cell_transcriptomic_dataset_for1_non-small_cell_lung_cancer/6222221) | [![figshare](https://img.shields.io/badge/-figshare-c62764)](https://figshare.com/collections/An_integrated_single-cell_transcriptomic_dataset_for1_non-small_cell_lung_cancer/6222221/3) | [![citation](https://img.shields.io/badge/dynamic/json?label=citation&query=citationCount&url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2F2e68442733604d3ff3f9fe5e62201ffc4f1ea951%3Ffields%3DcitationCount)](https://www.semanticscholar.org/paper/An-integrated-single-cell-transcriptomic-dataset-Prazanowska-Lim/2e68442733604d3ff3f9fe5e62201ffc4f1ea951) |"
-
+    
     if not file:
         file = "test.md"
     # Open and write result into markdown file

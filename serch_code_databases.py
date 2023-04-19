@@ -3,6 +3,82 @@ import requests
 from bs4 import BeautifulSoup
 
 
+def format_code(code_language, url_code, url):
+    if not url_code and not code_language:
+        code_infors = search_code(url)
+        if code_infors:
+            if len(code_infors) == 1:
+                code_language = code_infors[0][0]
+                url_code = code_infors[0][1]
+                shields_color_code = check_color(code_language)
+                codes = code_info(code_language, url_code, shields_color_code)
+
+            else:
+                codes = ""
+                for code_infor in code_infors:
+                    code_language = code_infor[0]
+                    url_code = code_infor[1]
+                    shields_color_code = check_color(code_language)
+                    code = code_info(code_language, url_code,
+                                     shields_color_code)
+                    codes = codes + code
+
+        else:
+            url_code = ""
+            code_language = "Unknown"
+            shields_color_code = check_color(code_language)
+            codes = code_info(code_language, url_code, shields_color_code)
+    elif url_code and not code_language:
+        code_language = "Unknown"
+        shields_color_code = check_color(code_language)
+        codes = code_info(code_language, url_code, shields_color_code)
+    elif not url_code and code_language:
+        shields_color_code = check_color(code_language)
+        codes = code_info(code_language, url_code, shields_color_code)
+    else:
+        shields_color_code = check_color(code_language)
+        codes = code_info(code_language, url_code, shields_color_code)
+    return codes
+
+
+def format_data(data_language, url_data, url):
+    if not url_data and not data_language:
+        data_infors = search_databases(url)
+        if data_infors:
+            if len(data_infors) == 1:
+                data_language = data_infors[0][0]
+                url_data = data_infors[0][1]
+                shields_color_data = check_color(data_language)
+                datas = data_info(data_language, url_data, shields_color_data)
+
+            else:
+                datas = ""
+                for data_infor in data_infors:
+                    data_language = data_infor[0]
+                    url_data = data_infor[1]
+                    shields_color_data = check_color(data_language)
+                    data = data_info(data_language, url_data,
+                                     shields_color_data)
+                    datas = datas + data
+
+        else:
+            url_data = ""
+            data_language = "Unknown"
+            shields_color_data = check_color(data_language)
+            datas = data_info(data_language, url_data, shields_color_data)
+    elif url_data and not data_language:
+        data_language = "Unknown"
+        shields_color_data = check_color(data_language)
+        datas = data_info(data_language, url_data, shields_color_data)
+    elif not url_data and data_language:
+        shields_color_data = check_color(data_language)
+        datas = data_info(data_language, url_data, shields_color_data)
+    else:
+        shields_color_data = check_color(data_language)
+        datas = data_info(data_language, url_data, shields_color_data)
+    return datas
+
+
 def search_code(url):
     response = requests.get(url)
     soup = BeautifulSoup(response.text, "html.parser")
@@ -81,6 +157,43 @@ def github_filter(code_link):
         return code_infors
 
 
+# def github_filter(code_link):
+#     # Extract the owner username and name of the repository
+#     if ".git" in code_link:
+#         code_link = code_link.replace(".git", "")
+#     owner, repo = code_link.split("/")[-2:]
+#     new_code_link = f"https://api.github.com/repos/{owner}/{repo}/languages"
+
+#     try:
+#         # Issue a GET request to obtain the programming language information of the repository
+#         languages = requests.get(new_code_link)
+#         # Check if the response status code is 200 (indicating success)
+#         if languages.status_code == 200:
+#             # Obtain response JSON data
+#             data = languages.json()
+#             # Traverse the programming language type and its corresponding number of lines, and add it to the code_infos list
+#             for language, lines in data.items():
+#                 print(f"Detailed information: {language}, total {lines} lines")
+#                 code_infors = [language, code_link]
+#             return code_infors
+#         else:
+#             print(f"Request failed with status code {languages.status_code}")
+#             code_infors = ["Unkonw", code_link]
+#             return code_infors
+#     except requests.exceptions.RequestException as e:
+#         # Handle request errors
+#         print(f"Request failed with error: {e}")
+#         return None
+#     except ValueError as e:
+#         # Handle JSON decoding errors
+#         print(f"JSON decoding failed with error: {e}")
+#         return None
+#     except:
+#         # Handle other unknown errors
+#         print("An unknown error occurred")
+#         return None
+
+
 def search_databases(url):
     response = requests.get(url)
     content = response.text
@@ -149,54 +262,6 @@ def search_databases(url):
     return data_infors
 
 
-def code_info(code_language, url_code, shields_color_code):
-    if " " in code_language:
-        code_language = code_language.replace(" ", "%20")
-    shields_url_code = "https://img.shields.io/badge/-" + \
-        code_language + "-" + shields_color_code
-
-    # Merge variables as 'Code'
-    code = "[" + "!" + "[" + code_language + "]" + \
-        "(" + shields_url_code + ")" + "]" + "(" + url_code + ")"
-    return code
-
-def format_code(code_language, url_code, url):
-    if not url_code and not code_language:
-        code_infors = search_code(url)
-        if code_infors:
-            if len(code_infors) == 1:
-                code_language = code_infors[0][0]
-                url_code = code_infors[0][1]
-                shields_color_code = check_color(code_language)
-                codes = code_info(code_language, url_code, shields_color_code)
-                
-            else:
-                codes = ""
-                for code_infor in code_infors:
-                    code_language = code_infor[0]
-                    url_code = code_infor[1]
-                    shields_color_code = check_color(code_language)
-                    code = code_info(code_language, url_code, shields_color_code)
-                    codes = codes + code
-                
-        else:
-            url_code = ""
-            code_language = "Unknown"
-            shields_color_code = check_color(code_language)
-            codes = code_info(code_language, url_code, shields_color_code)
-    elif url_code and not code_language:
-        code_language = "Unknown"
-        shields_color_code = check_color(code_language)
-        codes = code_info(code_language, url_code, shields_color_code)
-    elif not url_code and code_language:
-        shields_color_code = check_color(code_language)
-        codes = code_info(code_language, url_code, shields_color_code)
-    else:
-        shields_color_code = check_color(code_language)
-        codes = code_info(code_language, url_code, shields_color_code)
-    return codes
-
-
 def data_info(data_language, url_data, shields_color_data):
     if " " in data_language:
         data_language = data_language.replace(" ", "%20")
@@ -208,41 +273,17 @@ def data_info(data_language, url_data, shields_color_data):
         "(" + shields_url_data + ")" + "]" + "(" + url_data + ")"
     return data
 
-def format_data(data_language, url_data, url):
-    if not url_data and not data_language:
-        data_infors = search_databases(url)
-        if data_infors:
-            if len(data_infors) == 1:
-                data_language = data_infors[0][0]
-                url_data = data_infors[0][1]
-                shields_color_data = check_color(data_language)
-                datas = data_info(data_language, url_data, shields_color_data)
-                
-            else:
-                datas = ""
-                for data_infor in data_infors:
-                    data_language = data_infor[0]
-                    url_data = data_infor[1]
-                    shields_color_data = check_color(data_language)
-                    data = data_info(data_language, url_data, shields_color_data)
-                    datas = datas + data
-                
-        else:
-            url_data = ""
-            data_language = "Unknown"
-            shields_color_data = check_color(data_language)
-            datas = data_info(data_language, url_data, shields_color_data)
-    elif url_data and not data_language:
-        data_language = "Unknown"
-        shields_color_data = check_color(data_language)
-        datas = data_info(data_language, url_data, shields_color_data)
-    elif not url_data and data_language:
-        shields_color_data = check_color(data_language)
-        datas = data_info(data_language, url_data, shields_color_data)
-    else:
-        shields_color_data = check_color(data_language)
-        datas = data_info(data_language, url_data, shields_color_data)
-    return datas
+
+def code_info(code_language, url_code, shields_color_code):
+    if " " in code_language:
+        code_language = code_language.replace(" ", "%20")
+    shields_url_code = "https://img.shields.io/badge/-" + \
+        code_language + "-" + shields_color_code
+
+    # Merge variables as 'Code'
+    code = "[" + "!" + "[" + code_language + "]" + \
+        "(" + shields_url_code + ")" + "]" + "(" + url_code + ")"
+    return code
 
 
 def check_color(x):
