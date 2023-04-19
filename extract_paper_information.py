@@ -67,32 +67,38 @@ def extract_paper_infor(url_paper, code_language, url_code, data_database, url_d
                         str(data),
                         str(citation)])
     result = "| " + result + " |"
-    
+
+    # open the file in read/write mode
     if not file:
         file = "test.md"
-    # Open and write result into markdown file
-    with open(file, 'r+') as f:
-        lines = f.readlines()
+        
+    if os.path.exists(file):
+        open(file, 'w').close()
 
-        # Get the last line and remove the leading and trailing spaces
+    with open(file, 'r+') as f:
+        # read all lines from the file
+        lines = f.readlines()
+        # get the last line of the file
         last_line = lines[-1].strip()
+        # move the pointer to the end of the file
         f.seek(0, 2)
+        # write the result to the end of the file
         f.write("\n" + result)
-
+    # open the file again in read/write mode
     with open(file, 'r+') as f:
+        # read all lines from the file
         lines = f.readlines()
-
-        # Check whether each row is empty, and if so, delete it
+        # create a new list with non-empty lines
         new_lines = []
         for line in lines:
             if line.strip() != '':
                 new_lines.append(line)
-
-        # If the last line is a title, the new content needs to be wrapped
+        # remove the last line if it is an empty line
         if new_lines[-1] == os.linesep:
             new_lines.pop()
-
-        # Write the processed content back to the file
+        # move the pointer to the beginning of the file
         f.seek(0)
+        # write the new lines to the file
         f.write(''.join(new_lines))
+        # truncate the file
         f.truncate()
