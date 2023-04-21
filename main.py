@@ -39,4 +39,4 @@ extract_paper_infor(url_paper,
                     url_code,
                     data_database,
                     url_data,
-                    file="test.md")  # "test.md"
+                    file="test.md")  # "README.md"
