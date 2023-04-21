@@ -1,4 +1,5 @@
 import os
+import sys
 import requests
 from bs4 import BeautifulSoup
 from serch_code_databases import format_data
@@ -6,14 +7,25 @@ from serch_code_databases import format_code
 
 
 def extract_paper_infor(url_paper, code_language, url_code, data_database, url_data, file="test.md"):
+    """
+    This function extracts the paper from the specified URL and returns the corresponding information
+    Returns a list and writes it to the specified *.md file
+    """
 
-    # Send a request to obtain page content
-    response = requests.get(url_paper)
+    # Attempt to make a GET request to the URL
+    try:
+        response = requests.get(url_paper)
+    # If an SSL error occurs, print a message
+    except requests.exceptions.SSLError:
+        print('Please close the network proxy and try again......')
+        sys.exit(1)
 
+    # Extract paper information
     if url_paper.startswith("https://api.semanticscholar.org"):
-        # Extract paper information
-        if response.ok:
+        # Check if the response status code is 200 (indicating success)
+        if response.ok and response.status_code == 200:
             try:
+                # Extract the information from soup
                 soup = response.json()
                 title = soup["title"]
                 journal = soup["venue"]
@@ -23,26 +35,42 @@ def extract_paper_infor(url_paper, code_language, url_code, data_database, url_d
                 date = soup["year"]
                 # abstract = data["abstract"]
                 semanticscholar = soup["url"]
+
             except ValueError as e:
-                print(f"Error parsing JSON data: {e}")
+                print(f"Error parsing JSON data: {e}......")
+
         else:
-            print(f"Request failed with status code {response.status_code}")
+            print(
+                f"Request failed with status code {response.status_code}......")
+
     else:
-        soup = BeautifulSoup(response.text, "html.parser")
-        title = soup.find("h1", {"data-test-id": "paper-detail-title"}).text
-        journal = soup.find(
-            "span", {"data-heap-id": "paper-meta-journal"}).text
-        journal_doi = soup.find("a",
-                                {"class":
-                                 "icon-button button--full-width button--primary flex-paper-actions__button flex-paper-actions__button--primary"})["href"]
-        # abstract = soup.find("span", {"data-test-id": "text-truncator-text"}).text.strip()
-        date = soup.find("span", {"data-test-id": "paper-year"}).text
-        date = date[-4:]
-        # citation_count = soup.find(
-        #     "span", {"class": "scorecard-stat__headline__dark"}).text
-        semanticscholar = soup.find("a",
-                                    {"class":
-                                     "icon-button button--full-width button--primary flex-paper-actions__button flex-paper-actions__button--primary"})["data-heap-paper-id"]
+        if response.ok and response.status_code == 200:
+            try:
+                soup = BeautifulSoup(response.text, "html.parser")
+                title = soup.find(
+                    "h1", {"data-test-id": "paper-detail-title"}).text
+                journal = soup.find(
+                    "span", {"data-heap-id": "paper-meta-journal"}).text
+                journal_doi = soup.find("a",
+                                        {"class":
+                                         "icon-button button--full-width button--primary flex-paper-actions__button flex-paper-actions__button--primary"})["href"]
+                # abstract = soup.find("span", {"data-test-id": "text-truncator-text"}).text.strip()
+                date = soup.find("span", {"data-test-id": "paper-year"}).text
+                date = date[-4:]
+                # citation_count = soup.find(
+                #     "span", {"class": "scorecard-stat__headline__dark"}).text
+                semanticscholar = soup.find("a",
+                                            {"class":
+                                             "icon-button button--full-width button--primary flex-paper-actions__button flex-paper-actions__button--primary"})["data-heap-paper-id"]
+
+            except ValueError as e:
+                print(f"Error parsing JSON data: {e}......")
+                sys.exit(1)
+
+        else:
+            print(
+                f"Request failed with status code {response.status_code}......")
+            sys.exit(1)
 
     # Merge variables as 'Title'
     title = "[" + title + "]" + "(" + journal_doi + ")"
@@ -80,39 +108,44 @@ def extract_paper_infor(url_paper, code_language, url_code, data_database, url_d
         # Create the file and write a header
         with open(file, 'w') as f:
             f.write('# Papers with code\n### A repository of Papers-With-Code\n| Journal | Date | Title | Code | Data | Citation |\n| -- | -- | -- | -- | -- | -- |\n')
-            print(file, 'file created successfully.')
+            print(f'{file} created successfully......')
     else:
-        print(file, 'file already exists.')
+        print(f'The {file} already exists......')
 
-    print('Write paper information to file:', file)
+    print(f'Write information to {file}')
     with open(file, 'r+') as f:
-        # read all lines from the file
+        # Read all lines from the file
         lines = f.readlines()
 
-        # get the last line of the file
+        # Get the last line of the file
         # last_line = lines[-1].strip()
 
-        # move the pointer to the end of the file
+        # Move the pointer to the end of the file
         f.seek(0, 2)
 
-        # write the result to the end of the file
+        # Write the result to the end of the file
         f.write("\n" + result)
 
-    # open the file again in read/write mode
+    # Open the file again in read/write mode
     with open(file, 'r+') as f:
-        # read all lines from the file
+        # Read all lines from the file
         lines = f.readlines()
-        # create a new list with non-empty lines
+
+        # Create a new list with non-empty lines
         new_lines = []
         for line in lines:
             if line.strip() != '':
                 new_lines.append(line)
-        # remove the last line if it is an empty line
+
+        # Remove the last line if it is an empty line
         if new_lines[-1] == os.linesep:
             new_lines.pop()
-        # move the pointer to the beginning of the file
+
+        # Move the pointer to the beginning of the file
         f.seek(0)
-        # write the new lines to the file
+
+        # Write the new lines to the file
         f.write(''.join(new_lines))
-        # truncate the file
+
+        # Truncate the file
         f.truncate()
