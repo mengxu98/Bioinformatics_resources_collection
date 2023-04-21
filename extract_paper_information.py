@@ -47,10 +47,13 @@ def extract_paper_infor(url_paper, code_language, url_code, data_database, url_d
     # Merge variables as 'Title'
     title = "[" + title + "]" + "(" + journal_doi + ")"
 
+    # Merge variables as 'Code'
     code = format_code(code_language, url_code, journal_doi)
+
+    # Merge variables as 'Data'
     data = format_data(data_database, url_data, journal_doi)
 
-    # Merge variables as 'Citation'
+    # Merge variables as 'semanticscholar_api'
     semanticscholar_api = "https://img.shields.io/badge/dynamic/json?label=citation&query=citationCount&url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2F" + \
         semanticscholar + \
         "%3Ffields%3DcitationCount"
@@ -59,7 +62,7 @@ def extract_paper_infor(url_paper, code_language, url_code, data_database, url_d
     citation = "[" + "!" + "[" + "citation" + "]" + \
         "(" + semanticscholar_api + ")" + "]" + "(" + url_paper + ")"
 
-    # Merge variables as result
+    # Merge variables as 'Result'
     result = " | ".join([str(journal),
                         str(date),
                         str(title),
@@ -68,22 +71,33 @@ def extract_paper_infor(url_paper, code_language, url_code, data_database, url_d
                         str(citation)])
     result = "| " + result + " |"
 
-    # open the file in read/write mode
+    # Check if the file exists
     if not file:
         file = "test.md"
-        
-    if os.path.exists(file):
-        open(file, 'w').close()
 
+    # Check if the file exists
+    if not os.path.exists(file):
+        # Create the file and write a header
+        with open(file, 'w') as f:
+            f.write('# Papers with code\n### A repository of Papers-With-Code\n| Journal | Date | Title | Code | Data | Citation |\n| -- | -- | -- | -- | -- | -- |\n')
+            print(file, 'file created successfully.')
+    else:
+        print(file, 'file already exists.')
+
+    print('Write paper information to file:', file)
     with open(file, 'r+') as f:
         # read all lines from the file
         lines = f.readlines()
+
         # get the last line of the file
-        last_line = lines[-1].strip()
+        # last_line = lines[-1].strip()
+
         # move the pointer to the end of the file
         f.seek(0, 2)
+
         # write the result to the end of the file
         f.write("\n" + result)
+
     # open the file again in read/write mode
     with open(file, 'r+') as f:
         # read all lines from the file
