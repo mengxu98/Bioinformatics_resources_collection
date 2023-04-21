@@ -18,6 +18,11 @@ You can choose one of the following ways:
     Parameter: 'url_data', data storage address in the paper.
 
     Note: please shut down the proxy service when using this script!
+    
+Note: now this script only supports some open access journals correctly, such as "Nature communications", 
+        and some journals will not allow extract information.
+        So, you should use semanticscholar APIs as much as possible to obtain information,
+        and manually fill in other parameters, such as 'code_language', 'url_code', 'data_database' and 'url_data'.
 
 If you encounter any problems while using the script, please issue on GitHub.
 '''
@@ -25,7 +30,10 @@ If you encounter any problems while using the script, please issue on GitHub.
 # Import function
 from extract_paper_information import extract_paper_infor
 
-# URL
+######################
+# ***--- Here ---*** #
+######################
+
 # The URL of paper obtain from: https://www.semanticscholar.org/
 url_paper = "https://www.semanticscholar.org/paper/Tumor-microenvironment-remodeling-after-neoadjuvant-Hu-Zhang/dfb50b723e402caac70b0dcbe21ca58e34401505"
 # url_paper = "https://api.semanticscholar.org/v1/paper/66d79bafce806798b72b4333854b8761073221cc"  # test
