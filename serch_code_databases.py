@@ -95,7 +95,7 @@ def format_data(data_language, url_data, url):
         # If data language is provided but no URL data
         shields_color_data = check_color(data_language)
         datas = data_info(data_language, url_data, shields_color_data)
-        
+
     else:
         # If both data language and URL data are provided
         shields_color_data = check_color(data_language)
@@ -165,6 +165,10 @@ def check_code_link_class(code_link):
 
 
 def github_filter(code_link):
+    """
+    This function is used to filter information for a github repository
+    """
+
     # Check if the code_link starts with "http"
     if code_link.startswith("http"):
         # Replace ".git" with "" if it is found in the code_link
