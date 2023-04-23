@@ -20,11 +20,11 @@ You can choose one of the following ways:
     Note: please shut down the proxy service when using this script!
     
 Note: now this script only supports some open access journals correctly, such as "Nature communications", 
-        and some journals will not allow extract information.
-        So, you should use semanticscholar APIs as much as possible to obtain information,
-        and manually fill in other parameters, such as 'code_language', 'url_code', 'data_database' and 'url_data'.
+      and some journals will not allow extract information.
+      So, you should use semanticscholar APIs as much as possible to obtain information,
+      and manually fill in other parameters, such as 'code_language', 'url_code', 'data_database' and 'url_data'.
 
-If you encounter any problems while using the script, please issue on GitHub.
+If you encounter any problems when using this script, please issue on GitHub or contact me.
 '''
 
 # Import function
@@ -35,12 +35,12 @@ from extract_paper_information import extract_paper_infor
 ######################
 
 # The URL of paper obtain from: https://www.semanticscholar.org/
-url_paper = "https://www.semanticscholar.org/paper/Tumor-microenvironment-remodeling-after-neoadjuvant-Hu-Zhang/dfb50b723e402caac70b0dcbe21ca58e34401505"
-# url_paper = "https://api.semanticscholar.org/v1/paper/66d79bafce806798b72b4333854b8761073221cc"  # test
-code_language = "R Python"
-url_code = "https://github.com/Junjie-Hu/NSCLC-immunotherapy"
-data_database = "GEO"
-url_data = "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE207422"
+url_paper = "https://www.semanticscholar.org/paper/Single-cell-analysis-reveals-prognostic-fibroblast-Hanley-Waise/a5b158dbafff3ade8a9779c134441e5f3db18e2d"
+url_paper = "https://api.semanticscholar.org/v1/paper/a5b158dbafff3ade8a9779c134441e5f3db18e2d"  # test
+code_language = ""
+url_code = ""
+data_database = ""
+url_data = ""
 
 extract_paper_infor(url_paper,
                     code_language,
