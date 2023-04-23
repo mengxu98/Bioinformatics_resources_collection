@@ -2,8 +2,8 @@ import os
 import sys
 import requests
 from bs4 import BeautifulSoup
-from serch_code_databases import format_data
-from serch_code_databases import format_code
+from serch_data_information import format_data
+from serch_code_information import format_code
 
 
 def extract_paper_infor(url_paper, code_language, url_code, data_database, url_data, file="test.md"):
@@ -26,6 +26,7 @@ def extract_paper_infor(url_paper, code_language, url_code, data_database, url_d
         if response.ok and response.status_code == 200:
             try:
                 # Extract the information from soup
+                print("Extracting paper information......")
                 soup = response.json()
                 title = soup["title"]
                 journal = soup["venue"]
@@ -46,6 +47,7 @@ def extract_paper_infor(url_paper, code_language, url_code, data_database, url_d
     else:
         if response.ok and response.status_code == 200:
             try:
+                print("Extracting paper information......")
                 soup = BeautifulSoup(response.text, "html.parser")
                 title = soup.find(
                     "h1", {"data-test-id": "paper-detail-title"}).text
@@ -98,8 +100,10 @@ def extract_paper_infor(url_paper, code_language, url_code, data_database, url_d
                         str(data),
                         str(citation)])
     result = "| " + result + " |"
+    print("Extracting paper information done......")
 
     # Check if the file exists
+    print(f"Checking {file} existence......")
     if not file:
         file = "test.md"
 
@@ -108,11 +112,11 @@ def extract_paper_infor(url_paper, code_language, url_code, data_database, url_d
         # Create the file and write a header
         with open(file, 'w') as f:
             f.write('# Papers with code\n### A repository of Papers-With-Code\n| Journal | Date | Title | Code | Data | Citation |\n| -- | -- | -- | -- | -- | -- |\n')
-            print(f'{file} created successfully......')
+            print(f'The {file} created successfully......')
     else:
         print(f'The {file} already exists......')
 
-    print(f'Write information to {file}')
+    print(f'Write information to {file}......')
     with open(file, 'r+') as f:
         # Read all lines from the file
         lines = f.readlines()
