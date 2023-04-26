@@ -37,6 +37,12 @@ def extract_paper_infor(url_paper, code_language, url_code, data_database, url_d
                 # abstract = data["abstract"]
                 semanticscholar = soup["url"]
 
+                # Print the extracted information
+                print("Title:", title)
+                print("Published date:", date)
+                print("Journal:", journal)
+                print("DOI:", journal_doi)
+
             except ValueError as e:
                 print(f"Error parsing JSON data: {e}......")
 
@@ -64,6 +70,12 @@ def extract_paper_infor(url_paper, code_language, url_code, data_database, url_d
                 semanticscholar = soup.find("a",
                                             {"class":
                                              "icon-button button--full-width button--primary flex-paper-actions__button flex-paper-actions__button--primary"})["data-heap-paper-id"]
+
+                # Print the extracted information
+                print("Title:", title)
+                print("Published date:", date)
+                print("Journal:", journal)
+                print("DOI:", journal_doi)
 
             except ValueError as e:
                 print(f"Error parsing JSON data: {e}......")
