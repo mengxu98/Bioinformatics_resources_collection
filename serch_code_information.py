@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 
 def format_code(code_language, url_code, url):
     """
-    Search for code information: code_language, url_code and url
+    Format code information: code_language, url_code and url
     """
 
     if not url_code and not code_language:
@@ -50,6 +50,10 @@ def format_code(code_language, url_code, url):
 
 
 def search_code(url):
+    """
+    Search for code information: code_language, url_code and url
+    """
+
     response = requests.get(url)
     soup = BeautifulSoup(response.text, "html.parser")
     # content = response.text
@@ -75,7 +79,7 @@ def search_code(url):
                     code_infor = check_code_link_class(code_link)
                     code_infors.append(code_infor)
         else:
-            code_link = code_links.strip('()')
+            code_link = code_links[0].strip('().')
             if "github.io" in code_link:
                 print(
                     f"This code_link: {code_link} maybe not a code repository......")
@@ -112,7 +116,9 @@ def check_code_link_class(code_link):
 
 def github_filter(code_link):
     """
-    This function is used to filter information for a github repository
+    Check if the code_link contains "github", "figshare" or "zenodo"
+    Note: the code_link should be in the format of "https://github.com/user
+    Note: now figshare and zenodo not supported yet, only return 'Unknown' information
     """
 
     # Check if the code_link starts with "http"
@@ -176,7 +182,8 @@ def github_filter(code_link):
 
 def code_info(code_language, url_code, shields_color_code):
     """
-    This function takes three parameters: code_language, url_code and shields_color_code
+    This function takes a code_language, url_code, and shields_color_code as arguments and returns a string
+    that represents the code.
     """
 
     # Replace any spaces in the code language with %20
