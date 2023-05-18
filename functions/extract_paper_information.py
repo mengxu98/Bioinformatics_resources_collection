@@ -72,7 +72,7 @@ def extract_paper_infor(url_paper, doi_paper, code_language, url_code, data_data
         response = requests.get(url_extract)
     # If an SSL error occurs, print a message
     except requests.exceptions.SSLError:
-        print('Please close the network proxy and try again......')
+        print('Please shut down the proxy service and try again......')
         sys.exit(1)
 
     # Extract paper information
@@ -143,6 +143,7 @@ def extract_paper_infor(url_paper, doi_paper, code_language, url_code, data_data
             print(
                 f"Request failed with status code {response.status_code}......")
             sys.exit(1)
+
     # Merge variables as 'Title'
     title = "[" + title + "]" + "(" + journal_doi + ")"
 
@@ -153,7 +154,8 @@ def extract_paper_infor(url_paper, doi_paper, code_language, url_code, data_data
     data = format_data(data_database, url_data, journal_doi)
 
     # Merge variables as 'semanticscholar_api'
-    semanticscholar_api = "https://img.shields.io/badge/dynamic/json?label=citation&query=citationCount&url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2F" + \
+    semanticscholar_api = "https://img.shields.io/badge/dynamic/json?label=citation&query=citationCount&url=" + \
+        "https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2F" + \
         paper_id + \
         "%3Ffields%3DcitationCount"
 
