@@ -3,7 +3,9 @@ import requests
 from bs4 import BeautifulSoup
 
 
-def format_code(code_language, url_code, url):
+def format_code(code_language,
+                url_code,
+                url):
     """
     Format code information: code_language, url_code and url
     """
@@ -180,7 +182,9 @@ def github_filter(code_link):
         return code_infors
 
 
-def code_info(code_language, url_code, shields_color_code):
+def code_info(code_language,
+              url_code,
+              shields_color_code):
     """
     This function takes a code_language, url_code, and shields_color_code as arguments and returns a string
     that represents the code.
@@ -215,12 +219,14 @@ def check_color(x):
         "Zenodo": "024dad",
         "PKU": "357ca5",
         "figshare": "c62764",
-        "Failed": "c02f31"
+        "Failed": "c02f31",
+        "Unknown": "ca1fc7"
     }
+
     # Check if the argument is in the dictionary
-    if x in color_dict:
-        shields_color = color_dict[x]
-    else:
+    if x not in color_dict:
         x = "Unknown"
-        shields_color = "ca1fc7"
+
+    shields_color = color_dict[x]
+
     return shields_color

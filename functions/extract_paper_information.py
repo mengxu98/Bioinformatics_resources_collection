@@ -39,7 +39,13 @@ def extract_papers_infor(search_strings):
         print('More than one search term......')
 
 
-def extract_paper_infor(url_paper, doi_paper, code_language, url_code, data_database, url_data, file="test.md"):
+def extract_paper_infor(url_paper,
+                        doi_paper,
+                        code_language,
+                        url_code,
+                        data_database,
+                        url_data,
+                        file="test.md"):
     """
     This function extracts the paper from the specified URL and returns the corresponding information
 
@@ -51,7 +57,7 @@ def extract_paper_infor(url_paper, doi_paper, code_language, url_code, data_data
         Parameter: 'data_database', database for storing data of the paper;
         Parameter: 'url_data', data storage address of the paper.
 
-    Returns a list and writes it to the specified *.md file
+    Returns a list and writes it to the specified *.md file.
     """
 
     if url_paper:
@@ -173,10 +179,13 @@ def extract_paper_infor(url_paper, doi_paper, code_language, url_code, data_data
     result = "| " + result + " |"
     print("Extracting paper information done......")
 
-    # Check if the file exists
+    # Check if the variable 'file' existence
     print(f"Checking {file} existence......")
     if not file:
         file = "test.md"
+    else:
+        if not file.endswith('.md'):
+            file += '.md'
 
     # Check if the file exists
     if not os.path.exists(file):

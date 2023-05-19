@@ -3,7 +3,9 @@ import requests
 from bs4 import BeautifulSoup
 
 
-def format_data(data_language, url_data, url):
+def format_data(data_language,
+                url_data,
+                url):
     """
     Format data based on the given parameters.
      Args:
@@ -151,7 +153,9 @@ def search_databases(url):
         print("The database does not exist in this paper......")
 
 
-def data_info(data_language, url_data, shields_color_data):
+def data_info(data_language,
+              url_data,
+              shields_color_data):
     """
     This function takes three parameters: data_language, url_data and shields_color_data
     """
@@ -185,12 +189,14 @@ def check_color(x):
         "Zenodo": "024dad",
         "PKU": "357ca5",
         "figshare": "c62764",
-        "Failed": "c02f31"
+        "Failed": "c02f31",
+        "Unknown": "ca1fc7"
     }
+
     # Check if the argument is in the dictionary
-    if x in color_dict:
-        shields_color = color_dict[x]
-    else:
+    if x not in color_dict:
         x = "Unknown"
-        shields_color = "ca1fc7"
+
+    shields_color = color_dict[x]
+
     return shields_color
