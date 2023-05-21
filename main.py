@@ -38,14 +38,14 @@ from functions.extract_paper_information import extract_paper_infor
 ##################################################################################################
 
 # The URL of paper obtain from: https://www.semanticscholar.org/
-url_paper = "https://www.semanticscholar.org/paper/Single-cell-analysis-reveals-prognostic-fibroblast-Hanley-Waise/a5b158dbafff3ade8a9779c134441e5f3db18e2d"
+url_paper = "https://www.semanticscholar.org/paper/Elucidating-tumor-heterogeneity-from-spatially-data-Zuo-Zhang/09690abc5440dec515c14256dccf7fe45acee988"
 # url_paper = "https://api.semanticscholar.org/v1/paper/a5b158dbafff3ade8a9779c134441e5f3db18e2d"
 # doi_paper = "https://doi.org/10.1038/s41467-023-35832-6"
 doi_paper = ""
-code_language = ""
-url_code = ""
-data_database = ""
-url_data = ""
+code_language = "python"
+url_code = "https://github.com/cmzuo11/stMVC"
+data_database = "GEO"
+url_data = "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE176078"
 
 
 extract_paper_infor(url_paper,
@@ -54,4 +54,4 @@ extract_paper_infor(url_paper,
                     url_code,
                     data_database,
                     url_data,
-                    file="test.md")  # "README.md"
+                    file="papers/papers-with-method.md")  # "README.md"
