@@ -211,7 +211,7 @@ def check_color(x):
 
     # Dictionary to store the hex codes for each string
     color_dict = {
-        "R": "75aadb",
+        "R": "198ce7",
         "Python": "3572a5",
         "Shell": "89e051",
         "Jupyter Notebook": "da5b0b",
