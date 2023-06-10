@@ -183,14 +183,16 @@ def check_color(x):
     color_dict = {
         "R": "198ce7",
         "Python": "3572a5",
+        "R Python": "00008B",
         "Shell": "89e051",
         "Jupyter Notebook": "da5b0b",
         "GEO": "336699",
         "Zenodo": "024dad",
         "PKU": "357ca5",
         "figshare": "c62764",
+        "Website": "B03060",
         "Failed": "c02f31",
-        "Unknown": "ca1fc7"
+        "Unknown": "ADADAD"
     }
 
     # Check if the argument is in the dictionary
