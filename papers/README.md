@@ -6,7 +6,7 @@ This repository is used to record same papers with different categories, such as
 This repository is builded and maintained by Mengxu(mengxu98@qq.com).
 If you interested it, please add items as follow rules, and PR:
 You can choose one of the following ways:
-1) Refer to the 'README' file and manually fill in the following information:
+1) Refer the 'README' file and manually fill in the following information:
     - Add "| Journal | Date | Title | Code | Data | Citation |";
     - For Journal and Title, please sort by A-Z;
     - For Date, please sort by published date;
@@ -22,7 +22,6 @@ You can choose one of the following ways:
 
     Note:
     - Using ```pip install -r requirements.txt``` to get all the dependencies
-    - please shut down the proxy service when using this script!
-
-If you encounter any problems while using the script, please issue on GitHub.
+    - Please shut down the `proxy` service when using this script!
+    - If you encounter any problems while using the script, please issue on GitHub.
 
