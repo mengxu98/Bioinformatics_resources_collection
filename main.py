@@ -38,14 +38,15 @@ from functions.extract_paper_information import extract_paper_infor
 ##################################################################################################
 
 # The URL of paper obtain from: https://www.semanticscholar.org/
-url_paper = "https://www.semanticscholar.org/paper/High-resolution-3D-spatiotemporal-transcriptomic-of-Wang-Hu/a81789d2afa4f26b870cd2d9937d25e45f2153b5"
-# url_paper = "https://api.semanticscholar.org/v1/paper/a5b158dbafff3ade8a9779c134441e5f3db18e2d"
+# url_paper = "https://www.semanticscholar.org/paper/High-resolution-3D-spatiotemporal-transcriptomic-of-Wang-Hu/a81789d2afa4f26b870cd2d9937d25e45f2153b5"
+# url_paper = "https://www.semanticscholar.org/paper/Distinct-biological-ages-of-organs-and-systems-from-Nie-Li/fa40c4ea0810be27e974e0d97cf6eeaf2ef85973"
+url_paper = "https://api.semanticscholar.org/v1/paper/631e4db76fb0fd5ac6e1d7029627d0b99373540c"
 # doi_paper = "https://doi.org/10.1038/s41467-023-35832-6"
 doi_paper = ""
 code_language = "R Python"
-url_code = "https://www.cell.com/cms/10.1016/j.devcel.2022.04.006/attachment/94171a16-fac1-4d9e-b7e0-bd4909baf4f0/mmc6"
+url_code = "https://github.com/wanglabtongji/CCI"
 data_database = "Website"
-url_data = "https://db.cngb.org/stomics/flysta3d/"
+url_data = "https://genomebiology.biomedcentral.com/articles/10.1186/s13059-022-02783-y#availability-of-data-and-materials"
 
 
 extract_paper_infor(url_paper,
@@ -54,4 +55,4 @@ extract_paper_infor(url_paper,
                     url_code,
                     data_database,
                     url_data,
-                    file="papers/papers-with-story.md") # "papers/papers-with-method.md"
+                    file="papers/papers-with-method.md") # "papers/papers-with-story.md"

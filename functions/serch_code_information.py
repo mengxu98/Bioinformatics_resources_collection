@@ -48,6 +48,7 @@ def format_code(code_language,
     else:
         shields_color_code = check_color(code_language)
         codes = code_info(code_language, url_code, shields_color_code)
+
     return codes
 
 
@@ -88,6 +89,7 @@ def search_code(url):
             else:
                 code_infor = check_code_link_class(code_link)
                 code_infors.append(code_infor)
+                
     return code_infors
 
 
@@ -201,6 +203,7 @@ def code_info(code_language,
     # Create the 'Code' string using the parameters
     code = "[" + "!" + "[" + code_language + "]" + \
         "(" + shields_url_code + ")" + "]" + "(" + url_code + ")"
+            
     return code
 
 
@@ -222,7 +225,8 @@ def check_color(x):
         "figshare": "c62764",
         "Website": "B03060",
         "Failed": "c02f31",
-        "Unknown": "ADADAD"
+        "Unknown": "ADADAD",
+        "Null": "FAFAFA"
     }
 
     # Check if the argument is in the dictionary

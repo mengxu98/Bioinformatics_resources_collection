@@ -20,6 +20,7 @@ def format_data(data_language,
     if not url_data and not data_language:
         print("No data information provided......")
         data_infors = search_databases(url)
+        
         if data_infors:
             if len(data_infors) == 1:
                 data_language = data_infors[0][0]
@@ -82,8 +83,10 @@ def search_databases(url):
             # search for GEO database identifiers using regular expressions
             print("Searching for GEO database identifiers......")
             geo_ids = re.findall(r"(?i)GSE[\d]+", content)
+
             if geo_ids:
                 unique_geo_ids = list(set(geo_ids))  # Remove Duplicates
+
                 if len(unique_geo_ids) > 1:
                     for geo_id in unique_geo_ids:
                         geo_url = "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=" + geo_id
@@ -100,8 +103,10 @@ def search_databases(url):
         if "zenodo" or "ZENODO" or "Zenodo" in content:
             # search for Zenodo database identifiers using regular expressions
             zenodo_ids = re.findall(r"(?i)zenodo.org/record/\d+", content)
+
             if zenodo_ids:
                 unique_zenodo_ids = list(set(zenodo_ids))  # Remove Duplicates
+
                 if len(unique_zenodo_ids) > 1:
                     for zenodo_id in unique_geo_ids:
                         zenodo_url = "https://doi.org/" + zenodo_id
@@ -115,9 +120,11 @@ def search_databases(url):
             # if the website contains Zenodo link, search for the DOI
             elif re.search(r"zenodo", content):
                 zenodo_ids = re.findall(r'10\.\d+\/zenodo\.\d+', content)
+
                 if zenodo_ids:
                     unique_zenodo_ids = list(
                         set(zenodo_ids))  # Remove Duplicates
+                    
                     if len(unique_zenodo_ids) > 1:
                         for zenodo_id in unique_zenodo_ids:
                             zenodo_url = "https://doi.org/" + zenodo_id[0]
@@ -134,9 +141,11 @@ def search_databases(url):
             # search for Figshare database identifiers using regular expressions
             figshare_ids = re.findall(
                 r"(?i)figshare.com/articles/\w+/\d+", content)
+            
             if figshare_ids:
                 unique_figshare_ids = list(
                     set(figshare_ids))  # Remove Duplicates
+                
                 if len(unique_figshare_ids) > 1:
                     for figshare_id in unique_figshare_ids:
                         figshare_url = "https://doi.org/" + figshare_id
@@ -171,6 +180,7 @@ def data_info(data_language,
     # Create the 'Data' string using the parameters
     data = "[" + "!" + "[" + data_language + "]" + \
         "(" + shields_url_data + ")" + "]" + "(" + url_data + ")"
+    
     return data
 
 
@@ -192,7 +202,8 @@ def check_color(x):
         "figshare": "c62764",
         "Website": "B03060",
         "Failed": "c02f31",
-        "Unknown": "ADADAD"
+        "Unknown": "ADADAD",
+        "Null": "FAFAFA"
     }
 
     # Check if the argument is in the dictionary
