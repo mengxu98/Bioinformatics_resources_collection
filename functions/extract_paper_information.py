@@ -2,8 +2,8 @@ import os
 import sys
 import requests
 from bs4 import BeautifulSoup
-from functions.serch_data_information import format_data
-from functions.serch_code_information import format_code
+from .serch_data_information import format_data
+from .serch_code_information import format_code
 
 
 '''
@@ -146,8 +146,7 @@ def extract_paper_infor(url_paper,
                 sys.exit(1)
 
         else:
-            print(
-                f"Request failed with status code {response.status_code}......")
+            print(f"Request failed with status code {response.status_code}......")
             sys.exit(1)
 
     # Merge variables as 'Title'

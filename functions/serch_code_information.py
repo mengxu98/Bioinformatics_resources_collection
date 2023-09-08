@@ -2,6 +2,8 @@ import re
 import requests
 from bs4 import BeautifulSoup
 
+from .check_color import check_color
+
 
 def format_code(code_language,
                 url_code,
@@ -10,6 +12,7 @@ def format_code(code_language,
     Format code information: code_language, url_code and url
     """
 
+    print("Formatting code information......")
     if not url_code and not code_language:
         code_infors = search_code(url)
 
@@ -37,15 +40,18 @@ def format_code(code_language,
             codes = code_info(code_language, url_code, shields_color_code)
 
     elif url_code and not code_language:
+        print(f"The code from {url_code}......")
         code_language = "Unknown"
         shields_color_code = check_color(code_language)
         codes = code_info(code_language, url_code, shields_color_code)
 
     elif not url_code and code_language:
+        print(f"The code written by {code_language}......")
         shields_color_code = check_color(code_language)
         codes = code_info(code_language, url_code, shields_color_code)
 
     else:
+        print(f"The code written by {code_language}, and from {url_code}......")
         shields_color_code = check_color(code_language)
         codes = code_info(code_language, url_code, shields_color_code)
 
@@ -89,7 +95,7 @@ def search_code(url):
             else:
                 code_infor = check_code_link_class(code_link)
                 code_infors.append(code_infor)
-                
+
     return code_infors
 
 
@@ -205,34 +211,3 @@ def code_info(code_language,
         "(" + shields_url_code + ")" + "]" + "(" + url_code + ")"
             
     return code
-
-
-def check_color(x):
-    """
-    This function takes a string as an argument and returns a hex code based on the value of the string.
-    """
-
-    # Dictionary to store the hex codes for each string
-    color_dict = {
-        "R": "198ce7",
-        "Python": "3572a5",
-        "R Python": "00008B",
-        "Shell": "89e051",
-        "Jupyter Notebook": "da5b0b",
-        "GEO": "336699",
-        "Zenodo": "024dad",
-        "PKU": "357ca5",
-        "figshare": "c62764",
-        "Website": "B03060",
-        "Failed": "c02f31",
-        "Unknown": "ADADAD",
-        "Null": "FAFAFA"
-    }
-
-    # Check if the argument is in the dictionary
-    if x not in color_dict:
-        x = "Unknown"
-
-    shields_color = color_dict[x]
-
-    return shields_color
