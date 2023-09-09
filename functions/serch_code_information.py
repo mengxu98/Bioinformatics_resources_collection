@@ -5,15 +5,77 @@ from bs4 import BeautifulSoup
 from .check_color import check_color
 
 
+# def format_code(code_language,
+#                 url_code,
+#                 url):
+#     """
+#     Format code information: code_language, url_code and url
+#     """
+
+#     print("Formatting code information......")
+#     if not url_code and not code_language:
+#         code_infors = search_code(url)
+
+#         if code_infors:
+#             if len(code_infors) == 1:
+#                 code_language = code_infors[0][0]
+#                 url_code = code_infors[0][1]
+#                 shields_color_code = check_color(code_language)
+#                 codes = code_info(code_language, url_code, shields_color_code)
+
+#             else:
+#                 codes = ""
+#                 for code_infor in code_infors:
+#                     code_language = code_infor[0]
+#                     url_code = code_infor[1]
+#                     shields_color_code = check_color(code_language)
+#                     code = code_info(code_language, url_code,
+#                                      shields_color_code)
+#                     codes = codes + code
+
+#         else:
+#             print("Failed to obtain code information for this paper......")
+#             url_code = ""
+#             code_language = "Unknown"
+#             shields_color_code = check_color(code_language)
+#             codes = code_info(code_language, url_code, shields_color_code)
+
+#     elif url_code and not code_language:
+#         print(f"The code from {url_code}......")
+#         code_language = "Unknown"
+#         shields_color_code = check_color(code_language)
+#         codes = code_info(code_language, url_code, shields_color_code)
+
+#     elif not url_code and code_language:
+#         print(f"The code written by {code_language}......")
+#         shields_color_code = check_color(code_language)
+#         codes = code_info(code_language, url_code, shields_color_code)
+
+#     else:
+#         print(f"The code written by {code_language}, and from {url_code}......")
+#         shields_color_code = check_color(code_language)
+#         codes = code_info(code_language, url_code, shields_color_code)
+
+#     return codes
+
+
 def format_code(code_language,
                 url_code,
                 url):
     """
-    Format code information: code_language, url_code and url
+    Format code based on the given parameters.
+     Args:
+        code_language (str): The language of the code.
+        url_code (str): The URL of the code.
+        url (str): The URL of the website.
+     Returns:
+        codes (str): The formatted code information.
     """
 
     print("Formatting code information......")
     if not url_code and not code_language:
+        print("No code information provided......")
+
         code_infors = search_code(url)
 
         if code_infors:
@@ -29,31 +91,72 @@ def format_code(code_language,
                     code_language = code_infor[0]
                     url_code = code_infor[1]
                     shields_color_code = check_color(code_language)
-                    code = code_info(code_language, url_code,
-                                     shields_color_code)
+                    code = code_info(code_language, url_code, shields_color_code)
                     codes = codes + code
-
+        
         else:
+            print("Failed to obtain code information for this paper......")
+            # If no code is found
             url_code = ""
             code_language = "Unknown"
             shields_color_code = check_color(code_language)
             codes = code_info(code_language, url_code, shields_color_code)
 
     elif url_code and not code_language:
-        print(f"The code from {url_code}......")
         code_language = "Unknown"
         shields_color_code = check_color(code_language)
-        codes = code_info(code_language, url_code, shields_color_code)
+
+        if len(url_code) > 1:
+            codes = ""
+            for url_code_single in url_code:
+                print(f"The code from {url_code_single}......")
+                code = code_info(code_language, url_code_single, shields_color_code)
+                codes = codes + code
+        
+        else:
+            print(f"The code from {url_code}......")
+            # If URL code is provided but no code language
+            codes = code_info(code_language, url_code, shields_color_code)
 
     elif not url_code and code_language:
-        print(f"The code written by {code_language}......")
-        shields_color_code = check_color(code_language)
-        codes = code_info(code_language, url_code, shields_color_code)
+        # If code language is provided but no URL code
+        if len(code_language) > 1:
+            codes = ""
+            for code_language_single in code_language:
+                print(f"The code provided by {code_language_single}......")
+                shields_color_code = check_color(code_language_single)
+                code = code_info(code_language_single, url_code, shields_color_code)
+                codes = codes + code
+        
+        else:
+            print(f"The code provided by {url_code}......")
+            # If URL code is provided but no code language
+            shields_color_code = check_color(code_language)
+            codes = code_info(code_language, url_code, shields_color_code)
 
     else:
-        print(f"The code written by {code_language}, and from {url_code}......")
-        shields_color_code = check_color(code_language)
-        codes = code_info(code_language, url_code, shields_color_code)
+        if len(code_language) > 1 and len(url_code) > 1:
+            if len(code_language) != len(url_code):
+                if len(code_language) > len(url_code):
+                    for i in range(len(url_code), len(code_language)):
+                        url_code.append("")
+                if len(code_language) < len(url_code):
+                    for i in range(len(code_language), len(url_code)):
+                        code_language.append("Unknown")
+
+            codes = ""
+            for url_code_single, code_language_single in zip(url_code, code_language):
+                print(f"The code provided by {code_language_single}, and from {url_code_single}......")
+                shields_color_code = check_color(code_language_single)
+                code = code_info(code_language_single, url_code_single, shields_color_code)
+                codes = codes + code
+        
+        else:
+            if len(code_language) == 1 and len(url_code) == 1:
+                print(f"The code provided by {code_language}, and from {url_code}......")
+                # If both code language and URL code are provided
+                shields_color_code = check_color(code_language)
+                codes = code_info(code_language, url_code, shields_color_code)
 
     return codes
 

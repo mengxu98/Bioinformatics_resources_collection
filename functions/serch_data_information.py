@@ -15,7 +15,7 @@ def format_data(data_database,
         url_data (str): The URL of the data.
         url (str): The URL of the website.
      Returns:
-        datas (str): The formatted data.
+        datas (str): The formatted data information.
     """
 
     print("Formatting data information......")
@@ -37,11 +37,11 @@ def format_data(data_database,
                     data_database = data_infor[0]
                     url_data = data_infor[1]
                     shields_color_data = check_color(data_database)
-                    data = data_info(data_database, url_data,
-                                     shields_color_data)
+                    data = data_info(data_database, url_data, shields_color_data)
                     datas = datas + data
-
+        
         else:
+            print("Failed to obtain data information for this paper......")
             # If no data is found
             url_data = ""
             data_database = "Unknown"
@@ -49,23 +49,60 @@ def format_data(data_database,
             datas = data_info(data_database, url_data, shields_color_data)
 
     elif url_data and not data_database:
-        print(f"The dataset from {url_data}......")
-        # If URL data is provided but no data language
         data_database = "Unknown"
         shields_color_data = check_color(data_database)
-        datas = data_info(data_database, url_data, shields_color_data)
+
+        if len(url_data) > 1:
+            datas = ""
+            for url_data_single in url_data:
+                print(f"The dataset from {url_data_single}......")
+                data = data_info(data_database, url_data_single, shields_color_data)
+                datas = datas + data
+        
+        else:
+            print(f"The dataset from {url_data}......")
+            # If URL data is provided but no data language
+            datas = data_info(data_database, url_data, shields_color_data)
+
 
     elif not url_data and data_database:
-        print(f"The dataset provided by {data_database}......")
         # If data language is provided but no URL data
-        shields_color_data = check_color(data_database)
-        datas = data_info(data_database, url_data, shields_color_data)
+        if len(data_database) > 1:
+            datas = ""
+            for data_database_single in data_database:
+                print(f"The dataset provided by {data_database_single}......")
+                shields_color_data = check_color(data_database_single)
+                data = data_info(data_database_single, url_data, shields_color_data)
+                datas = datas + data
+        
+        else:
+            print(f"The dataset provided by {url_data}......")
+            # If URL data is provided but no data language
+            shields_color_data = check_color(data_database)
+            datas = data_info(data_database, url_data, shields_color_data)
 
     else:
-        print(f"The dataset provided by {data_database}, and from {url_data}......")
-        # If both data language and URL data are provided
-        shields_color_data = check_color(data_database)
-        datas = data_info(data_database, url_data, shields_color_data)
+        if len(data_database) > 1 and len(url_data) > 1:
+            if len(data_database) != len(url_data):
+                if len(data_database) > len(url_data):
+                    data_database = data_database[0:(len(url_data)-1)]
+                if len(data_database) < len(url_data):
+                    for i in range(len(data_database), len(url_data)):
+                        data_database.append("Unknown")
+
+            datas = ""
+            for url_data_single, data_database_single in zip(url_data, data_database):
+                print(f"The dataset provided by {data_database_single}, and from {url_data_single}......")
+                shields_color_data = check_color(data_database_single)
+                data = data_info(data_database_single, url_data_single, shields_color_data)
+                datas = datas + data
+        
+        else:
+            if len(data_database) == 1 and len(url_data) == 1:
+                print(f"The dataset provided by {data_database}, and from {url_data}......")
+                # If both data language and URL data are provided
+                shields_color_data = check_color(data_database)
+                datas = data_info(data_database, url_data, shields_color_data)
 
     return datas
 
