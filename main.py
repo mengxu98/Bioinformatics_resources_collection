@@ -31,22 +31,15 @@ If you encounter any problems when using this script, please issue on GitHub or 
 
 
 # Import function
-from functions.extract_paper_information import extract_paper_infor
-
-##################################################################################################
-# ***----------------------------------------- Here -----------------------------------------*** #
-##################################################################################################
+from functions.extract_information import extract_paper_infor
 
 # The URL of paper obtain from: https://www.semanticscholar.org/
-# url_paper = "https://www.semanticscholar.org/paper/High-resolution-3D-spatiotemporal-transcriptomic-of-Wang-Hu/a81789d2afa4f26b870cd2d9937d25e45f2153b5"
-# url_paper = "https://www.semanticscholar.org/paper/Distinct-biological-ages-of-organs-and-systems-from-Nie-Li/fa40c4ea0810be27e974e0d97cf6eeaf2ef85973"
-url_paper = "https://api.semanticscholar.org/v1/paper/631e4db76fb0fd5ac6e1d7029627d0b99373540c"
-# doi_paper = "https://doi.org/10.1038/s41467-023-35832-6"
-doi_paper = ""
-code_language = "R Python"
-url_code = "https://github.com/wanglabtongji/CCI"
-data_database = "Website"
-url_data = "https://genomebiology.biomedcentral.com/articles/10.1186/s13059-022-02783-y#availability-of-data-and-materials"
+url_paper = "https://api.semanticscholar.org/v1/paper/59447739b7dda29ef919184cc8246cbbbd5e8938"
+doi_paper = ['']
+code_language = ['Python']
+url_code = ['https://github.com/zhanglab-wbgcas/STGRNS']
+data_database = ['None']
+url_data = ['']
 
 
 extract_paper_infor(url_paper,

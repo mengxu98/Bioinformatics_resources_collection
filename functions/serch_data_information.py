@@ -3,6 +3,7 @@ import requests
 # from bs4 import BeautifulSoup
 
 from .check_color import check_color
+from .format_shields import format_shields
 
 
 def format_data(data_database,
@@ -29,7 +30,8 @@ def format_data(data_database,
                 data_database = data_infors[0][0]
                 url_data = data_infors[0][1]
                 shields_color_data = check_color(data_database)
-                datas = data_info(data_database, url_data, shields_color_data)
+                datas = format_shields(
+                    data_database, url_data, shields_color_data)
 
             else:
                 datas = ""
@@ -37,16 +39,17 @@ def format_data(data_database,
                     data_database = data_infor[0]
                     url_data = data_infor[1]
                     shields_color_data = check_color(data_database)
-                    data = data_info(data_database, url_data, shields_color_data)
+                    data = format_shields(data_database, url_data,
+                                          shields_color_data)
                     datas = datas + data
-        
+
         else:
             print("Failed to obtain data information for this paper......")
             # If no data is found
             url_data = ""
             data_database = "Unknown"
             shields_color_data = check_color(data_database)
-            datas = data_info(data_database, url_data, shields_color_data)
+            datas = format_shields(data_database, url_data, shields_color_data)
 
     elif url_data and not data_database:
         data_database = "Unknown"
@@ -56,14 +59,15 @@ def format_data(data_database,
             datas = ""
             for url_data_single in url_data:
                 print(f"The dataset from {url_data_single}......")
-                data = data_info(data_database, url_data_single, shields_color_data)
+                data = format_shields(
+                    data_database, url_data_single, shields_color_data)
                 datas = datas + data
-        
+
         else:
+            url_data = url_data[0]
             print(f"The dataset from {url_data}......")
             # If URL data is provided but no data language
-            datas = data_info(data_database, url_data, shields_color_data)
-
+            datas = format_shields(data_database, url_data, shields_color_data)
 
     elif not url_data and data_database:
         # If data language is provided but no URL data
@@ -72,14 +76,16 @@ def format_data(data_database,
             for data_database_single in data_database:
                 print(f"The dataset provided by {data_database_single}......")
                 shields_color_data = check_color(data_database_single)
-                data = data_info(data_database_single, url_data, shields_color_data)
+                data = format_shields(data_database_single,
+                                      url_data, shields_color_data)
                 datas = datas + data
-        
+
         else:
+            data_database = data_database[0]
             print(f"The dataset provided by {url_data}......")
             # If URL data is provided but no data language
             shields_color_data = check_color(data_database)
-            datas = data_info(data_database, url_data, shields_color_data)
+            datas = format_shields(data_database, url_data, shields_color_data)
 
     else:
         if len(data_database) > 1 and len(url_data) > 1:
@@ -92,17 +98,23 @@ def format_data(data_database,
 
             datas = ""
             for url_data_single, data_database_single in zip(url_data, data_database):
-                print(f"The dataset provided by {data_database_single}, and from {url_data_single}......")
+                print(
+                    f"The dataset provided by {data_database_single}, and from {url_data_single}......")
                 shields_color_data = check_color(data_database_single)
-                data = data_info(data_database_single, url_data_single, shields_color_data)
+                data = format_shields(data_database_single,
+                                      url_data_single, shields_color_data)
                 datas = datas + data
-        
+
         else:
             if len(data_database) == 1 and len(url_data) == 1:
-                print(f"The dataset provided by {data_database}, and from {url_data}......")
+                data_database = data_database[0]
+                url_data = url_data[0]
+                print(
+                    f"The dataset provided by {data_database}, and from {url_data}......")
                 # If both data language and URL data are provided
                 shields_color_data = check_color(data_database)
-                datas = data_info(data_database, url_data, shields_color_data)
+                datas = format_shields(
+                    data_database, url_data, shields_color_data)
 
     return datas
 
@@ -168,7 +180,7 @@ def search_databases(url):
                 if zenodo_ids:
                     unique_zenodo_ids = list(
                         set(zenodo_ids))  # Remove Duplicates
-                    
+
                     if len(unique_zenodo_ids) > 1:
                         for zenodo_id in unique_zenodo_ids:
                             zenodo_url = "https://doi.org/" + zenodo_id[0]
@@ -179,17 +191,17 @@ def search_databases(url):
                         data_infor = ["Zenodo", zenodo_url]
                         data_infors.append(data_infor)
             else:
-                print("The website does not contain Zenodo link.")
+                print("The website does not contain Zenodo link......")
 
         if "figshare" in content:
             # search for Figshare database identifiers using regular expressions
             figshare_ids = re.findall(
                 r"(?i)figshare.com/articles/\w+/\d+", content)
-            
+
             if figshare_ids:
                 unique_figshare_ids = list(
                     set(figshare_ids))  # Remove Duplicates
-                
+
                 if len(unique_figshare_ids) > 1:
                     for figshare_id in unique_figshare_ids:
                         figshare_url = "https://doi.org/" + figshare_id
@@ -204,25 +216,3 @@ def search_databases(url):
 
     else:
         print("The database does not exist in this paper......")
-
-
-def data_info(data_database,
-              url_data,
-              shields_color_data):
-    """
-    This function takes three parameters: data_database, url_data and shields_color_data
-    """
-
-    # Replace any spaces in the data language with %20
-    if " " in data_database:
-        data_database = data_database.replace(" ", "%20")
-
-    # Create the shields_url_data using the parameters
-    shields_url_data = "https://img.shields.io/badge/-" + \
-        data_database + "-" + shields_color_data
-
-    # Create the 'Data' string using the parameters
-    data = "[" + "!" + "[" + data_database + "]" + \
-        "(" + shields_url_data + ")" + "]" + "(" + url_data + ")"
-    
-    return data

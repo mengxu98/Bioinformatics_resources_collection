@@ -3,60 +3,7 @@ import requests
 from bs4 import BeautifulSoup
 
 from .check_color import check_color
-
-
-# def format_code(code_language,
-#                 url_code,
-#                 url):
-#     """
-#     Format code information: code_language, url_code and url
-#     """
-
-#     print("Formatting code information......")
-#     if not url_code and not code_language:
-#         code_infors = search_code(url)
-
-#         if code_infors:
-#             if len(code_infors) == 1:
-#                 code_language = code_infors[0][0]
-#                 url_code = code_infors[0][1]
-#                 shields_color_code = check_color(code_language)
-#                 codes = code_info(code_language, url_code, shields_color_code)
-
-#             else:
-#                 codes = ""
-#                 for code_infor in code_infors:
-#                     code_language = code_infor[0]
-#                     url_code = code_infor[1]
-#                     shields_color_code = check_color(code_language)
-#                     code = code_info(code_language, url_code,
-#                                      shields_color_code)
-#                     codes = codes + code
-
-#         else:
-#             print("Failed to obtain code information for this paper......")
-#             url_code = ""
-#             code_language = "Unknown"
-#             shields_color_code = check_color(code_language)
-#             codes = code_info(code_language, url_code, shields_color_code)
-
-#     elif url_code and not code_language:
-#         print(f"The code from {url_code}......")
-#         code_language = "Unknown"
-#         shields_color_code = check_color(code_language)
-#         codes = code_info(code_language, url_code, shields_color_code)
-
-#     elif not url_code and code_language:
-#         print(f"The code written by {code_language}......")
-#         shields_color_code = check_color(code_language)
-#         codes = code_info(code_language, url_code, shields_color_code)
-
-#     else:
-#         print(f"The code written by {code_language}, and from {url_code}......")
-#         shields_color_code = check_color(code_language)
-#         codes = code_info(code_language, url_code, shields_color_code)
-
-#     return codes
+from .format_shields import format_shields
 
 
 def format_code(code_language,
@@ -83,7 +30,8 @@ def format_code(code_language,
                 code_language = code_infors[0][0]
                 url_code = code_infors[0][1]
                 shields_color_code = check_color(code_language)
-                codes = code_info(code_language, url_code, shields_color_code)
+                codes = format_shields(
+                    code_language, url_code, shields_color_code)
 
             else:
                 codes = ""
@@ -91,16 +39,17 @@ def format_code(code_language,
                     code_language = code_infor[0]
                     url_code = code_infor[1]
                     shields_color_code = check_color(code_language)
-                    code = code_info(code_language, url_code, shields_color_code)
+                    code = format_shields(code_language, url_code,
+                                          shields_color_code)
                     codes = codes + code
-        
+
         else:
             print("Failed to obtain code information for this paper......")
             # If no code is found
             url_code = ""
             code_language = "Unknown"
             shields_color_code = check_color(code_language)
-            codes = code_info(code_language, url_code, shields_color_code)
+            codes = format_shields(code_language, url_code, shields_color_code)
 
     elif url_code and not code_language:
         code_language = "Unknown"
@@ -110,13 +59,15 @@ def format_code(code_language,
             codes = ""
             for url_code_single in url_code:
                 print(f"The code from {url_code_single}......")
-                code = code_info(code_language, url_code_single, shields_color_code)
+                code = format_shields(
+                    code_language, url_code_single, shields_color_code)
                 codes = codes + code
-        
+
         else:
+            url_code=url_code[0]
             print(f"The code from {url_code}......")
             # If URL code is provided but no code language
-            codes = code_info(code_language, url_code, shields_color_code)
+            codes = format_shields(code_language, url_code, shields_color_code)
 
     elif not url_code and code_language:
         # If code language is provided but no URL code
@@ -125,14 +76,16 @@ def format_code(code_language,
             for code_language_single in code_language:
                 print(f"The code provided by {code_language_single}......")
                 shields_color_code = check_color(code_language_single)
-                code = code_info(code_language_single, url_code, shields_color_code)
+                code = format_shields(code_language_single,
+                                      url_code, shields_color_code)
                 codes = codes + code
-        
+
         else:
+            code_language=code_language[0]
             print(f"The code provided by {url_code}......")
             # If URL code is provided but no code language
             shields_color_code = check_color(code_language)
-            codes = code_info(code_language, url_code, shields_color_code)
+            codes = format_shields(code_language, url_code, shields_color_code)
 
     else:
         if len(code_language) > 1 and len(url_code) > 1:
@@ -146,17 +99,23 @@ def format_code(code_language,
 
             codes = ""
             for url_code_single, code_language_single in zip(url_code, code_language):
-                print(f"The code provided by {code_language_single}, and from {url_code_single}......")
+                print(
+                    f"The code provided by {code_language_single}, and from {url_code_single}......")
                 shields_color_code = check_color(code_language_single)
-                code = code_info(code_language_single, url_code_single, shields_color_code)
+                code = format_shields(code_language_single,
+                                      url_code_single, shields_color_code)
                 codes = codes + code
-        
+
         else:
             if len(code_language) == 1 and len(url_code) == 1:
-                print(f"The code provided by {code_language}, and from {url_code}......")
+                code_language=code_language[0]
+                url_code=url_code[0]
+                print(
+                    f"The code provided by {code_language}, and from {url_code}......")
                 # If both code language and URL code are provided
                 shields_color_code = check_color(code_language)
-                codes = code_info(code_language, url_code, shields_color_code)
+                codes = format_shields(
+                    code_language, url_code, shields_color_code)
 
     return codes
 
@@ -291,26 +250,3 @@ def github_filter(code_link):
         print(f"This code_link: {code_link} maybe not a code repository......")
         code_infors = ["Unknown", code_link]
         return code_infors
-
-
-def code_info(code_language,
-              url_code,
-              shields_color_code):
-    """
-    This function takes a code_language, url_code, and shields_color_code as arguments and returns a string
-    that represents the code.
-    """
-
-    # Replace any spaces in the code language with %20
-    if " " in code_language:
-        code_language = code_language.replace(" ", "%20")
-
-    # Create the code string using the URL and the code language
-    shields_url_code = "https://img.shields.io/badge/-" + \
-        code_language + "-" + shields_color_code
-
-    # Create the 'Code' string using the parameters
-    code = "[" + "!" + "[" + code_language + "]" + \
-        "(" + shields_url_code + ")" + "]" + "(" + url_code + ")"
-            
-    return code
