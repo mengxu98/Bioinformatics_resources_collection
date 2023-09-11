@@ -13,6 +13,7 @@ def check_color(string):
     color_dict = {
         "R": "198ce7",
         "Python": "3572a5",
+        "MATLAB": "e16737",
         "R Python": "00008B",
         "Shell": "89e051",
         "Jupyter Notebook": "da5b0b",
@@ -20,6 +21,8 @@ def check_color(string):
         "Zenodo": "024dad",
         "PKU": "357ca5",
         "figshare": "c62764",
+        "UK Biobank": "005f6f",
+        "ADNI": "34791f",
         "Website": "B03060",
         "Failed": "c02f31",
         "Unknown": "ADADAD",

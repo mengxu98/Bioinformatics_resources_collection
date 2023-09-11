@@ -34,12 +34,12 @@ If you encounter any problems when using this script, please issue on GitHub or 
 from functions.extract_information import extract_paper_infor
 
 # The URL of paper obtain from: https://www.semanticscholar.org/
-url_paper = "https://api.semanticscholar.org/v1/paper/59447739b7dda29ef919184cc8246cbbbd5e8938"
+url_paper = "https://api.semanticscholar.org/v1/paper/806cfebf4f12d190197101608d7fe140f8edadb8"
 doi_paper = ['']
-code_language = ['Python']
-url_code = ['https://github.com/zhanglab-wbgcas/STGRNS']
+code_language = ['R']
+url_code = ['https://github.com/One-Biosciences/MAYA/']
 data_database = ['None']
-url_data = ['']
+url_data = ['None']
 
 
 extract_paper_infor(url_paper,
