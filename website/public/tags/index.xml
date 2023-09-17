@@ -1,0 +1,113 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Paper with code</title>
+    <link>http://localhost:1313/tags/</link>
+    <description>Recent content in Tags on Paper with code</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>©2023 Mengxu.</copyright>
+    
+        <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>http://localhost:1313/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/</guid>
+      <description>&lt;h1 id=&#34;papers-with-code&#34;&gt;&lt;em&gt;Papers with code&lt;/em&gt;&lt;/h1&gt;
+&lt;p&gt;This repository is used to record same papers with different categories, such as, bioinformatics methods (main) in &lt;a href=&#34;http://localhost:1313/papers/papers-with-method/index.html&#34;&gt;&lt;em&gt;&lt;code&gt;Papers with method&lt;/code&gt;&lt;/em&gt;&lt;/a&gt;
+ and biology stories in &lt;a href=&#34;http://localhost:1313/papers/papers-with-story/index.html&#34;&gt;&lt;em&gt;&lt;code&gt;Papers with story&lt;/code&gt;&lt;/em&gt;&lt;/a&gt;
+ of single-cell omics data.&lt;/p&gt;
+&lt;h2 id=&#34;papers-with-method&#34;&gt;Papers with method&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Journal&lt;/th&gt;
+&lt;th&gt;Date&lt;/th&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Code&lt;/th&gt;
+&lt;th&gt;Data&lt;/th&gt;
+&lt;th&gt;Citation&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Nature Communications&lt;/td&gt;
+&lt;td&gt;2022&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://doi.org/10.1038/s41467-022-33619-9&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Elucidating tumor heterogeneity from spatially resolved transcriptomics data by multi-view graph collaborative learning&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/cmzuo11/stMVC&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/-Python-3572a5&#34;
+        alt=&#34;Python&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE176078&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/-GEO-336699&#34;
+        alt=&#34;GEO&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.semanticscholar.org/paper/09690abc5440dec515c14256dccf7fe45acee988&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/dynamic/json?label=citation&amp;amp;query=citationCount&amp;amp;url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2F09690abc5440dec515c14256dccf7fe45acee988%3Ffields%3DcitationCount&#34;
+        alt=&#34;citation&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;More see &lt;a href=&#34;http://localhost:1313/papers/papers-with-method/index.html&#34;&gt;&lt;em&gt;&lt;code&gt;Papers with method&lt;/code&gt;&lt;/em&gt;&lt;/a&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;papers-with-story&#34;&gt;Papers with story&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Journal&lt;/th&gt;
+&lt;th&gt;Date&lt;/th&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Code&lt;/th&gt;
+&lt;th&gt;Data&lt;/th&gt;
+&lt;th&gt;Citation&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Nature communications&lt;/td&gt;
+&lt;td&gt;2023&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://doi.org/10.1038/s41467-023-35832-6&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Single-cell analysis reveals prognostic fibroblast subpopulations linked to molecular and immunological subtypes of lung cancer&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/cjh-lab/NCOMMS_NSCLC_scFibs&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/-R-198ce7&#34;
+        alt=&#34;R&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE153935&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/-GEO-336699&#34;
+        alt=&#34;GEO&#34;/&gt;&lt;/a&gt;
+ &lt;a href=&#34;https://zenodo.org/record/7400873#.ZCZBDl5LgQ8&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/-Zenodo-024dad&#34;
+        alt=&#34;Zenodo&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.semanticscholar.org/paper/Single-cell-analysis-reveals-prognostic-fibroblast-Hanley-Waise/a5b158dbafff3ade8a9779c134441e5f3db18e2d&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/dynamic/json?label=citation&amp;amp;query=citationCount&amp;amp;url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2Fa5b158dbafff3ade8a9779c134441e5f3db18e2d%3Ffields%3DcitationCount&#34;
+        alt=&#34;citation&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;More see &lt;a href=&#34;http://localhost:1313/papers/papers-with-story/index.html&#34;&gt;&lt;em&gt;&lt;code&gt;Papers with story&lt;/code&gt;&lt;/em&gt;&lt;/a&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;maintenance&#34;&gt;Maintenance&lt;/h2&gt;
+&lt;p&gt;If you interested this project and want to maintenance it, please see &lt;a href=&#34;http://localhost:1313/papers/readme/index.html&#34;&gt;&lt;em&gt;&lt;code&gt;here&lt;/code&gt;&lt;/em&gt;&lt;/a&gt;
+ or &lt;a href=&#34;https://github.com/allenai/s2-folks/tree/add-CI-action&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;em&gt;&lt;code&gt;s2-folks&lt;/code&gt;&lt;/em&gt;&lt;/a&gt;
+ for more information.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
