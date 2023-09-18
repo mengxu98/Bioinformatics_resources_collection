@@ -1,0 +1,383 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Paper with code</title>
+    <link>https://mengxu98.github.io/papers-with-code/posts/</link>
+    <description>Recent content in Posts on Paper with code</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>©2023 Mengxu.</copyright>
+    <lastBuildDate>Mon, 18 Sep 2023 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://mengxu98.github.io/papers-with-code/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Papers with code</title>
+      <link>https://mengxu98.github.io/papers-with-code/posts/papers-with-story/</link>
+      <pubDate>Mon, 18 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mengxu98.github.io/papers-with-code/posts/papers-with-story/</guid>
+      <description>&lt;h1 id=&#34;papers-with-code&#34;&gt;Papers with code&lt;/h1&gt;
+&lt;h3 id=&#34;a-repository-of-papers-with-code&#34;&gt;A repository of Papers-With-Code&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;Journal&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Date&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Title&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Code&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Data&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Citation&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Tumor&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Nature communications&lt;/td&gt;
+&lt;td&gt;2023&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://doi.org/10.1038/s41467-023-35832-6&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Single-cell analysis reveals prognostic fibroblast subpopulations linked to molecular and immunological subtypes of lung cancer&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/cjh-lab/NCOMMS_NSCLC_scFibs&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/-R-198ce7&#34;
+        alt=&#34;R&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE153935&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/-GEO-336699&#34;
+        alt=&#34;GEO&#34;/&gt;&lt;/a&gt;
+ &lt;a href=&#34;https://zenodo.org/record/7400873#.ZCZBDl5LgQ8&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/-Zenodo-024dad&#34;
+        alt=&#34;Zenodo&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.semanticscholar.org/paper/Single-cell-analysis-reveals-prognostic-fibroblast-Hanley-Waise/a5b158dbafff3ade8a9779c134441e5f3db18e2d&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/dynamic/json?label=citation&amp;amp;query=citationCount&amp;amp;url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2Fa5b158dbafff3ade8a9779c134441e5f3db18e2d%3Ffields%3DcitationCount&#34;
+        alt=&#34;citation&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Science&lt;/td&gt;
+&lt;td&gt;2021&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.science.org/doi/10.1126/science.abe6474&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Pan-cancer single-cell landscape of tumor-infiltrating T cells&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://zenodo.org/record/5461803#.ZCknc15LgQ8&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/-R%20Python%20Shell-00008B&#34;
+        alt=&#34;R-ipynb-Shell&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://cancer-pku.cn:3838/PanC_T/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/-PKU-336699&#34;
+        alt=&#34;PKU&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.semanticscholar.org/paper/Pan-cancer-single-cell-landscape-of-T-cells-Zheng-Qin/eda76900f3954e1930080779b5cfb92274a11da3&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/dynamic/json?label=citation&amp;amp;query=citationCount&amp;amp;url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2Feda76900f3954e1930080779b5cfb92274a11da3%3Ffields%3DcitationCount&#34;
+        alt=&#34;citation&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Science&lt;/td&gt;
+&lt;td&gt;2018&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.science.org/doi/10.1126/science.aaq1723&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Cell type atlas and lineage tree of a whole complex animal by single-cell transcriptomics&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/rajewsky-lab/planarian_lineages&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/-Jupyter%20Notebook-da5b0b&#34;
+        alt=&#34;Jupyter%20Notebook&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/-Unknow-ADADAD&#34;
+        alt=&#34;Unknow&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.semanticscholar.org/paper/Cell-type-atlas-and-lineage-tree-of-a-whole-complex-Plass-Solana/41b3c17dcaad2d25cad02c93d0d57e2b3a67e0f2&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/dynamic/json?label=citation&amp;amp;query=citationCount&amp;amp;url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2F41b3c17dcaad2d25cad02c93d0d57e2b3a67e0f2%3Ffields%3DcitationCount&#34;
+        alt=&#34;citation&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;scientific data&lt;/td&gt;
+&lt;td&gt;2023&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.nature.com/articles/s41597-023-02074-6&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;An integrated single-cell transcriptomic dataset for non-small cell lung cancer&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://figshare.com/articles/online_resource/NSCLC_data_reanalysis_codes/22106201?backTo=/collections/An_integrated_single-cell_transcriptomic_dataset_for1_non-small_cell_lung_cancer/6222221?backTo=/collections/An_integrated_single-cell_transcriptomic_dataset_for1_non-small_cell_lung_cancer/6222221?backTo=/collections/An_integrated_single-cell_transcriptomic_dataset_for1_non-small_cell_lung_cancer/6222221&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/-R-198ce7&#34;
+        alt=&#34;R&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://figshare.com/collections/An_integrated_single-cell_transcriptomic_dataset_for1_non-small_cell_lung_cancer/6222221/3&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/-figshare-c62764&#34;
+        alt=&#34;figshare&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.semanticscholar.org/paper/An-integrated-single-cell-transcriptomic-dataset-Prazanowska-Lim/2e68442733604d3ff3f9fe5e62201ffc4f1ea951&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/dynamic/json?label=citation&amp;amp;query=citationCount&amp;amp;url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2F2e68442733604d3ff3f9fe5e62201ffc4f1ea951%3Ffields%3DcitationCount&#34;
+        alt=&#34;citation&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Oncogene&lt;/td&gt;
+&lt;td&gt;2020&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://doi.org/10.1038/s41388-021-02054-3&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Single-cell RNA sequencing reveals distinct tumor microenvironmental patterns in lung adenocarcinoma&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://doi.org/10.24433/CO.0121060.v1&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/-R-198ce7&#34;
+        alt=&#34;R&#34;/&gt;&lt;/a&gt;
+&lt;a href=&#34;https://github.com/bischofp/single_cell_lung_adenocarcinoma&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/-Jupyter%20Notebook-da5b0b&#34;
+        alt=&#34;Jupyter%20Notebook&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/-Unknown-ADADAD&#34;
+        alt=&#34;Unknown&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.semanticscholar.org/paper/Single-cell-RNA-sequencing-reveals-distinct-tumor-Bischoff-Trinks/66d79bafce806798b72b4333854b8761073221cc&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/dynamic/json?label=citation&amp;amp;query=citationCount&amp;amp;url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2F66d79bafce806798b72b4333854b8761073221cc%3Ffields%3DcitationCount&#34;
+        alt=&#34;citation&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Genome Medicine&lt;/td&gt;
+&lt;td&gt;2023&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://doi.org/10.1186/s13073-023-01164-9&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Tumor microenvironment remodeling after neoadjuvant immunotherapy in non-small cell lung cancer revealed by single-cell RNA sequencing&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/Junjie-Hu/NSCLC-immunotherapy&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/-R%20Python-00008B&#34;
+        alt=&#34;R%20Python&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE207422&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/-GEO-336699&#34;
+        alt=&#34;GEO&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.semanticscholar.org/paper/Tumor-microenvironment-remodeling-after-neoadjuvant-Hu-Zhang/dfb50b723e402caac70b0dcbe21ca58e34401505&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/dynamic/json?label=citation&amp;amp;query=citationCount&amp;amp;url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2Fdfb50b723e402caac70b0dcbe21ca58e34401505%3Ffields%3DcitationCount&#34;
+        alt=&#34;citation&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Nature Computational Science&lt;/td&gt;
+&lt;td&gt;2021&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.nature.com/articles/s43588-021-00099-8&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Modeling gene regulatory networks using neural network architectures&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/HantaoShu/DeepSEM&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/-Python-3572a5&#34;
+        alt=&#34;Python&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/-GEO-336699&#34;
+        alt=&#34;GEO&#34;/&gt;&lt;/a&gt;
+ &lt;a href=&#34;https://zenodo.org/record/3378975&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/-Zenodo-024dad&#34;
+        alt=&#34;Zenodo&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.semanticscholar.org/paper/Modeling-gene-regulatory-networks-using-neural-Shu-Zhou/99fdbe369f58bacbdb3e4394499060fe03813706&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/dynamic/json?label=citation&amp;amp;query=citationCount&amp;amp;url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2F99fdbe369f58bacbdb3e4394499060fe03813706%3Ffields%3DcitationCount&#34;
+        alt=&#34;citation&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Developmental cell&lt;/td&gt;
+&lt;td&gt;2022&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pubmed/35512700&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;High-resolution 3D spatiotemporal transcriptomic maps of developing Drosophila embryos and larvae.&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.cell.com/cms/10.1016/j.devcel.2022.04.006/attachment/94171a16-fac1-4d9e-b7e0-bd4909baf4f0/mmc6&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/-R%20Python-00008B&#34;
+        alt=&#34;R%20Python&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://db.cngb.org/stomics/flysta3d/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/-Website-B03060&#34;
+        alt=&#34;Website&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.semanticscholar.org/paper/a81789d2afa4f26b870cd2d9937d25e45f2153b5&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/dynamic/json?label=citation&amp;amp;query=citationCount&amp;amp;url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2Fa81789d2afa4f26b870cd2d9937d25e45f2153b5%3Ffields%3DcitationCount&#34;
+        alt=&#34;citation&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;BioAge&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Cell Reports&lt;/td&gt;
+&lt;td&gt;2022&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://doi.org/10.1016/j.celrep.2022.110459&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Distinct biological ages of organs and systems identified from a multi-omics study.&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://doi.org/10.5281/zenodo.6002321&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/-R-198ce7&#34;
+        alt=&#34;R&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://doi.org/10.6084/m9.figshare.19085156&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/-figshare-c62764&#34;
+        alt=&#34;figshare&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.semanticscholar.org/paper/fa40c4ea0810be27e974e0d97cf6eeaf2ef85973&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/dynamic/json?label=citation&amp;amp;query=citationCount&amp;amp;url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2Ffa40c4ea0810be27e974e0d97cf6eeaf2ef85973%3Ffields%3DcitationCount&#34;
+        alt=&#34;citation&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</description>
+    </item>
+    
+    <item>
+      <title>Description</title>
+      <link>https://mengxu98.github.io/papers-with-code/posts/description/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mengxu98.github.io/papers-with-code/posts/description/</guid>
+      <description>&lt;h1 id=&#34;description&#34;&gt;&lt;em&gt;Description&lt;/em&gt;&lt;/h1&gt;
+&lt;p&gt;This repository is used to record same papers with different categories, such as, bioinformatics methods (main) in &lt;a href=&#34;https://mengxu98.github.io/papers-with-code/papers/papers-with-method.md&#34;&gt;&lt;code&gt;Papers with method&lt;/code&gt;&lt;/a&gt;
+ and biology stories in &lt;a href=&#34;https://mengxu98.github.io/papers-with-code/papers/papers-with-story.md&#34;&gt;&lt;code&gt;Papers with story&lt;/code&gt;&lt;/a&gt;
+ of single-cell omics data.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;maintenance&#34;&gt;Maintenance&lt;/h2&gt;
+&lt;p&gt;This repository is builded and maintained by Mengxu(&lt;a href=&#34;mailto:mengxu98@qq.com&#34;&gt;mengxu98@qq.com&lt;/a&gt;
+).
+If you interested it, please add items as follow rules, and PR:
+You can choose one of the following ways:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Refer the &amp;lsquo;README&amp;rsquo; file and manually fill in the following information:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Add &amp;ldquo;| Journal | Date | Title | Code | Data | Citation |&amp;rdquo;;&lt;/li&gt;
+&lt;li&gt;For Journal and Title, please sort by A-Z;&lt;/li&gt;
+&lt;li&gt;For Date, please sort by published date;&lt;/li&gt;
+&lt;li&gt;For Code and Data, please reference: &lt;a href=&#34;https://img.shields.io/;&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;https://img.shields.io/;&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;For Citation, the data of Citation could obtain from: &lt;a href=&#34;https://www.semanticscholar.org/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;https://www.semanticscholar.org/&lt;/a&gt;
+.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Automatically fill in information using &amp;rsquo;extract_paper_infor&amp;rsquo; function:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Parameter: &amp;lsquo;url_paper&amp;rsquo;, need to provide a link to the paper from &lt;a href=&#34;https://www.semanticscholar.org/;&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;https://www.semanticscholar.org/;&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;Parameter: &amp;lsquo;code_language&amp;rsquo;, the main programming languages used in the paper;&lt;/li&gt;
+&lt;li&gt;Parameter: &amp;lsquo;url_code&amp;rsquo;, code storage address in the paper;&lt;/li&gt;
+&lt;li&gt;Parameter: &amp;lsquo;data_database&amp;rsquo;, database for storing data in the paper;&lt;/li&gt;
+&lt;li&gt;Parameter: &amp;lsquo;url_data&amp;rsquo;, data storage address in the paper.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Note:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Using &lt;code&gt;pip install -r requirements.txt&lt;/code&gt; to get all the dependencies&lt;/li&gt;
+&lt;li&gt;Please shut down the &lt;code&gt;proxy&lt;/code&gt; service when using this script!&lt;/li&gt;
+&lt;li&gt;If you encounter any problems while using the script, please issue on GitHub.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
+    <item>
+      <title>Papers with method</title>
+      <link>https://mengxu98.github.io/papers-with-code/posts/papers-with-method/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mengxu98.github.io/papers-with-code/posts/papers-with-method/</guid>
+      <description>&lt;h1 id=&#34;papers-with-method&#34;&gt;Papers with method&lt;/h1&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Journal&lt;/th&gt;
+&lt;th&gt;Date&lt;/th&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Code&lt;/th&gt;
+&lt;th&gt;Data&lt;/th&gt;
+&lt;th&gt;Citation&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Nature Communications&lt;/td&gt;
+&lt;td&gt;2022&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://doi.org/10.1038/s41467-022-33619-9&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Elucidating tumor heterogeneity from spatially resolved transcriptomics data by multi-view graph collaborative learning&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/cmzuo11/stMVC&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/-Python-3572a5&#34;
+        alt=&#34;Python&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE176078&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/-GEO-336699&#34;
+        alt=&#34;GEO&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.semanticscholar.org/paper/09690abc5440dec515c14256dccf7fe45acee988&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/dynamic/json?label=citation&amp;amp;query=citationCount&amp;amp;url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2F09690abc5440dec515c14256dccf7fe45acee988%3Ffields%3DcitationCount&#34;
+        alt=&#34;citation&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Nature Communications&lt;/td&gt;
+&lt;td&gt;2022&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://doi.org/10.1038/s41467-022-32111-8&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Knowledge-graph-based cell-cell communication inference for spatially resolved transcriptomic data with SpaTalk&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/ZJUFanLab/SpaTalk&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/-R-198ce7&#34;
+        alt=&#34;R&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.nature.com/articles/s41467-022-32111-8#data-availability&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/-Website-B03060&#34;
+        alt=&#34;Website&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.semanticscholar.org/paper/7957b93e72b7775066da09cf9fb742eb2707b1f8&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/dynamic/json?label=citation&amp;amp;query=citationCount&amp;amp;url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2F7957b93e72b7775066da09cf9fb742eb2707b1f8%3Ffields%3DcitationCount&#34;
+        alt=&#34;citation&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Genome Biology&lt;/td&gt;
+&lt;td&gt;2022&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://doi.org/10.1186/s13059-022-02783-y&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Evaluation of cell-cell interaction methods by integrating single-cell RNA sequencing data with spatial information&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wanglabtongji/CCI&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/-R%20Python-00008B&#34;
+        alt=&#34;R%20Python&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://genomebiology.biomedcentral.com/articles/10.1186/s13059-022-02783-y#availability-of-data-and-materials&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/-Website-B03060&#34;
+        alt=&#34;Website&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.semanticscholar.org/paper/631e4db76fb0fd5ac6e1d7029627d0b99373540c&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/dynamic/json?label=citation&amp;amp;query=citationCount&amp;amp;url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2F631e4db76fb0fd5ac6e1d7029627d0b99373540c%3Ffields%3DcitationCount&#34;
+        alt=&#34;citation&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Computational and Structural Biotechnology Journal&lt;/td&gt;
+&lt;td&gt;2021&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://doi.org/10.1016/j.csbj.2021.06.043&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;UCell: Robust and scalable single-cell gene signature scoring&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/carmonalab/UCell&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/-R-198ce7&#34;
+        alt=&#34;R&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/-Null-FAFAFA&#34;
+        alt=&#34;Null&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.semanticscholar.org/paper/8b9c1b99a5b857331da15cdca3ab74f78e3f2d2f&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/dynamic/json?label=citation&amp;amp;query=citationCount&amp;amp;url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2F8b9c1b99a5b857331da15cdca3ab74f78e3f2d2f%3Ffields%3DcitationCount&#34;
+        alt=&#34;citation&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Bioinformatics&lt;/td&gt;
+&lt;td&gt;2023&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://doi.org/10.1093/bioinformatics/btad165&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;STGRNS: an interpretable transformer-based method for inferring gene regulatory networks from single-cell transcriptomic data&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/zhanglab-wbgcas/STGRNS&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/-Python-3572a5&#34;
+        alt=&#34;Python&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/-Null-FAFAFA&#34;
+        alt=&#34;Null&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.semanticscholar.org/paper/59447739b7dda29ef919184cc8246cbbbd5e8938&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/dynamic/json?label=citation&amp;amp;query=citationCount&amp;amp;url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2F59447739b7dda29ef919184cc8246cbbbd5e8938%3Ffields%3DcitationCount&#34;
+        alt=&#34;citation&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Nature Medicine&lt;/td&gt;
+&lt;td&gt;2023&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://doi.org/10.1038/s41591-023-02296-6&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Heterogeneous aging across multiple organ systems and prediction of chronic disease and mortality (BioAge)&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/yetianmed/BioAge&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/-MATLAB-e16737&#34;
+        alt=&#34;MATLAB&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://bbams.ndph.ox.ac.uk/ams/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/-UK%20Biobank-005f6f&#34;
+        alt=&#34;UK%20Biobank&#34;/&gt;&lt;/a&gt;
+&lt;a href=&#34;https://adni.loni.usc.edu/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/-ADNI-34791f&#34;
+        alt=&#34;ADNI&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.semanticscholar.org/paper/e55822f9277e715529f816ed5e4fbb3f77f8d6ea&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/dynamic/json?label=citation&amp;amp;query=citationCount&amp;amp;url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2Fe55822f9277e715529f816ed5e4fbb3f77f8d6ea%3Ffields%3DcitationCount&#34;
+        alt=&#34;citation&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Nature Communications&lt;/td&gt;
+&lt;td&gt;2022&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://doi.org/10.1038/s41467-023-37410-2&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Multi-modal quantification of pathway activity with MAYA&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/One-Biosciences/MAYA/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/-R-198ce7&#34;
+        alt=&#34;R&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;Null&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/-Null-FAFAFA&#34;
+        alt=&#34;Null&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.semanticscholar.org/paper/806cfebf4f12d190197101608d7fe140f8edadb8&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/dynamic/json?label=citation&amp;amp;query=citationCount&amp;amp;url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2F806cfebf4f12d190197101608d7fe140f8edadb8%3Ffields%3DcitationCount&#34;
+        alt=&#34;citation&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
