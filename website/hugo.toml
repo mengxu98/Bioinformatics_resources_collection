@@ -4,6 +4,7 @@ title = "Paper with code"
 theme = "hugo-notepadium"
 copyright = "©2023 Mengxu."
 
+publishDir = "../docs"
 
 [params]
 style = "auto"  # default: auto. light: light theme, dark: dark theme, auto: based on system.
