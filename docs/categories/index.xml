@@ -11,119 +11,11 @@
     
     
     <item>
-      <title></title>
-      <link>https://mengxu98.github.io/papers-with-code/archives/</link>
-      <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://mengxu98.github.io/papers-with-code/archives/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Placeholder Text</title>
-      <link>https://mengxu98.github.io/papers-with-code/post/</link>
+      <title>Description</title>
+      <link>https://mengxu98.github.io/papers-with-code/posts/description/</link>
       <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://mengxu98.github.io/papers-with-code/post/</guid>
-      <description>&lt;h1 id=&#34;papers-with-code&#34;&gt;&lt;em&gt;Papers with code&lt;/em&gt;&lt;/h1&gt;
-&lt;p&gt;This repository is used to record same papers with different categories, such as, bioinformatics methods (main) in &lt;a href=&#34;https://mengxu98.github.io/papers-with-code/papers/papers-with-method/index.html&#34;&gt;&lt;em&gt;&lt;code&gt;Papers with method&lt;/code&gt;&lt;/em&gt;&lt;/a&gt;
- and biology stories in &lt;a href=&#34;https://mengxu98.github.io/papers-with-code/papers/papers-with-story/index.html&#34;&gt;&lt;em&gt;&lt;code&gt;Papers with story&lt;/code&gt;&lt;/em&gt;&lt;/a&gt;
- of single-cell omics data.&lt;/p&gt;
-&lt;h2 id=&#34;papers-with-method&#34;&gt;Papers with method&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Journal&lt;/th&gt;
-&lt;th&gt;Date&lt;/th&gt;
-&lt;th&gt;Title&lt;/th&gt;
-&lt;th&gt;Code&lt;/th&gt;
-&lt;th&gt;Data&lt;/th&gt;
-&lt;th&gt;Citation&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Nature Communications&lt;/td&gt;
-&lt;td&gt;2022&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://doi.org/10.1038/s41467-022-33619-9&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Elucidating tumor heterogeneity from spatially resolved transcriptomics data by multi-view graph collaborative learning&lt;/a&gt;
-&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/cmzuo11/stMVC&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/-Python-3572a5&#34;
-        alt=&#34;Python&#34;/&gt;&lt;/a&gt;
-&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE176078&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/-GEO-336699&#34;
-        alt=&#34;GEO&#34;/&gt;&lt;/a&gt;
-&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.semanticscholar.org/paper/09690abc5440dec515c14256dccf7fe45acee988&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/dynamic/json?label=citation&amp;amp;query=citationCount&amp;amp;url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2F09690abc5440dec515c14256dccf7fe45acee988%3Ffields%3DcitationCount&#34;
-        alt=&#34;citation&#34;/&gt;&lt;/a&gt;
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;More see &lt;a href=&#34;https://mengxu98.github.io/papers-with-code/papers/papers-with-method/index.html&#34;&gt;&lt;em&gt;&lt;code&gt;Papers with method&lt;/code&gt;&lt;/em&gt;&lt;/a&gt;
-&lt;/p&gt;
-&lt;h2 id=&#34;papers-with-story&#34;&gt;Papers with story&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Journal&lt;/th&gt;
-&lt;th&gt;Date&lt;/th&gt;
-&lt;th&gt;Title&lt;/th&gt;
-&lt;th&gt;Code&lt;/th&gt;
-&lt;th&gt;Data&lt;/th&gt;
-&lt;th&gt;Citation&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Nature communications&lt;/td&gt;
-&lt;td&gt;2023&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://doi.org/10.1038/s41467-023-35832-6&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Single-cell analysis reveals prognostic fibroblast subpopulations linked to molecular and immunological subtypes of lung cancer&lt;/a&gt;
-&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/cjh-lab/NCOMMS_NSCLC_scFibs&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/-R-198ce7&#34;
-        alt=&#34;R&#34;/&gt;&lt;/a&gt;
-&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE153935&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/-GEO-336699&#34;
-        alt=&#34;GEO&#34;/&gt;&lt;/a&gt;
- &lt;a href=&#34;https://zenodo.org/record/7400873#.ZCZBDl5LgQ8&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/-Zenodo-024dad&#34;
-        alt=&#34;Zenodo&#34;/&gt;&lt;/a&gt;
-&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.semanticscholar.org/paper/Single-cell-analysis-reveals-prognostic-fibroblast-Hanley-Waise/a5b158dbafff3ade8a9779c134441e5f3db18e2d&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/dynamic/json?label=citation&amp;amp;query=citationCount&amp;amp;url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2Fa5b158dbafff3ade8a9779c134441e5f3db18e2d%3Ffields%3DcitationCount&#34;
-        alt=&#34;citation&#34;/&gt;&lt;/a&gt;
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;More see &lt;a href=&#34;https://mengxu98.github.io/papers-with-code/papers/papers-with-story/index.html&#34;&gt;&lt;em&gt;&lt;code&gt;Papers with story&lt;/code&gt;&lt;/em&gt;&lt;/a&gt;
-&lt;/p&gt;
-&lt;h2 id=&#34;maintenance&#34;&gt;Maintenance&lt;/h2&gt;
-&lt;p&gt;If you interested this project and want to maintenance it, please see &lt;a href=&#34;https://mengxu98.github.io/papers-with-code/papers/readme/index.html&#34;&gt;&lt;em&gt;&lt;code&gt;here&lt;/code&gt;&lt;/em&gt;&lt;/a&gt;
- or &lt;a href=&#34;https://github.com/allenai/s2-folks/tree/add-CI-action&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;em&gt;&lt;code&gt;s2-folks&lt;/code&gt;&lt;/em&gt;&lt;/a&gt;
- for more information.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Placeholder Text</title>
-      <link>https://mengxu98.github.io/papers-with-code/posts/11/</link>
-      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://mengxu98.github.io/papers-with-code/posts/11/</guid>
+      <guid>https://mengxu98.github.io/papers-with-code/posts/description/</guid>
       <description>&lt;h1 id=&#34;papers-with-code&#34;&gt;&lt;em&gt;Papers with code&lt;/em&gt;&lt;/h1&gt;
 &lt;p&gt;This repository is used to record same papers with different categories, such as, bioinformatics methods (main) in &lt;a href=&#34;https://mengxu98.github.io/papers-with-code/papers/papers-with-method.md&#34;&gt;&lt;code&gt;Papers with method&lt;/code&gt;&lt;/a&gt;
  and biology stories in &lt;a href=&#34;https://mengxu98.github.io/papers-with-code/papers/papers-with-story.md&#34;&gt;&lt;code&gt;Papers with story&lt;/code&gt;&lt;/a&gt;
@@ -163,37 +55,7 @@ You can choose one of the following ways:&lt;/p&gt;
 &lt;li&gt;If you encounter any problems while using the script, please issue on GitHub.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://mengxu98.github.io/papers-with-code/about/</link>
-      <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://mengxu98.github.io/papers-with-code/about/</guid>
-      <description>&lt;p&gt;Written in Go, Hugo is an open source static site generator available under the &lt;a href=&#34;https://github.com/gohugoio/hugo/blob/master/LICENSE&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Apache Licence 2.0.&lt;/a&gt;
- Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.&lt;/p&gt;
-&lt;p&gt;Hugo makes use of a variety of open source projects including:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/yuin/goldmark&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;https://github.com/yuin/goldmark&lt;/a&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/alecthomas/chroma&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;https://github.com/alecthomas/chroma&lt;/a&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/muesli/smartcrop&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;https://github.com/muesli/smartcrop&lt;/a&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/spf13/cobra&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;https://github.com/spf13/cobra&lt;/a&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/spf13/viper&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;https://github.com/spf13/viper&lt;/a&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.&lt;/p&gt;
-&lt;p&gt;Hugo is for people who want to hand code their own website without worrying about setting up complicated runtimes, dependencies and databases.&lt;/p&gt;
-&lt;p&gt;Websites built with Hugo are extremelly fast, secure and can be deployed anywhere including, AWS, GitHub Pages, Heroku, Netlify and any other hosting provider.&lt;/p&gt;
-&lt;p&gt;Learn more and contribute on &lt;a href=&#34;https://github.com/gohugoio&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;GitHub&lt;/a&gt;
-.&lt;/p&gt;
-</description>
+&lt;/ol&gt;</description>
     </item>
     
     <item>
@@ -323,8 +185,7 @@ You can choose one of the following ways:&lt;/p&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
-&lt;/table&gt;
-</description>
+&lt;/table&gt;</description>
     </item>
     
     <item>
@@ -338,54 +199,23 @@ You can choose one of the following ways:&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th&gt;Journal&lt;/th&gt;
-&lt;th&gt;Date&lt;/th&gt;
-&lt;th&gt;Title&lt;/th&gt;
-&lt;th&gt;Code&lt;/th&gt;
-&lt;th&gt;Data&lt;/th&gt;
-&lt;th&gt;Citation&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Journal&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Date&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Title&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Code&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Data&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Citation&lt;/strong&gt;&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;Cell Reports&lt;/td&gt;
-&lt;td&gt;2022&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://doi.org/10.1016/j.celrep.2022.110459&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Distinct biological ages of organs and systems identified from a multi-omics study.&lt;/a&gt;
-&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://doi.org/10.5281/zenodo.6002321&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/-R-198ce7&#34;
-        alt=&#34;R&#34;/&gt;&lt;/a&gt;
-&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://doi.org/10.6084/m9.figshare.19085156&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/-figshare-c62764&#34;
-        alt=&#34;figshare&#34;/&gt;&lt;/a&gt;
-&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.semanticscholar.org/paper/fa40c4ea0810be27e974e0d97cf6eeaf2ef85973&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/dynamic/json?label=citation&amp;amp;query=citationCount&amp;amp;url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2Ffa40c4ea0810be27e974e0d97cf6eeaf2ef85973%3Ffields%3DcitationCount&#34;
-        alt=&#34;citation&#34;/&gt;&lt;/a&gt;
-&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;Tumor&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mengxu98.github.io/papers-with-code/posts/papers-with-story_raw/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mengxu98.github.io/papers-with-code/posts/papers-with-story_raw/</guid>
-      <description>&lt;h1 id=&#34;papers-with-story&#34;&gt;Papers with story&lt;/h1&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Journal&lt;/th&gt;
-&lt;th&gt;Date&lt;/th&gt;
-&lt;th&gt;Title&lt;/th&gt;
-&lt;th&gt;Code&lt;/th&gt;
-&lt;th&gt;Data&lt;/th&gt;
-&lt;th&gt;Citation&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;Nature communications&lt;/td&gt;
 &lt;td&gt;2023&lt;/td&gt;
@@ -512,8 +342,137 @@ You can choose one of the following ways:&lt;/p&gt;
         alt=&#34;citation&#34;/&gt;&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;BioAge&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Cell Reports&lt;/td&gt;
+&lt;td&gt;2022&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://doi.org/10.1016/j.celrep.2022.110459&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Distinct biological ages of organs and systems identified from a multi-omics study.&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://doi.org/10.5281/zenodo.6002321&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/-R-198ce7&#34;
+        alt=&#34;R&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://doi.org/10.6084/m9.figshare.19085156&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/-figshare-c62764&#34;
+        alt=&#34;figshare&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.semanticscholar.org/paper/fa40c4ea0810be27e974e0d97cf6eeaf2ef85973&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/dynamic/json?label=citation&amp;amp;query=citationCount&amp;amp;url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2Ffa40c4ea0810be27e974e0d97cf6eeaf2ef85973%3Ffields%3DcitationCount&#34;
+        alt=&#34;citation&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mengxu98.github.io/papers-with-code/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mengxu98.github.io/papers-with-code/readme/</guid>
+      <description>&lt;h1 id=&#34;papers-with-code&#34;&gt;&lt;em&gt;Papers with code&lt;/em&gt;&lt;/h1&gt;
+&lt;p&gt;This repository is used to record same papers with different categories, such as, bioinformatics methods (main) in &lt;a href=&#34;https://mengxu98.github.io/papers-with-code/website/content/papers/papers-with-method.md&#34;&gt;&lt;em&gt;&lt;code&gt;Papers with method&lt;/code&gt;&lt;/em&gt;&lt;/a&gt;
+ and biology stories in &lt;a href=&#34;https://mengxu98.github.io/papers-with-code/website/content/papers/papers-with-story.md&#34;&gt;&lt;em&gt;&lt;code&gt;Papers with story&lt;/code&gt;&lt;/em&gt;&lt;/a&gt;
+ of single-cell omics data.&lt;/p&gt;
+&lt;h2 id=&#34;papers-with-method&#34;&gt;Papers with method&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Journal&lt;/th&gt;
+&lt;th&gt;Date&lt;/th&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Code&lt;/th&gt;
+&lt;th&gt;Data&lt;/th&gt;
+&lt;th&gt;Citation&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Nature Communications&lt;/td&gt;
+&lt;td&gt;2022&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://doi.org/10.1038/s41467-022-33619-9&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Elucidating tumor heterogeneity from spatially resolved transcriptomics data by multi-view graph collaborative learning&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/cmzuo11/stMVC&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/-Python-3572a5&#34;
+        alt=&#34;Python&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE176078&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/-GEO-336699&#34;
+        alt=&#34;GEO&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.semanticscholar.org/paper/09690abc5440dec515c14256dccf7fe45acee988&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/dynamic/json?label=citation&amp;amp;query=citationCount&amp;amp;url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2F09690abc5440dec515c14256dccf7fe45acee988%3Ffields%3DcitationCount&#34;
+        alt=&#34;citation&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;p&gt;More see &lt;a href=&#34;https://mengxu98.github.io/papers-with-code/website/content/papers/papers-with-method.md&#34;&gt;&lt;em&gt;&lt;code&gt;Papers with method&lt;/code&gt;&lt;/em&gt;&lt;/a&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;papers-with-story&#34;&gt;Papers with story&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Journal&lt;/th&gt;
+&lt;th&gt;Date&lt;/th&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Code&lt;/th&gt;
+&lt;th&gt;Data&lt;/th&gt;
+&lt;th&gt;Citation&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Nature communications&lt;/td&gt;
+&lt;td&gt;2023&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://doi.org/10.1038/s41467-023-35832-6&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Single-cell analysis reveals prognostic fibroblast subpopulations linked to molecular and immunological subtypes of lung cancer&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/cjh-lab/NCOMMS_NSCLC_scFibs&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/-R-198ce7&#34;
+        alt=&#34;R&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE153935&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/-GEO-336699&#34;
+        alt=&#34;GEO&#34;/&gt;&lt;/a&gt;
+ &lt;a href=&#34;https://zenodo.org/record/7400873#.ZCZBDl5LgQ8&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/-Zenodo-024dad&#34;
+        alt=&#34;Zenodo&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.semanticscholar.org/paper/Single-cell-analysis-reveals-prognostic-fibroblast-Hanley-Waise/a5b158dbafff3ade8a9779c134441e5f3db18e2d&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/dynamic/json?label=citation&amp;amp;query=citationCount&amp;amp;url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2Fa5b158dbafff3ade8a9779c134441e5f3db18e2d%3Ffields%3DcitationCount&#34;
+        alt=&#34;citation&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;More see &lt;a href=&#34;https://mengxu98.github.io/papers-with-code/website/content/papers/papers-with-story.md&#34;&gt;&lt;em&gt;&lt;code&gt;Papers with story&lt;/code&gt;&lt;/em&gt;&lt;/a&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;maintenance&#34;&gt;Maintenance&lt;/h2&gt;
+&lt;p&gt;If you interested this project and want to maintenance it, please see &lt;a href=&#34;https://mengxu98.github.io/papers-with-code/website/content/papers/README.md&#34;&gt;&lt;em&gt;&lt;code&gt;here&lt;/code&gt;&lt;/em&gt;&lt;/a&gt;
+ or &lt;a href=&#34;https://github.com/allenai/s2-folks/tree/add-CI-action&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;em&gt;&lt;code&gt;s2-folks&lt;/code&gt;&lt;/em&gt;&lt;/a&gt;
+ for more information.&lt;/p&gt;
 </description>
     </item>
     
