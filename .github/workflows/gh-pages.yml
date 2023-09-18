@@ -24,9 +24,22 @@ jobs:
       - name: Build
         run: cd website ; hugo
  
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        if: github.ref == 'refs/heads/main'
+      # - name: Build site
+      #   run: pkgdown::build_site_github_pages(new_process = FALSE, install = FALSE)
+      #   shell: Rscript {0}
+
+      # - name: Deploy
+      #   uses: peaceiris/actions-gh-pages@v3
+      #   if: github.ref == 'refs/heads/main'
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      #     publish_dir: ./public
+
+
+      - name: Deploy to GitHub pages 🚀
+        if: github.event_name != 'pull_request'
+        uses: JamesIves/github-pages-deploy-action@v4.4.1
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+          clean: false
+          branch: gh-pages
+          folder: docs
