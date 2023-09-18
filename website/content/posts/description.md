@@ -1,18 +1,17 @@
-+++
-author = "Mengxu"
-title = "Description"
-date = "2019-03-09"
-description = "Lorem Ipsum Dolor Si Amet"
-tags = [
-    "markdown",
-    "text",
-]
-+++
-
-# *Papers with code*
+---
+# 常用定义
+title: "Description"
+# tags: ["tag-1"]
+# categories: ["index"]
+author: "Mengxu"
+# mathjax: true
+# draft: true
+# publishDate: 2024-09-18T10:00:00Z
+---
+<!--more-->
+# *Description*
 This repository is used to record same papers with different categories, such as, bioinformatics methods (main) in [`Papers with method`](/papers/papers-with-method.md) and biology stories in [`Papers with story`](/papers/papers-with-story.md) of single-cell omics data.
 <!--more-->
-
 ## Maintenance
 This repository is builded and maintained by Mengxu(mengxu98@qq.com).
 If you interested it, please add items as follow rules, and PR:

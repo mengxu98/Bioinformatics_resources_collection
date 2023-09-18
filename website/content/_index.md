@@ -1,6 +1,13 @@
-+++
-author = "Hugo Authors"
-+++
+---
+title: "Papers with code"
+date: 2023-09-18
+# tags: ["tag-1"]
+# categories: ["index"]
+author: "Mengxu"
+# mathjax: true
+# draft: true
+# publishDate: 2024-09-18T10:00:00Z
+---
 
 # *Papers with code*
 This repository is used to record same papers with different categories, such as, bioinformatics methods (main) in [*`Papers with method`*](posts/papers-with-method/index.html) and biology stories in [*`Papers with story`*](posts/papers-with-story/index.html) of single-cell omics data.
