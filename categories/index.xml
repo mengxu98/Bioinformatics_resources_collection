@@ -17,8 +17,8 @@
       
       <guid>https://mengxu98.github.io/papers-with-code/posts/description/</guid>
       <description>&lt;h1 id=&#34;description&#34;&gt;&lt;em&gt;Description&lt;/em&gt;&lt;/h1&gt;
-&lt;p&gt;This repository is used to record same papers with different categories, such as, bioinformatics methods (main) in &lt;a href=&#34;https://mengxu98.github.io/papers-with-code/papers/papers-with-method.md&#34;&gt;&lt;code&gt;Papers with method&lt;/code&gt;&lt;/a&gt;
- and biology stories in &lt;a href=&#34;https://mengxu98.github.io/papers-with-code/papers/papers-with-story.md&#34;&gt;&lt;code&gt;Papers with story&lt;/code&gt;&lt;/a&gt;
+&lt;p&gt;This repository is used to record same papers with different categories, such as, bioinformatics methods (main) in &lt;a href=&#34;posts/papers-with-method/index.html&#34;&gt;&lt;em&gt;&lt;code&gt;Papers with method&lt;/code&gt;&lt;/em&gt;&lt;/a&gt;
+ and biology stories in &lt;a href=&#34;posts/papers-with-story/index.html&#34;&gt;&lt;em&gt;&lt;code&gt;Papers with story&lt;/code&gt;&lt;/em&gt;&lt;/a&gt;
  of single-cell omics data.&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;h2 id=&#34;maintenance&#34;&gt;Maintenance&lt;/h2&gt;
