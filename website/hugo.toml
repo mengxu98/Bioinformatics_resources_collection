@@ -1,7 +1,9 @@
-baseURL = "http://localhost:1313/"
+baseURL = "http://localhost:1313"
 title = "Paper with code"
 theme = "hugo-notepadium"
 copyright = "©2023 Mengxu."
+
+publishDir = "../docs"
 
 [[params.nav.custom]]
 title = "GitHub"
