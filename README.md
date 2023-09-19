@@ -1,5 +1,5 @@
 # *Papers with code*
-This repository is used to record same papers with different categories, such as, bioinformatics methods (main) in [*`Papers with method`*](https://mengxu98.github.io/papers-with-code/posts/papers-with-method/index.html) and biology stories in [*`Papers with story`*](https://mengxu98.github.io/papers-with-code/posts/papers-with-methohttps://mengxu98.github.io/papers-with-code/posts/papers-with-story/index.htmld/index.html) of single-cell omics data.
+This repository is used to record same papers with different categories, such as, bioinformatics methods (main) in [*`Papers with method`*](https://mengxu98.github.io/papers-with-code/posts/papers-with-method/index.html) and biology stories in [*`Papers with story`*](https://mengxu98.github.io/papers-with-code/posts/papers-with-story/index.html) of single-cell omics data.
 
 ## Papers with method
 | Journal | Date | Title | Code | Data | Citation |
@@ -15,7 +15,7 @@ More see [*`Papers with method`*](https://mengxu98.github.io/papers-with-code/po
 | Nature communications | 2023 | [Single-cell analysis reveals prognostic fibroblast subpopulations linked to molecular and immunological subtypes of lung cancer](https://doi.org/10.1038/s41467-023-35832-6) | [![R](https://img.shields.io/badge/-R-198ce7)](https://github.com/cjh-lab/NCOMMS_NSCLC_scFibs) | [![GEO](https://img.shields.io/badge/-GEO-336699)](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE153935) [![Zenodo](https://img.shields.io/badge/-Zenodo-024dad)](https://zenodo.org/record/7400873#.ZCZBDl5LgQ8) | [![citation](https://img.shields.io/badge/dynamic/json?label=citation&query=citationCount&url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2Fa5b158dbafff3ade8a9779c134441e5f3db18e2d%3Ffields%3DcitationCount)](https://www.semanticscholar.org/paper/Single-cell-analysis-reveals-prognostic-fibroblast-Hanley-Waise/a5b158dbafff3ade8a9779c134441e5f3db18e2d) |
 |||||||
 
-More see [*`Papers with story`*](https://mengxu98.github.io/papers-with-code/posts/papers-with-methohttps://mengxu98.github.io/papers-with-code/posts/papers-with-story/index.htmld/index.html)
+More see [*`Papers with story`*](https://mengxu98.github.io/papers-with-code/posts/papers-with-story/index.html)
 
 ## Maintenance
 If you interested this project and want to maintenance it, please see [*`here`*](https://mengxu98.github.io/papers-with-code/posts/description/index.html) or [*`s2-folks`*](https://github.com/allenai/s2-folks/tree/add-CI-action) for more information.
