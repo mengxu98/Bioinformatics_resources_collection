@@ -11,6 +11,118 @@
     
     
     <item>
+      <title>Blogs, Books and Labs</title>
+      <link>https://mengxu98.github.io/papers-with-code/posts/blogsbookslabs/</link>
+      <pubDate>Sat, 23 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mengxu98.github.io/papers-with-code/posts/blogsbookslabs/</guid>
+      <description>&lt;h1 id=&#34;blogs-books-and-labs&#34;&gt;Blogs, Books and Labs&lt;/h1&gt;
+&lt;p&gt;Here is a list of some &lt;strong&gt;Bolgs&lt;/strong&gt;, &lt;strong&gt;Books&lt;/strong&gt; and &lt;strong&gt;Labs&lt;/strong&gt; that I think useful for who want to learn about single cell RNA sequencing (scRNA-seq) and related information and tools.&lt;/p&gt;
+&lt;h2 id=&#34;blogs&#34;&gt;Blogs&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Field&lt;/th&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;books&#34;&gt;Books&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Field&lt;/th&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://adv-r.hadley.nz/index.html&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Advanced R&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;scRNA-seq&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.singlecellcourse.org/index.html&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Analysis of single cell RNA-seq data&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;scRNA-seq&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;www.sc-best-practices.org&#34;&gt;Single-cell best practices&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;labs&#34;&gt;Labs&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Field&lt;/th&gt;
+&lt;th&gt;Lab&lt;/th&gt;
+&lt;th&gt;Masterpiece&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;scRNA-seq tools&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/theislab&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;theislab&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/theislab/scvelo&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;scvelo&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Brain Imaging&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://sites.google.com/view/yeolab&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Computational Brain Imaging Group&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/ThomasYeoLab/CBIG&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;CBIG&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;R · statistics&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://yihui.org/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Yihui Xie&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://yihui.org/en/vitae/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;here&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Gene regulatory network&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/zpliulab&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;zpliulab&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/zpliulab/scGENA&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;scGENA&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Gene regulatory network&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/zpliulab&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;netbiolab&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/netbiolab/scHumanNet&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;scHumanNet&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Gene regulatory network&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/zpliulab&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;aertslab&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/aertslab/SCENIC&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;SCENIC&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Gene regulatory network&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://lusystemsbio.northeastern.edu/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;LULAB&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://lusystemsbio.northeastern.edu/publications/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;here&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</description>
+    </item>
+    
+    <item>
       <title>Description</title>
       <link>https://mengxu98.github.io/papers-with-code/posts/description/</link>
       <pubDate>Mon, 18 Sep 2023 00:00:00 +0000</pubDate>
