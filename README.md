@@ -1,5 +1,6 @@
 # *Papers with code*
-This repository is used to record same papers with different categories, such as, bioinformatics methods (main) in [*`Papers with method`*](https://mengxu98.github.io/papers-with-code/posts/papers-with-method/index.html) and biology stories in [*`Papers with story`*](https://mengxu98.github.io/papers-with-code/posts/papers-with-story/index.html) of single-cell omics data.
+This repository is used to record same papers with different categories, such as, bioinformatics methods (main) in [***`Papers with method`***](https://mengxu98.github.io/papers-with-code/posts/papers-with-method/index.html) and biology stories in [***`Papers with story`***](https://mengxu98.github.io/papers-with-code/posts/papers-with-story/index.html) of single-cell omics data.
+Now, I make a new category: [***`Blogs, Books and labs`***](posts/blogs&books&labs/index.html), to introduce ***Bolgs***, ***Books*** and ***Labs*** that I think useful for who want to learn about single cell RNA sequencing (scRNA-seq) and related information and tools.
 
 ## Papers with method
 | Journal | Date | Title | Code | Data | Citation |
