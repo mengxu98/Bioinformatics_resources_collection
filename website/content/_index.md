@@ -39,5 +39,7 @@ More see [*`Papers with story`*](posts/papers-with-story/index.html)
 | Gene regulatory network | [aertslab](https://github.com/zpliulab) | [SCENIC](https://github.com/aertslab/SCENIC) |
 ||||
 
+More see [*`Blogs, Books and labs`*](posts/blogs&books&labs/index.html)
+
 ## Maintenance
 If you interested this project and want to maintenance it, please see [*`here`*](posts/description/index.html) or [*`s2-folks`*](https://github.com/allenai/s2-folks/tree/add-CI-action) for more information.
