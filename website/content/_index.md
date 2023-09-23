@@ -11,7 +11,7 @@ author: "Mengxu"
 
 # *Papers with code*
 This repository is used to record same papers with different categories, such as, bioinformatics methods (main) in [***`Papers with method`***](posts/papers-with-method/index.html) and biology stories in [***`Papers with story`***](posts/papers-with-story/index.html) of single-cell omics data.
-Now, I make a new category: [***`Blogs, Books and labs`***](posts/blogs&books&labs/index.html), to introduce ***Bolgs***, ***Books*** and ***Labs*** that I think useful for who want to learn about single cell RNA sequencing (scRNA-seq) and related information and tools.
+Now, I make a new category: [***`Blogs, Books and labs`***](posts/blogsbookslabs/index.html), to introduce ***Bolgs***, ***Books*** and ***Labs*** that I think useful for who want to learn about single cell RNA sequencing (scRNA-seq) and related information and tools.
 
 ## Papers with method
 
@@ -32,14 +32,14 @@ More see [*`Papers with method`*](posts/papers-with-method/index.html)
 
 More see [*`Papers with story`*](posts/papers-with-story/index.html)
 
-## Blogs, Books and labs
+## Blogs, Books and Labs
 | Field | Lab | Masterpiece |
 | -- | -- | -- |
 ||||
 | Gene regulatory network | [aertslab](https://github.com/zpliulab) | [SCENIC](https://github.com/aertslab/SCENIC) |
 ||||
 
-More see [*`Blogs, Books and labs`*](posts/blogs&books&labs/index.html)
+More see [*`Blogs, Books and labs`*](posts/blogsbookslabs/index.html)
 
 ## Maintenance
 If you interested this project and want to maintenance it, please see [*`here`*](posts/description/index.html) or [*`s2-folks`*](https://github.com/allenai/s2-folks/tree/add-CI-action) for more information.

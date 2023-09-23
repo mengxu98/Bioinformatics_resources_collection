@@ -16,7 +16,8 @@ Here is a list of some **Bolgs**, **Books** and **Labs** that I think useful for
 ## Blogs
 | Field | Title |
 | -- | -- |
-| | |
+| scRNA-seq | [Dictionary learning for integrative, multimodal, and scalable single-cell analysis (video)](https://www.youtube.com/watch?v=AHl5V-9dMOI) |
+| scRNA-seq | [Seurat - Guided Clustering Tutorial](https://satijalab.org/seurat/articles/pbmc3k_tutorial.html) |
 
 ## Books
 | Field | Title |
@@ -28,10 +29,12 @@ Here is a list of some **Bolgs**, **Books** and **Labs** that I think useful for
 ## Labs
 | Field | Lab | Masterpiece |
 | -- | -- | -- |
+| scRNA-seq tools | [satijalab](https://satijalab.org/) | [seurat](https://github.com/satijalab/seurat)  |
 | scRNA-seq tools | [theislab](https://github.com/theislab) | [scvelo](https://github.com/theislab/scvelo)  |
 | Brain Imaging | [Computational Brain Imaging Group](https://sites.google.com/view/yeolab) | [CBIG](https://github.com/ThomasYeoLab/CBIG) |
-| R · statistics | [Yihui Xie](https://yihui.org/) | [here](https://yihui.org/en/vitae/) |
 | Gene regulatory network | [zpliulab](https://github.com/zpliulab) | [scGENA](https://github.com/zpliulab/scGENA) |
 | Gene regulatory network | [netbiolab](https://github.com/zpliulab) | [scHumanNet](https://github.com/netbiolab/scHumanNet) |
 | Gene regulatory network | [aertslab](https://github.com/zpliulab) | [SCENIC](https://github.com/aertslab/SCENIC) |
 | Gene regulatory network | [LULAB](https://lusystemsbio.northeastern.edu/) | [here](https://lusystemsbio.northeastern.edu/publications/) |
+| R · statistics | [Yihui Xie](https://yihui.org/) | [here](https://yihui.org/en/vitae/) |
+| Bioinformation | [Quan Zou](http://lab.malab.cn/~zq/) | [here](http://lab.malab.cn/~zq/) |
