@@ -8,7 +8,7 @@ publishDir = "../docs"
 
 [params]
 style = "auto"  # default: auto. light: light theme, dark: dark theme, auto: based on system.
-dateFormat = "Monday, January 2, 2006"
+dateFormat = "Monday, January 2, 2023"
 
 [[params.nav.custom]]
 identifier = "github"
