@@ -1,12 +1,7 @@
 ---
 title: "Papers with method"
-date: 2023-09-18
-# tags: ["tag-1"]
-# categories: ["index"]
 author: "Mengxu"
-# mathjax: true
-# draft: true
-# publishDate: 2024-09-18T10:00:00Z
+date: 2023-10-24
 ---
 <!--more-->
 # Papers with method

@@ -1,12 +1,8 @@
 ---
 title: "Papers with code"
-date: 2023-09-18
-# tags: ["tag-1"]
-# categories: ["index"]
 author: "Mengxu"
-# mathjax: true
-# draft: true
-# publishDate: 2024-09-18T10:00:00Z
+date: 2023-10-24
+draft: false
 ---
 
 # *Papers with code*
@@ -32,14 +28,14 @@ More see [*`Papers with method`*](posts/papers-with-method/index.html)
 
 More see [*`Papers with story`*](posts/papers-with-story/index.html)
 
-## Blogs, Books and Labs
+## Blogs, Books, Labs and Databases
 | Field | Lab | Masterpiece |
 | -- | -- | -- |
 ||||
 | Gene regulatory network | [aertslab](https://github.com/zpliulab) | [SCENIC](https://github.com/aertslab/SCENIC) |
 ||||
 
-More see [*`Blogs, Books and labs`*](posts/blogsbookslabs/index.html)
+More see [*`Blogs, Books, Labs and Databases`*](posts/blogsbookslabs/index.html)
 
 ## Maintenance
 If you interested this project and want to maintenance it, please see [*`here`*](posts/description/index.html) or [*`s2-folks`*](https://github.com/allenai/s2-folks/tree/add-CI-action) for more information.
