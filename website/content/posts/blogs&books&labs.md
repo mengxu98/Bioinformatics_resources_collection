@@ -20,7 +20,8 @@ Here is a list of some **Bolgs**, **Books**, **Labs** and **Databases** that I t
 ## Books
 | Field | Title |
 | -- | -- |
-| | [Advanced R](https://adv-r.hadley.nz/index.html) |
+| R | [Advanced R](https://adv-r.hadley.nz/index.html) |
+| R | [Deep R Programming](https://deepr.gagolewski.com/) |
 | scRNA-seq | [Analysis of single cell RNA-seq data](https://www.singlecellcourse.org/index.html) |
 | scRNA-seq | [Single-cell best practices](www.sc-best-practices.org) |
 | Causal Inference | [A First Course in Causal Inference](https://arxiv.org/abs/2305.18793) |
