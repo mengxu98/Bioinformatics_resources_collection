@@ -60,8 +60,13 @@
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;R&lt;/td&gt;
 &lt;td&gt;&lt;a href=&#34;https://adv-r.hadley.nz/index.html&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Advanced R&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;R&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://deepr.gagolewski.com/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Deep R Programming&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
