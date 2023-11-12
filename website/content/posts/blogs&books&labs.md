@@ -40,6 +40,7 @@ Here is a list of some **Bolgs**, **Books**, **Labs** and **Databases** that I t
 | R · statistics | [Yihui Xie](https://yihui.org/) | [here](https://yihui.org/en/vitae/) |
 | Bioinformation | [Quan Zou](http://lab.malab.cn/~zq/) | [here](http://lab.malab.cn/~zq/) |
 | Similarity Network Fusion | [Similarity Network Fusion](http://compbio.cs.toronto.edu/SNF/SNF/Software.html/) | [SNFtool](https://rdrr.io/cran/SNFtool/man/SNF.html/) |
+| scRNA-seq and gene networks | [QuaDBio Group](https://bsse.ethz.ch/qdb/) | [Pando](https://github.com/quadbio/Pando/tree/main/) |
 
 ## Databases
 | Field | Database | Description |
