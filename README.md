@@ -28,4 +28,4 @@ More see [*`Papers with story`*](https://mengxu98.github.io/papers-with-code/pos
 More see [*`Blogs, Books, Labs and Databases`*](posts/blogsbookslabs/index.html)
 
 ## Maintenance
-If you interested this project and want to maintenance it, please see [*`here`*](https://mengxu98.github.io/papers-with-code/posts/description/index.html) or [*`s2-folks`*](https://github.com/allenai/s2-folks/tree/add-CI-action) for more information.
+If you interested this project and want to maintenance it, please see [*`here`*](https://mengxu98.github.io/papers-with-code/posts/description/index.html) or [*`s2-folks`*](https://github.com/allenai/s2-folks/tree/main) for more information.
