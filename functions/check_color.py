@@ -36,3 +36,28 @@ def check_color(string):
     shields_color = color_dict[string]
 
     return shields_color
+
+
+import unittest
+
+class TestCheckColor(unittest.TestCase):
+    def test_check_color(self):
+        self.assertEqual(check_color("R"), "198ce7")
+        self.assertEqual(check_color("Python"), "3572a5")
+        self.assertEqual(check_color("MATLAB"), "e16737")
+        self.assertEqual(check_color("R Python"), "00008B")
+        self.assertEqual(check_color("Shell"), "89e051")
+        self.assertEqual(check_color("Jupyter Notebook"), "da5b0b")
+        self.assertEqual(check_color("GEO"), "336699")
+        self.assertEqual(check_color("Zenodo"), "024dad")
+        self.assertEqual(check_color("PKU"), "357ca5")
+        self.assertEqual(check_color("figshare"), "c62764")
+        self.assertEqual(check_color("UK Biobank"), "005f6f")
+        self.assertEqual(check_color("ADNI"), "34791f")
+        self.assertEqual(check_color("Website"), "B03060")
+        self.assertEqual(check_color("Failed"), "c02f31")
+        self.assertEqual(check_color("Unknown"), "ADADAD")
+        self.assertEqual(check_color("Null"), "FAFAFA")
+
+if __name__ == '__main__':
+    unittest.main()
