@@ -78,7 +78,7 @@ def extract_paper_infor(url_paper,
 
         else:
             print(
-                f"Request failed with status code {response.status_code}......")
+                f"Request failed with status code: {response.status_code}......")
 
     else:
         if response.ok and response.status_code == 200:
@@ -115,7 +115,7 @@ def extract_paper_infor(url_paper,
 
         else:
             print(
-                f"Request failed with status code {response.status_code}......")
+                f"Request failed with status code: {response.status_code}......")
             sys.exit(1)
 
     # Merge variables as 'Title'
