@@ -34,12 +34,13 @@ If you encounter any problems when using this script, please issue on GitHub or 
 from functions.extract_information import extract_paper_infor
 
 # The URL of paper obtain from: https://www.semanticscholar.org/
-url_paper = "https://api.semanticscholar.org/v1/paper/806cfebf4f12d190197101608d7fe140f8edadb8"
+url_paper = "https://api.semanticscholar.org/v1/paper/c2971ece5f70f24bf65c828506cf17fe6cd20212"
+# https://www.semanticscholar.org/paper/Genes-associated-with-cognitive-ability-and-HAR-in-Driessens-Galakhova/c2971ece5f70f24bf65c828506cf17fe6cd20212
 doi_paper = ['']
-code_language = ['R']
-url_code = ['https://github.com/One-Biosciences/MAYA/']
-data_database = ['None']
-url_data = ['None']
+code_language = ['MATLAB']
+url_code = ['https://github.com/AnnaGalakhova/Driessens_Galakhova_Heyer_2022']
+data_database = ['Website']
+url_data = ['https://www.nature.com/articles/s41467-023-39946-9#data-availability']
 
 
 extract_paper_infor(url_paper,
@@ -48,4 +49,4 @@ extract_paper_infor(url_paper,
                     url_code,
                     data_database,
                     url_data,
-                    file="papers/papers-with-method.md") # "papers/papers-with-story.md"
+                    file="website/content/posts/papers-with-method.md")
