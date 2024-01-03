@@ -517,6 +517,21 @@
         alt=&#34;citation&#34;/&gt;&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Nature Communications&lt;/td&gt;
+&lt;td&gt;2023&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://doi.org/10.1038/s41467-023-39946-9&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Genes associated with cognitive ability and HAR show overlapping expression patterns in human cortical neuron types&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/AnnaGalakhova/Driessens_Galakhova_Heyer_2022&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/-MATLAB-e16737&#34;
+        alt=&#34;MATLAB&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.nature.com/articles/s41467-023-39946-9#data-availability&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/-Website-B03060&#34;
+        alt=&#34;Website&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.semanticscholar.org/paper/c2971ece5f70f24bf65c828506cf17fe6cd20212&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/dynamic/json?label=citation&amp;amp;query=citationCount&amp;amp;url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2Fc2971ece5f70f24bf65c828506cf17fe6cd20212%3Ffields%3DcitationCount&#34;
+        alt=&#34;citation&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;</description>
     </item>
