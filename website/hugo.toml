@@ -2,13 +2,13 @@ baseURL = "https://mengxu98.github.io/papers-with-code/"
 
 title = "Paper with code"
 theme = "hugo-notepadium"
-copyright = "©2023 Mengxu."
+copyright = "©2024 Mengxu."
 
 publishDir = "../docs"
 
 [params]
 style = "auto"  # default: auto. light: light theme, dark: dark theme, auto: based on system.
-dateFormat = "Monday, January 2, 2023"
+dateFormat = "Monday, January 2, 2024"
 
 [[params.nav.custom]]
 identifier = "github"
