@@ -16,6 +16,8 @@ Here is a list of some **Bolgs**, **Books**, **Labs** and **Databases** that I t
 | `Brain development` | [自然感觉刺激对脑发育的影响](https://www.cas.cn/kxcb/kpwz/201401/t20140129_4031024.shtml#:%7E:text=%E4%B8%B0%E5%AF%8C%E7%8E%AF%E5%A2%83%E3%80%81%E6%88%96%E8%80%85%E6%9B%B4,%E5%8A%A0%E5%82%AC%E4%BA%A7%E7%B4%A0%E7%9A%84%E8%A1%A8%E8%BE%BE%E3%80%82) |
 | `Brain development` | [青少年脑发育的个体差异性](https://zhuanlan.zhihu.com/p/307358952) |
 | `Brain development` | [丰富环境对儿童大脑发育的影响](https://zhuanlan.zhihu.com/p/532096885) |
+| `Mendelian randomization` | [浅谈孟德尔随机化法与经济学研究的渊源](https://zhuanlan.zhihu.com/p/507997457/) |
+| `Mendelian randomization` | [孟德尔随机化推断暴露因素与健康结局的因果关系](https://www.jianshu.com/p/8ac31267d3d8) |
 | `scRNA-seq` | [Dictionary learning for integrative, multimodal, and scalable single-cell analysis (video)](https://www.youtube.com/watch?v=AHl5V-9dMOI) |
 | `scRNA-seq` | [Seurat - Guided Clustering Tutorial](https://satijalab.org/seurat/articles/pbmc3k_tutorial.html) |
 | `scRNA-seq` | [awesome-deep-learning-single-cell-papers](https://github.com/OmicsML/awesome-deep-learning-single-cell-papers) |
@@ -47,6 +49,11 @@ Here is a list of some **Bolgs**, **Books**, **Labs** and **Databases** that I t
 | `scRNA-seq and gene networks` | [QuaDBio Group](https://bsse.ethz.ch/qdb/) | [Pando](https://github.com/quadbio/Pando/tree/main/) |
 
 ## Databases
-| Field | Database | Description |
-| -- | -- | -- |
-| `scRNA-seq` | [scRNASeqDB](https://bioinfo.uth.edu/scrnaseqdb/) | Human Single Cell Transcriptome Database  |
+| Field | Database | Description | Related paper |
+| -- | -- | -- | -- |
+| `scRNA-seq` | [scRNASeqDB](https://bioinfo.uth.edu/scrnaseqdb/) | Human Single Cell Transcriptome Database | |
+| `GWAS` | [GWAS Catalog](https://www.ebi.ac.uk/gwas/home) | The NHGRI-EBI Catalog of human genome-wide association studies | |
+| `GWAS` | [ieu](https://gwas.mrcieu.ac.uk/) | GWAS summary data | |
+| `GWAS` | [MR-base](https://gwas.mrcieu.ac.uk/) | MR-base is a database and analytical platform for Mendelian randomization | |
+| `GWAS` | [GWAS Summary Statistics](https://github.com/BIG-S2/GWAS) | GWAS Summary Statistics for Brain Imaging Phenotypes | [paper](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-022-04947-w) |
+| `GWAS` | [SSGAC Data Portal](https://thessgac.com/papers/) | The NHGRI-EBI Catalog of human genome-wide association studies | [paper](https://www.nature.com/articles/s41588-018-0147-3)] |
