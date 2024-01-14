@@ -58,6 +58,11 @@
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
+&lt;td&gt;&lt;code&gt;GWAS&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://gwaslab.org/2021/03/30/gwas%e5%85%a5%e9%97%a8%e6%96%87%e7%ab%a0%e4%b8%8e%e4%b9%a6%e7%b1%8d%e6%8e%a8%e8%8d%90/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;GWAS入门文章与书籍推荐&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
 &lt;td&gt;&lt;code&gt;scRNA-seq&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=AHl5V-9dMOI&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Dictionary learning for integrative, multimodal, and scalable single-cell analysis (video)&lt;/a&gt;
 &lt;/td&gt;
@@ -106,6 +111,16 @@
 &lt;tr&gt;
 &lt;td&gt;&lt;code&gt;Causal Inference&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;&lt;a href=&#34;https://arxiv.org/abs/2305.18793&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;A First Course in Causal Inference&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;GWAS&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://gwaslab.org/2021/11/14/twosamplemr/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;GWASLab&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;GWAS&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://cloufield.github.io/GWASTutorial/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;GWASTutorial&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
