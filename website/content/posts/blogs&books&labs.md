@@ -18,6 +18,7 @@ Here is a list of some **Bolgs**, **Books**, **Labs** and **Databases** that I t
 | `Brain development` | [丰富环境对儿童大脑发育的影响](https://zhuanlan.zhihu.com/p/532096885) |
 | `Mendelian randomization` | [浅谈孟德尔随机化法与经济学研究的渊源](https://zhuanlan.zhihu.com/p/507997457/) |
 | `Mendelian randomization` | [孟德尔随机化推断暴露因素与健康结局的因果关系](https://www.jianshu.com/p/8ac31267d3d8) |
+| `GWAS` | [GWAS入门文章与书籍推荐](https://gwaslab.org/2021/03/30/gwas%e5%85%a5%e9%97%a8%e6%96%87%e7%ab%a0%e4%b8%8e%e4%b9%a6%e7%b1%8d%e6%8e%a8%e8%8d%90/) |
 | `scRNA-seq` | [Dictionary learning for integrative, multimodal, and scalable single-cell analysis (video)](https://www.youtube.com/watch?v=AHl5V-9dMOI) |
 | `scRNA-seq` | [Seurat - Guided Clustering Tutorial](https://satijalab.org/seurat/articles/pbmc3k_tutorial.html) |
 | `scRNA-seq` | [awesome-deep-learning-single-cell-papers](https://github.com/OmicsML/awesome-deep-learning-single-cell-papers) |
@@ -30,6 +31,8 @@ Here is a list of some **Bolgs**, **Books**, **Labs** and **Databases** that I t
 | `scRNA-seq` | [Analysis of single cell RNA-seq data](https://www.singlecellcourse.org/index.html) |
 | `scRNA-seq` | [Single-cell best practices](www.sc-best-practices.org) |
 | `Causal Inference` | [A First Course in Causal Inference](https://arxiv.org/abs/2305.18793) |
+| `GWAS` | [GWASLab](https://gwaslab.org/2021/11/14/twosamplemr/) |
+| `GWAS` | [GWASTutorial](https://cloufield.github.io/GWASTutorial/) |
 
 ## Labs
 | Field | Lab | Masterpiece |
