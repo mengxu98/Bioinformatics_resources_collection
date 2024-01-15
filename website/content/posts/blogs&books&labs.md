@@ -59,4 +59,4 @@ Here is a list of some **Bolgs**, **Books**, **Labs** and **Databases** that I t
 | `GWAS` | [ieu](https://gwas.mrcieu.ac.uk/) | GWAS summary data | |
 | `GWAS` | [MR-base](https://gwas.mrcieu.ac.uk/) | MR-base is a database and analytical platform for Mendelian randomization | |
 | `GWAS` | [GWAS Summary Statistics](https://github.com/BIG-S2/GWAS) | GWAS Summary Statistics for Brain Imaging Phenotypes | [paper](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-022-04947-w) |
-| `GWAS` | [SSGAC Data Portal](https://thessgac.com/papers/) | The NHGRI-EBI Catalog of human genome-wide association studies | [paper](https://www.nature.com/articles/s41588-018-0147-3)] |
+| `GWAS` | [SSGAC Data Portal](https://thessgac.com/papers/) | The NHGRI-EBI Catalog of human genome-wide association studies | [paper](https://www.nature.com/articles/s41588-018-0147-3) |
