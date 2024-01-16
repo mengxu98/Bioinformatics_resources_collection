@@ -50,6 +50,7 @@ Here is a list of some **Bolgs**, **Books**, **Labs** and **Databases** that I t
 | `Bioinformation` | [Feng Zhang](https://fzhang.bioinfo-lab.com/) | [VECTOR](https://github.com/jumphone/Vector/) |
 | `Similarity Network Fusion` | [Similarity Network Fusion](http://compbio.cs.toronto.edu/SNF/SNF/Software.html/) | [SNFtool](https://rdrr.io/cran/SNFtool/man/SNF.html/) |
 | `scRNA-seq and gene networks` | [QuaDBio Group](https://bsse.ethz.ch/qdb/) | [Pando](https://github.com/quadbio/Pando/tree/main/) |
+| `GWAS` | [***GWASLab***](https://gwaslab.org/) |  |  |
 
 ## Databases
 | Field | Database | Description | Related paper |
@@ -60,3 +61,4 @@ Here is a list of some **Bolgs**, **Books**, **Labs** and **Databases** that I t
 | `GWAS` | [MR-base](https://gwas.mrcieu.ac.uk/) | MR-base is a database and analytical platform for Mendelian randomization | |
 | `GWAS` | [GWAS Summary Statistics](https://github.com/BIG-S2/GWAS) | GWAS Summary Statistics for Brain Imaging Phenotypes | [paper](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-022-04947-w) |
 | `GWAS` | [SSGAC Data Portal](https://thessgac.com/papers/) | The NHGRI-EBI Catalog of human genome-wide association studies | [paper](https://www.nature.com/articles/s41588-018-0147-3) |
+| `Brain` | [CHCP](https://www.scidb.cn/en/detail?dataSetId=f512d085f3d3452a9b14689e9997ca94#p2) | Chinese Human Connectome Project | [paper](https://www.nature.com/articles/s41593-022-01215-1) |
