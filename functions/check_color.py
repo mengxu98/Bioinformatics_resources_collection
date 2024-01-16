@@ -18,6 +18,7 @@ def check_color(string):
         "Shell": "89e051",
         "Jupyter Notebook": "da5b0b",
         "GEO": "336699",
+        "Github": "B03060",
         "Zenodo": "024dad",
         "PKU": "357ca5",
         "figshare": "c62764",
