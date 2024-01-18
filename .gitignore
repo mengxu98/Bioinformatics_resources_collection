@@ -1,4 +1,5 @@
-
 *.pyc
 docs
 .DS_Store
+.idea
+.vscode
