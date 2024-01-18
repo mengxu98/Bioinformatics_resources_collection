@@ -13,6 +13,7 @@ def check_color(string):
     color_dict = {
         "R": "198ce7",
         "Python": "3572a5",
+        "Java": "b0721a",
         "MATLAB": "e16737",
         "R Python": "00008B",
         "Shell": "89e051",
