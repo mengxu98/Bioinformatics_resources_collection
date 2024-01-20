@@ -275,6 +275,13 @@
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;code&gt;GWAS&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://analysistools.cancer.gov/ezqtl/#/home&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;ezQTL&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;ezQTL is a web-based tool for integrative QTL (Quantitative Trait Loci) visualization and colocalization with GWAS data for individual loci to aid GWAS annotation.&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;GWAS&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;&lt;a href=&#34;https://github.com/BIG-S2/GWAS&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;GWAS Summary Statistics&lt;/a&gt;
 &lt;/td&gt;
 &lt;td&gt;GWAS Summary Statistics for Brain Imaging Phenotypes&lt;/td&gt;
