@@ -45,6 +45,7 @@ Here is a list of some **Bolgs**, **Books**, **Labs** and **Databases** that I t
 | `Gene regulatory network` | [aertslab](https://github.com/zpliulab) | [SCENIC](https://github.com/aertslab/SCENIC) |
 | `Gene regulatory network` | [LULAB](https://lusystemsbio.northeastern.edu/) | [here](https://lusystemsbio.northeastern.edu/publications/) |
 | `Gene regulatory network` | [The Glass Group](https://sites.google.com/a/channing.harvard.edu/kimberlyglass/home) | [lionessR](https://github.com/kuijjerlab/lionessR) |
+| `Gene regulatory network` | [THE NETWORK ZOO](https://netzoo.github.io/) | |
 | `R · statistics` | [Yihui Xie](https://yihui.org/) | [here](https://yihui.org/en/vitae/) |
 | `Bioinformation` | [Quan Zou](http://lab.malab.cn/~zq/) | [here](http://lab.malab.cn/~zq/) |
 | `Bioinformation` | [Feng Zhang](https://fzhang.bioinfo-lab.com/) | [VECTOR](https://github.com/jumphone/Vector/) |
