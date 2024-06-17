@@ -136,10 +136,17 @@
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;code&gt;scRNA-seq tools&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;Bioinformatics tools&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;&lt;a href=&#34;https://satijalab.org/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;satijalab&lt;/a&gt;
 &lt;/td&gt;
 &lt;td&gt;&lt;a href=&#34;https://github.com/satijalab/seurat&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;seurat&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Bioinformatics tools&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://sqsun.github.io/index.html&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Sun Lab&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/fanyue322/TDEseq&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;TDEseq&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
