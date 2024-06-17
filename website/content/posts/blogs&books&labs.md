@@ -37,7 +37,8 @@ Here is a list of some **Bolgs**, **Books**, **Labs** and **Databases** that I t
 ## Labs
 | Field | Lab | Masterpiece |
 | -- | -- | -- |
-| `scRNA-seq tools` | [satijalab](https://satijalab.org/) | [seurat](https://github.com/satijalab/seurat)  |
+| `Bioinformatics tools` | [satijalab](https://satijalab.org/) | [seurat](https://github.com/satijalab/seurat)  |
+| `Bioinformatics tools` | [Sun Lab](https://sqsun.github.io/index.html) | [TDEseq](https://github.com/fanyue322/TDEseq)  |
 | `scRNA-seq tools` | [theislab](https://github.com/theislab) | [scvelo](https://github.com/theislab/scvelo)  |
 | `Brain Imaging` | [Computational Brain Imaging Group](https://sites.google.com/view/yeolab) | [CBIG](https://github.com/ThomasYeoLab/CBIG) |
 | `Gene regulatory network` | [zpliulab](https://github.com/zpliulab) | [scGENA](https://github.com/zpliulab/scGENA) |
