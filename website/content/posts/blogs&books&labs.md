@@ -57,7 +57,9 @@ Here is a list of some **Bolgs**, **Books**, **Labs** and **Databases** that I t
 ## Databases
 | Field | Database | Description | Related paper |
 | -- | -- | -- | -- |
-| `scRNA-seq` | [scRNASeqDB](https://bioinfo.uth.edu/scrnaseqdb/) | Human Single Cell Transcriptome Database | |
+| `Single-cell` | [scRNASeqDB](https://bioinfo.uth.edu/scrnaseqdb/) | Human Single Cell Transcriptome Database | |
+| `Single-cell` | [Azimuth](https://azimuth.hubmapconsortium.org/) | App for reference based single-cell analysis | [paper](https://doi.org/10.1016/j.cell.2021.04.048) |
+| `Single-cell` | [CancerSCEM](https://ngdc.cncb.ac.cn/cancerscem/) | Cancer Single-cell Expression Map | [paper (PMID: 34643725)](https://pubmed.ncbi.nlm.nih.gov/34643725/) |
 | `GWAS` | [GWAS Catalog](https://www.ebi.ac.uk/gwas/home) | The NHGRI-EBI Catalog of human genome-wide association studies | |
 | `GWAS` | [UK Biobank](https://www.ukbiobank.ac.uk/) | The world’s most important health research database | |
 | `GWAS` | [ieu_MR-base](https://gwas.mrcieu.ac.uk/) | MR-base is a database and analytical platform for Mendelian randomization | |
