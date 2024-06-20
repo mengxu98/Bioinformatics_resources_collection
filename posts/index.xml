@@ -1,22 +1,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Paper with code</title>
-    <link>https://mengxu98.github.io/papers-with-code/posts/</link>
-    <description>Recent content in Posts on Paper with code</description>
+    <title>Posts on Bioinformatics_resources_collection</title>
+    <link>https://mengxu98.github.io/Bioinformatics_resources_collection/posts/</link>
+    <description>Recent content in Posts on Bioinformatics_resources_collection</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>©2024 Mengxu.</copyright>
     <lastBuildDate>Thu, 24 Oct 2024 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="https://mengxu98.github.io/papers-with-code/posts/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://mengxu98.github.io/Bioinformatics_resources_collection/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Blogs, Books, Labs and Databases</title>
-      <link>https://mengxu98.github.io/papers-with-code/posts/blogsbookslabs/</link>
+      <link>https://mengxu98.github.io/Bioinformatics_resources_collection/posts/blogsbookslabs/</link>
       <pubDate>Thu, 11 Jan 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://mengxu98.github.io/papers-with-code/posts/blogsbookslabs/</guid>
+      <guid>https://mengxu98.github.io/Bioinformatics_resources_collection/posts/blogsbookslabs/</guid>
       <description>&lt;h1 id=&#34;blogs-books-labs-and-databases&#34;&gt;Blogs, Books, Labs and Databases&lt;/h1&gt;
 &lt;p&gt;Here is a list of some &lt;strong&gt;Bolgs&lt;/strong&gt;, &lt;strong&gt;Books&lt;/strong&gt;, &lt;strong&gt;Labs&lt;/strong&gt; and &lt;strong&gt;Databases&lt;/strong&gt; that I think useful for who want to learn about single cell RNA sequencing (scRNA-seq) and related information and tools.&lt;/p&gt;
 &lt;h2 id=&#34;blogs&#34;&gt;Blogs&lt;/h2&gt;
@@ -340,10 +340,10 @@
     
     <item>
       <title>Papers with method</title>
-      <link>https://mengxu98.github.io/papers-with-code/posts/papers-with-method/</link>
+      <link>https://mengxu98.github.io/Bioinformatics_resources_collection/posts/papers-with-method/</link>
       <pubDate>Thu, 11 Jan 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://mengxu98.github.io/papers-with-code/posts/papers-with-method/</guid>
+      <guid>https://mengxu98.github.io/Bioinformatics_resources_collection/posts/papers-with-method/</guid>
       <description>&lt;h1 id=&#34;papers-with-method&#34;&gt;Papers with method&lt;/h1&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -611,10 +611,10 @@
     
     <item>
       <title>Papers with story</title>
-      <link>https://mengxu98.github.io/papers-with-code/posts/papers-with-story/</link>
+      <link>https://mengxu98.github.io/Bioinformatics_resources_collection/posts/papers-with-story/</link>
       <pubDate>Thu, 11 Jan 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://mengxu98.github.io/papers-with-code/posts/papers-with-story/</guid>
+      <guid>https://mengxu98.github.io/Bioinformatics_resources_collection/posts/papers-with-story/</guid>
       <description>&lt;h1 id=&#34;papers-with-story&#34;&gt;Papers with story&lt;/h1&gt;
 &lt;h3 id=&#34;a-repository-of-papers-with-code&#34;&gt;A repository of Papers-With-Code&lt;/h3&gt;
 &lt;table&gt;
