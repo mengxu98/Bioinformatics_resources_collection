@@ -1,6 +1,6 @@
-baseURL = "https://mengxu98.github.io/papers-with-code/"
+baseURL = "https://mengxu98.github.io/Bioinformatics_resources_collection/"
 
-title = "Paper with code"
+title = "Bioinformatics_resources_collection"
 theme = "hugo-notepadium"
 copyright = "©2024 Mengxu."
 
@@ -13,7 +13,7 @@ dateFormat = "Monday, January 2, 2024"
 [[params.nav.custom]]
 identifier = "github"
 title = "GitHub"
-url = "https://github.com/mengxu98/papers-with-code"
+url = "https://github.com/mengxu98/Bioinformatics_resources_collection"
 
 [[params.nav.custom]]
 title = "Hugo"

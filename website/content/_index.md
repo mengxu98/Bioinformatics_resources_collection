@@ -1,11 +1,11 @@
 ---
-title: "Papers with code"
+title: "Bioinformatics_resources_collection"
 author: "Mengxu"
-date: 2024-01-11
+date: 2024-6-19
 draft: false
 ---
 
-# *Papers with code*
+# *Bioinformatics_resources_collection*
 This repository is used to record same papers with different categories, such as, bioinformatics methods (main) in [***`Papers with method`***](posts/papers-with-method/index.html) and biology stories in [***`Papers with story`***](posts/papers-with-story/index.html) of single-cell omics data.
 Now, I make a new category: [***`Blogs, Books and labs`***](posts/blogsbookslabs/index.html), to introduce ***Bolgs***, ***Books*** and ***Labs*** that I think useful for who want to learn about single cell RNA sequencing (scRNA-seq) and related information and tools.
 
