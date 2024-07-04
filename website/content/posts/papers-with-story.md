@@ -3,9 +3,7 @@ title: "Papers with story"
 author: "Mengxu"
 date: 2024-01-11
 ---
-
 <!--more-->
-# Papers with story
 ### A repository of Papers-With-Code
 | **Journal** | **Date** | **Title** | **Code** | **Data** | **Citation** |
 | -- | -- | -- | -- | -- | -- |

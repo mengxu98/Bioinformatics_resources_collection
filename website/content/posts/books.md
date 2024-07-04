@@ -5,7 +5,6 @@ date: 2024-07-03
 ---
 
 <!--more-->
-# *Books*
 
 Here is a list of some ***Books*** that I think useful for who want to learn about single cell RNA sequencing (scRNA-seq) and related information and tools.
 

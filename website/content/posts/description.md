@@ -4,9 +4,8 @@ author: "Mengxu"
 date: 2024-07-03
 ---
 <!--more-->
-# *Description*
+
 This repository is used to record same papers with different categories, such as, bioinformatics methods (main) in [*`Papers with method`*](posts/papers-with-method/index.html) and biology stories in [*`Papers with story`*](posts/papers-with-story/index.html) of single-cell omics data.
-<!--more-->
 
 ## Maintenance
 This repository is builded and maintained by Mengxu(mengxu98@qq.com).

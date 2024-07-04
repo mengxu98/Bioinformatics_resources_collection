@@ -5,7 +5,6 @@ date: 2024-07-03
 ---
 
 <!--more-->
-# *Databases*
 
 Here is a list of some ***Databases*** that I think useful for who want to learn about single cell RNA sequencing (scRNA-seq) and related information and tools.
 
@@ -22,3 +21,5 @@ Here is a list of some ***Databases*** that I think useful for who want to learn
 | `GWAS` | [GWAS Summary Statistics](https://github.com/BIG-S2/GWAS) | GWAS Summary Statistics for Brain Imaging Phenotypes | [paper](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-022-04947-w) |
 | `GWAS` | [SSGAC Data Portal](https://thessgac.com/) | The NHGRI-EBI Catalog of human genome-wide association studies | [paper](https://www.nature.com/articles/s41588-018-0147-3) |
 | `Brain` | [CHCP](https://www.scidb.cn/en/detail?dataSetId=f512d085f3d3452a9b14689e9997ca94#p2) | Chinese Human Connectome Project | [paper](https://www.nature.com/articles/s41593-022-01215-1) |
+| `Network` | [EnhFFL](https://lcbb.swjtu.edu.cn/EnhFFL/) | A Database of Enhancer Mediated Feed-Forward Loops | [paper](https://doi.org/10.1093/pcmedi/pbab006) |
+| `Network` | [CellNetdb](http://www.bioailab.com:3838/CellNetdb) | A Database of Enhancer Mediated Feed-Forward Loops | [paper (PMID: 38347596)](https://pubmed.ncbi.nlm.nih.gov/38347596/) |

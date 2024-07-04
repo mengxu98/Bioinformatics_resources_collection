@@ -4,7 +4,6 @@ author: "Mengxu"
 date: 2024-01-11
 ---
 <!--more-->
-# Papers with method
 | Journal | Date | Title | Code | Data | Citation |
 | -- | -- | -- | -- | -- | -- |
 |  |  |  |  |  |  |

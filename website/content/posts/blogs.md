@@ -5,7 +5,6 @@ date: 2024-07-03
 ---
 
 <!--more-->
-# *Blogs*
 
 Here is a list of some ***Bolgs*** that I think useful for who want to learn about single cell RNA sequencing (scRNA-seq) and related information and tools.
 
