@@ -11,13 +11,12 @@
     
     
     <item>
-      <title>Blogs, Books, Labs and Databases</title>
+      <title>Blogs</title>
       <link>https://mengxu98.github.io/Bioinformatics_resources_collection/posts/blogs/</link>
-      <pubDate>Thu, 11 Jan 2024 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 03 Jul 2024 00:00:00 +0000</pubDate>
       
       <guid>https://mengxu98.github.io/Bioinformatics_resources_collection/posts/blogs/</guid>
-      <description>&lt;h1 id=&#34;blogs&#34;&gt;&lt;em&gt;Blogs&lt;/em&gt;&lt;/h1&gt;
-&lt;p&gt;Here is a list of some &lt;em&gt;&lt;strong&gt;Bolgs&lt;/strong&gt;&lt;/em&gt; that I think useful for who want to learn about single cell RNA sequencing (scRNA-seq) and related information and tools.&lt;/p&gt;
+      <description>&lt;p&gt;Here is a list of some &lt;em&gt;&lt;strong&gt;Bolgs&lt;/strong&gt;&lt;/em&gt; that I think useful for who want to learn about single cell RNA sequencing (scRNA-seq) and related information and tools.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -81,13 +80,12 @@
     </item>
     
     <item>
-      <title>Blogs, Books, Labs and Databases</title>
+      <title>Books</title>
       <link>https://mengxu98.github.io/Bioinformatics_resources_collection/posts/books/</link>
-      <pubDate>Thu, 11 Jan 2024 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 03 Jul 2024 00:00:00 +0000</pubDate>
       
       <guid>https://mengxu98.github.io/Bioinformatics_resources_collection/posts/books/</guid>
-      <description>&lt;h1 id=&#34;books&#34;&gt;&lt;em&gt;Books&lt;/em&gt;&lt;/h1&gt;
-&lt;p&gt;Here is a list of some &lt;em&gt;&lt;strong&gt;Books&lt;/strong&gt;&lt;/em&gt; that I think useful for who want to learn about single cell RNA sequencing (scRNA-seq) and related information and tools.&lt;/p&gt;
+      <description>&lt;p&gt;Here is a list of some &lt;em&gt;&lt;strong&gt;Books&lt;/strong&gt;&lt;/em&gt; that I think useful for who want to learn about single cell RNA sequencing (scRNA-seq) and related information and tools.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -136,13 +134,12 @@
     </item>
     
     <item>
-      <title>Blogs, Books, Labs and Databases</title>
+      <title>Databases</title>
       <link>https://mengxu98.github.io/Bioinformatics_resources_collection/posts/databases/</link>
-      <pubDate>Thu, 11 Jan 2024 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 03 Jul 2024 00:00:00 +0000</pubDate>
       
       <guid>https://mengxu98.github.io/Bioinformatics_resources_collection/posts/databases/</guid>
-      <description>&lt;h1 id=&#34;databases&#34;&gt;&lt;em&gt;Databases&lt;/em&gt;&lt;/h1&gt;
-&lt;p&gt;Here is a list of some &lt;em&gt;&lt;strong&gt;Databases&lt;/strong&gt;&lt;/em&gt; that I think useful for who want to learn about single cell RNA sequencing (scRNA-seq) and related information and tools.&lt;/p&gt;
+      <description>&lt;p&gt;Here is a list of some &lt;em&gt;&lt;strong&gt;Databases&lt;/strong&gt;&lt;/em&gt; that I think useful for who want to learn about single cell RNA sequencing (scRNA-seq) and related information and tools.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -236,18 +233,80 @@
 &lt;td&gt;&lt;a href=&#34;https://www.nature.com/articles/s41593-022-01215-1&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;paper&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Network&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://lcbb.swjtu.edu.cn/EnhFFL/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;EnhFFL&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;A Database of Enhancer Mediated Feed-Forward Loops&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://doi.org/10.1093/pcmedi/pbab006&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;paper&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Network&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://www.bioailab.com:3838/CellNetdb&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;CellNetdb&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;A Database of Enhancer Mediated Feed-Forward Loops&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://pubmed.ncbi.nlm.nih.gov/38347596/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;paper (PMID: 38347596)&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;</description>
     </item>
     
     <item>
-      <title>Blogs, Books, Labs and Databases</title>
+      <title>Description</title>
+      <link>https://mengxu98.github.io/Bioinformatics_resources_collection/posts/description/</link>
+      <pubDate>Wed, 03 Jul 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mengxu98.github.io/Bioinformatics_resources_collection/posts/description/</guid>
+      <description>&lt;p&gt;This repository is used to record same papers with different categories, such as, bioinformatics methods (main) in &lt;a href=&#34;posts/papers-with-method/index.html&#34;&gt;&lt;em&gt;&lt;code&gt;Papers with method&lt;/code&gt;&lt;/em&gt;&lt;/a&gt;
+ and biology stories in &lt;a href=&#34;posts/papers-with-story/index.html&#34;&gt;&lt;em&gt;&lt;code&gt;Papers with story&lt;/code&gt;&lt;/em&gt;&lt;/a&gt;
+ of single-cell omics data.&lt;/p&gt;
+&lt;h2 id=&#34;maintenance&#34;&gt;Maintenance&lt;/h2&gt;
+&lt;p&gt;This repository is builded and maintained by Mengxu(&lt;a href=&#34;mailto:mengxu98@qq.com&#34;&gt;mengxu98@qq.com&lt;/a&gt;
+).
+If you interested it, please add items as follow rules, and PR:
+You can choose one of the following ways:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Refer the &amp;lsquo;README&amp;rsquo; file and manually fill in the following information:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Add &amp;ldquo;| Journal | Date | Title | Code | Data | Citation |&amp;rdquo;;&lt;/li&gt;
+&lt;li&gt;For Journal and Title, please sort by A-Z;&lt;/li&gt;
+&lt;li&gt;For Date, please sort by published date;&lt;/li&gt;
+&lt;li&gt;For Code and Data, please reference: &lt;a href=&#34;https://img.shields.io/;&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;https://img.shields.io/;&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;For Citation, the data of Citation could obtain from: &lt;a href=&#34;https://www.semanticscholar.org/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;https://www.semanticscholar.org/&lt;/a&gt;
+.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Automatically fill in information using &amp;rsquo;extract_paper_infor&amp;rsquo; function:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Parameter: &amp;lsquo;url_paper&amp;rsquo;, need to provide a link to the paper from &lt;a href=&#34;https://www.semanticscholar.org/;&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;https://www.semanticscholar.org/;&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;Parameter: &amp;lsquo;code_language&amp;rsquo;, the main programming languages used in the paper;&lt;/li&gt;
+&lt;li&gt;Parameter: &amp;lsquo;url_code&amp;rsquo;, code storage address in the paper;&lt;/li&gt;
+&lt;li&gt;Parameter: &amp;lsquo;data_database&amp;rsquo;, database for storing data in the paper;&lt;/li&gt;
+&lt;li&gt;Parameter: &amp;lsquo;url_data&amp;rsquo;, data storage address in the paper.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Note:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Using &lt;code&gt;pip install -r requirements.txt&lt;/code&gt; to get all the dependencies&lt;/li&gt;
+&lt;li&gt;Please shut down the &lt;code&gt;proxy&lt;/code&gt; service when using this script!&lt;/li&gt;
+&lt;li&gt;If you encounter any problems while using the script, please issue on GitHub.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
+    <item>
+      <title>Labs</title>
       <link>https://mengxu98.github.io/Bioinformatics_resources_collection/posts/labs/</link>
-      <pubDate>Thu, 11 Jan 2024 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 03 Jul 2024 00:00:00 +0000</pubDate>
       
       <guid>https://mengxu98.github.io/Bioinformatics_resources_collection/posts/labs/</guid>
-      <description>&lt;h1 id=&#34;labs&#34;&gt;&lt;em&gt;Labs&lt;/em&gt;&lt;/h1&gt;
-&lt;p&gt;Here is a list of some &lt;em&gt;&lt;strong&gt;Labs&lt;/strong&gt;&lt;/em&gt; that I think useful for who want to learn about single cell RNA sequencing (scRNA-seq) and related information and tools.&lt;/p&gt;
+      <description>&lt;p&gt;Here is a list of some &lt;em&gt;&lt;strong&gt;Labs&lt;/strong&gt;&lt;/em&gt; that I think useful for who want to learn about single cell RNA sequencing (scRNA-seq) and related information and tools.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -377,8 +436,7 @@
       <pubDate>Thu, 11 Jan 2024 00:00:00 +0000</pubDate>
       
       <guid>https://mengxu98.github.io/Bioinformatics_resources_collection/posts/papers-with-method/</guid>
-      <description>&lt;h1 id=&#34;papers-with-method&#34;&gt;Papers with method&lt;/h1&gt;
-&lt;table&gt;
+      <description>&lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th&gt;Journal&lt;/th&gt;
@@ -648,8 +706,7 @@
       <pubDate>Thu, 11 Jan 2024 00:00:00 +0000</pubDate>
       
       <guid>https://mengxu98.github.io/Bioinformatics_resources_collection/posts/papers-with-story/</guid>
-      <description>&lt;h1 id=&#34;papers-with-story&#34;&gt;Papers with story&lt;/h1&gt;
-&lt;h3 id=&#34;a-repository-of-papers-with-code&#34;&gt;A repository of Papers-With-Code&lt;/h3&gt;
+      <description>&lt;h3 id=&#34;a-repository-of-papers-with-code&#34;&gt;A repository of Papers-With-Code&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
