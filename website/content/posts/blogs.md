@@ -20,3 +20,6 @@ Here is a list of some ***Bolgs*** that I think useful for who want to learn abo
 | `scRNA-seq` | [Dictionary learning for integrative, multimodal, and scalable single-cell analysis (video)](https://www.youtube.com/watch?v=AHl5V-9dMOI) |
 | `scRNA-seq` | [Seurat - Guided Clustering Tutorial](https://satijalab.org/seurat/articles/pbmc3k_tutorial.html) |
 | `scRNA-seq` | [awesome-deep-learning-single-cell-papers](https://github.com/OmicsML/awesome-deep-learning-single-cell-papers) |
+| `scRNA-seq` | [Bioinformatics Training at the Harvard Chan Bioinformatics Core](https://hbctraining.github.io/main/) |
+| `scRNA-seq` | [Bioinformatics Training at the Harvard Chan Bioinformatics Core (Chinese note)](https://wap.sciencenet.cn/home.php?mod=space&do=blog&id=1241283) |
+| `Enrichment analysis` | [一文掌握GSEA)](https://mp.weixin.qq.com/s?__biz=MzI5MTcwNjA4NQ==&mid=2247488358&idx=1&sn=4c1c15b6467ff7f8bd7fe95400bbc1df&scene=21#wechat_redirect) |
