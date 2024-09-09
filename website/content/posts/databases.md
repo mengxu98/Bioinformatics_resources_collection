@@ -10,6 +10,7 @@ Here is a list of some ***Databases*** that I think useful for who want to learn
 
 | Field | Database | Description | Related paper |
 | -- | -- | -- | -- |
+| `Single-cell`, `AD` | [SEA-AD](https://portal.brain-map.org/explore/seattle-alzheimers-disease) | The Seattle Alzheimer’s Disease Brain Cell Atlas | [paper](https://www.biorxiv.org/content/10.1101/2023.05.08.539485v3) |
 | `Single-cell` | [scRNASeqDB](https://bioinfo.uth.edu/scrnaseqdb/) | Human Single Cell Transcriptome Database | |
 | `Single-cell` | [Azimuth](https://azimuth.hubmapconsortium.org/) | App for reference based single-cell analysis | [paper](https://doi.org/10.1016/j.cell.2021.04.048) |
 | `Single-cell` | [CancerSCEM](https://ngdc.cncb.ac.cn/cancerscem/) | Cancer Single-cell Expression Map | [paper (PMID: 34643725)](https://pubmed.ncbi.nlm.nih.gov/34643725/) |
