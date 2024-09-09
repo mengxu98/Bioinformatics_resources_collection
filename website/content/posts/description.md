@@ -5,7 +5,7 @@ date: 2024-07-03
 ---
 <!--more-->
 
-This repository is used to record same papers with different categories, such as, bioinformatics methods (main) in [*`Papers with method`*](posts/papers-with-method/index.html) and biology stories in [*`Papers with story`*](posts/papers-with-story/index.html) of single-cell omics data.
+This repository is used to record same papers with different categories, such as[*`Methods`*](posts/methods/index.html) and [*`Articles`*](posts/Articles/index.html) of single-cell omics data.
 
 ## Maintenance
 This repository is builded and maintained by Mengxu(mengxu98@qq.com).

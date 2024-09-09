@@ -1,5 +1,5 @@
 ---
-title: "Papers with method"
+title: "Methods"
 author: "Mengxu"
 date: 2024-01-11
 ---
@@ -13,6 +13,9 @@ date: 2024-01-11
 | **`Data integration`** |  |  |  |  |  |
 | Genome Biology | 2022 | [Evaluation of cell-cell interaction methods by integrating single-cell RNA sequencing data with spatial information](https://doi.org/10.1186/s13059-022-02783-y) | [![R%20Python](https://img.shields.io/badge/-R%20Python-00008B)](https://github.com/wanglabtongji/CCI) | [![Website](https://img.shields.io/badge/-Website-B03060)](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-022-02783-y#availability-of-data-and-materials) | [![citation](https://img.shields.io/badge/dynamic/json?label=citation&query=citationCount&url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2F631e4db76fb0fd5ac6e1d7029627d0b99373540c%3Ffields%3DcitationCount)](https://www.semanticscholar.org/paper/631e4db76fb0fd5ac6e1d7029627d0b99373540c) |
 | Nature Communications | 2022 | [Elucidating tumor heterogeneity from spatially resolved transcriptomics data by multi-view graph collaborative learning](https://doi.org/10.1038/s41467-022-33619-9) | [![Python](https://img.shields.io/badge/-Python-3572a5)](https://github.com/cmzuo11/stMVC) | [![GEO](https://img.shields.io/badge/-GEO-336699)](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE176078) | [![citation](https://img.shields.io/badge/dynamic/json?label=citation&query=citationCount&url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2F09690abc5440dec515c14256dccf7fe45acee988%3Ffields%3DcitationCount)](https://www.semanticscholar.org/paper/09690abc5440dec515c14256dccf7fe45acee988) |
+|  |  |  |  |  |  |
+| **`Feature selection`** |  |  |  |  |  |
+| BMC Biology | 2024 | [COMSE: analysis of single-cell RNA-seq data using community detection-based feature selection](https://doi.org/10.1186/s12915-024-01963-5) | [![R](https://img.shields.io/badge/-R-198ce7)](https://github.com/Lan-lab/COMSE) | [![Null](https://img.shields.io/badge/-Null-FAFAFA)]() | [![citation](https://img.shields.io/badge/dynamic/json?label=citation&query=citationCount&url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2F58e4d63a4572ec930429ee65e82ef7c5bf7c593b%3Ffields%3DcitationCount)](https://www.semanticscholar.org/paper/58e4d63a4572ec930429ee65e82ef7c5bf7c593b) |
 |  |  |  |  |  |  |
 | **`Gene regulatory network`** |  |  |  |  |  |
 | Bioinformatics | 2023 | [STGRNS: an interpretable transformer-based method for inferring gene regulatory networks from single-cell transcriptomic data](https://doi.org/10.1093/bioinformatics/btad165) | [![Python](https://img.shields.io/badge/-Python-3572a5)](https://github.com/zhanglab-wbgcas/STGRNS) | [![Null](https://img.shields.io/badge/-Null-FAFAFA)]() | [![citation](https://img.shields.io/badge/dynamic/json?label=citation&query=citationCount&url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2F59447739b7dda29ef919184cc8246cbbbd5e8938%3Ffields%3DcitationCount)](https://www.semanticscholar.org/paper/59447739b7dda29ef919184cc8246cbbbd5e8938) |
