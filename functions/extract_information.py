@@ -7,13 +7,15 @@ from .serch_data_information import format_data
 from .serch_code_information import format_code
 
 
-def extract_paper_infor(url_paper,
-                        doi_paper,
-                        code_language,
-                        url_code,
-                        data_database,
-                        url_data,
-                        file="test.md"):
+def extract_paper_infor(
+    url_paper,
+    doi_paper,
+    code_language,
+    url_code,
+    data_database,
+    url_data,
+    file="test.md",
+):
     """
     This function extracts the paper from the specified URL and returns the corresponding information
 
@@ -32,13 +34,14 @@ def extract_paper_infor(url_paper,
         url_extract = url_paper
     elif not url_paper and doi_paper:
         from semanticscholar import SemanticScholar
+
         sch = SemanticScholar()
         if "https://doi.org/" in doi_paper:
             doi_paper = doi_paper.replace("https://doi.org/", "")
         paper = sch.get_paper(doi_paper)
         url_extract = paper.url
     else:
-        print('Please provide a url of semanticscholar or doi......')
+        print("Please provide a url of semanticscholar or doi......")
         sys.exit(1)
 
     # Attempt to make a GET request to the URL
@@ -46,7 +49,7 @@ def extract_paper_infor(url_paper,
         response = requests.get(url_extract)
     # If an SSL error occurs, print a message
     except requests.exceptions.SSLError:
-        print('Please shut down the proxy service and try again......')
+        print("Please shut down the proxy service and try again......")
         sys.exit(1)
 
     # Extract paper information
@@ -77,31 +80,35 @@ def extract_paper_infor(url_paper,
                 print(f"Error parsing JSON data: {e}......")
 
         else:
-            print(
-                f"Request failed with status code: {response.status_code}......")
+            print(f"Request failed with status code: {response.status_code}......")
 
     else:
         if response.ok and response.status_code == 200:
             try:
                 print("Extracting paper information......")
                 soup = BeautifulSoup(response.text, "html.parser")
-                title = soup.find(
-                    "h1", {"data-test-id": "paper-detail-title"}).text
-                journal = soup.find(
-                    "span", {"data-heap-id": "paper-meta-journal"}).text
-                journal_doi = soup.find("a",
-                                        {"class":
-                                            "icon-button button--full-width button--primary flex-paper-actions__button flex-paper-actions__button--primary"})["href"]
+                title = soup.find("h1", {"data-test-id": "paper-detail-title"}).text
+                journal = soup.find("span", {"data-heap-id": "paper-meta-journal"}).text
+                journal_doi = soup.find(
+                    "a",
+                    {
+                        "class": "icon-button button--full-width button--primary flex-paper-actions__button flex-paper-actions__button--primary"
+                    },
+                )["href"]
                 # abstract = soup.find("span", {"data-test-id": "text-truncator-text"}).text.strip()
-                date = soup.find(
-                    "span", {"data-test-id": "paper-year"}).text
+                date = soup.find("span", {"data-test-id": "paper-year"}).text
                 date = date[-4:]
                 # citation_count = soup.find(
                 #     "span", {"class": "scorecard-stat__headline__dark"}).text
-                paper_id = soup.find("a",
-                                     {"class":
-                                      "icon-button button--full-width button--primary flex-paper-actions__button flex-paper-actions__button--primary"})["data-heap-paper-id"]
-                url_semanticscholar = f"https://www.semanticscholar.org/paper/{paper_id}"
+                paper_id = soup.find(
+                    "a",
+                    {
+                        "class": "icon-button button--full-width button--primary flex-paper-actions__button flex-paper-actions__button--primary"
+                    },
+                )["data-heap-paper-id"]
+                url_semanticscholar = (
+                    f"https://www.semanticscholar.org/paper/{paper_id}"
+                )
 
                 # Print the extracted information
                 print("Title:", title)
@@ -114,8 +121,7 @@ def extract_paper_infor(url_paper,
                 sys.exit(1)
 
         else:
-            print(
-                f"Request failed with status code: {response.status_code}......")
+            print(f"Request failed with status code: {response.status_code}......")
             sys.exit(1)
 
     # Merge variables as 'Title'
@@ -128,22 +134,33 @@ def extract_paper_infor(url_paper,
     data = format_data(data_database, url_data, journal_doi)
 
     # Merge variables as 'semanticscholar_api'
-    semanticscholar_api = "https://img.shields.io/badge/dynamic/json?label=citation&query=citationCount&url=" + \
-        "https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2F" + \
-        paper_id + \
-        "%3Ffields%3DcitationCount"
+    semanticscholar_api = (
+        "https://img.shields.io/badge/dynamic/json?label=citation&query=citationCount&url="
+        + "https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2F"
+        + paper_id
+        + "%3Ffields%3DcitationCount"
+    )
 
     # Merge variables as 'Citation'
-    citation = "[" + "!" + "[" + "citation" + "]" + \
-        "(" + semanticscholar_api + ")" + "]" + "(" + url_semanticscholar + ")"
+    citation = (
+        "["
+        + "!"
+        + "["
+        + "citation"
+        + "]"
+        + "("
+        + semanticscholar_api
+        + ")"
+        + "]"
+        + "("
+        + url_semanticscholar
+        + ")"
+    )
 
     # Merge variables as 'Result'
-    result = " | ".join([str(journal),
-                        str(date),
-                        str(title),
-                        str(code),
-                        str(data),
-                        str(citation)])
+    result = " | ".join(
+        [str(journal), str(date), str(title), str(code), str(data), str(citation)]
+    )
     result = "| " + result + " |"
     print("Extracting paper information done......")
 
@@ -152,20 +169,22 @@ def extract_paper_infor(url_paper,
     if not file:
         file = "test.md"
     else:
-        if not file.endswith('.md'):
-            file += '.md'
+        if not file.endswith(".md"):
+            file += ".md"
 
     # Check if the file exists
     if not os.path.exists(file):
         # Create the file and write a header
-        with open(file, 'w') as f:
-            f.write('# Papers with code\n### A repository of Papers-With-Code\n| Journal | Date | Title | Code | Data | Citation |\n| -- | -- | -- | -- | -- | -- |\n')
-            print(f'The {file} created successfully......')
+        with open(file, "w") as f:
+            f.write(
+                "# Papers with code\n### A repository of Papers-With-Code\n| Journal | Date | Title | Code | Data | Citation |\n| -- | -- | -- | -- | -- | -- |\n"
+            )
+            print(f"The {file} created successfully......")
     else:
-        print(f'The {file} already exists......')
+        print(f"The {file} already exists......")
 
-    print(f'Write information to {file}......')
-    with open(file, 'r+') as f:
+    print(f"Write information to {file}......")
+    with open(file, "r+") as f:
         # Read all lines from the file
         lines = f.readlines()
 
@@ -179,14 +198,14 @@ def extract_paper_infor(url_paper,
         f.write("\n" + result)
 
     # Open the file again in read/write mode
-    with open(file, 'r+') as f:
+    with open(file, "r+") as f:
         # Read all lines from the file
         lines = f.readlines()
 
         # Create a new list with non-empty lines
         new_lines = []
         for line in lines:
-            if line.strip() != '':
+            if line.strip() != "":
                 new_lines.append(line)
 
         # Remove the last line if it is an empty line
@@ -197,7 +216,7 @@ def extract_paper_infor(url_paper,
         f.seek(0)
 
         # Write the new lines to the file
-        f.write(''.join(new_lines))
+        f.write("".join(new_lines))
 
         # Truncate the file
         f.truncate()

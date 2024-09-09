@@ -1,14 +1,13 @@
 import re
 import requests
+
 # from bs4 import BeautifulSoup
 
 from .check_color import check_color
 from .format_shields import format_shields
 
 
-def format_data(data_database,
-                url_data,
-                url):
+def format_data(data_database, url_data, url):
     """
     Format data based on the given parameters.
      Args:
@@ -30,8 +29,7 @@ def format_data(data_database,
                 data_database = data_infors[0][0]
                 url_data = data_infors[0][1]
                 shields_color_data = check_color(data_database)
-                datas = format_shields(
-                    data_database, url_data, shields_color_data)
+                datas = format_shields(data_database, url_data, shields_color_data)
 
             else:
                 datas = ""
@@ -39,8 +37,7 @@ def format_data(data_database,
                     data_database = data_infor[0]
                     url_data = data_infor[1]
                     shields_color_data = check_color(data_database)
-                    data = format_shields(data_database, url_data,
-                                          shields_color_data)
+                    data = format_shields(data_database, url_data, shields_color_data)
                     datas = datas + data
 
         else:
@@ -60,7 +57,8 @@ def format_data(data_database,
             for url_data_single in url_data:
                 print(f"The dataset from {url_data_single}......")
                 data = format_shields(
-                    data_database, url_data_single, shields_color_data)
+                    data_database, url_data_single, shields_color_data
+                )
                 datas = datas + data
 
         else:
@@ -76,8 +74,9 @@ def format_data(data_database,
             for data_database_single in data_database:
                 print(f"The dataset provided by {data_database_single}......")
                 shields_color_data = check_color(data_database_single)
-                data = format_shields(data_database_single,
-                                      url_data, shields_color_data)
+                data = format_shields(
+                    data_database_single, url_data, shields_color_data
+                )
                 datas = datas + data
 
         else:
@@ -91,7 +90,7 @@ def format_data(data_database,
         if len(data_database) > 1 and len(url_data) > 1:
             if len(data_database) != len(url_data):
                 if len(data_database) > len(url_data):
-                    data_database = data_database[0:(len(url_data)-1)]
+                    data_database = data_database[0 : (len(url_data) - 1)]
                 if len(data_database) < len(url_data):
                     for i in range(len(data_database), len(url_data)):
                         data_database.append("Unknown")
@@ -99,10 +98,12 @@ def format_data(data_database,
             datas = ""
             for url_data_single, data_database_single in zip(url_data, data_database):
                 print(
-                    f"The dataset provided by {data_database_single}, and from {url_data_single}......")
+                    f"The dataset provided by {data_database_single}, and from {url_data_single}......"
+                )
                 shields_color_data = check_color(data_database_single)
-                data = format_shields(data_database_single,
-                                      url_data_single, shields_color_data)
+                data = format_shields(
+                    data_database_single, url_data_single, shields_color_data
+                )
                 datas = datas + data
 
         else:
@@ -110,11 +111,11 @@ def format_data(data_database,
                 data_database = data_database[0]
                 url_data = url_data[0]
                 print(
-                    f"The dataset provided by {data_database}, and from {url_data}......")
+                    f"The dataset provided by {data_database}, and from {url_data}......"
+                )
                 # If both data language and URL data are provided
                 shields_color_data = check_color(data_database)
-                datas = format_shields(
-                    data_database, url_data, shields_color_data)
+                datas = format_shields(data_database, url_data, shields_color_data)
 
     return datas
 
@@ -145,13 +146,18 @@ def search_databases(url):
 
                 if len(unique_geo_ids) > 1:
                     for geo_id in unique_geo_ids:
-                        geo_url = "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=" + geo_id
+                        geo_url = (
+                            "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc="
+                            + geo_id
+                        )
                         print(f"Found GEO database identifier(s):{geo_url}")
                         data_infor = ["GEO", geo_url]
                         data_infors.append(data_infor)
                 else:
-                    geo_url = "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=" + \
-                        geo_ids[0]
+                    geo_url = (
+                        "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc="
+                        + geo_ids[0]
+                    )
                     print(f"Found GEO database identifier(s):{geo_url}")
                     data_infor = ["GEO", geo_url]
                     data_infors.append(data_infor)
@@ -175,11 +181,10 @@ def search_databases(url):
 
             # if the website contains Zenodo link, search for the DOI
             elif re.search(r"zenodo", content):
-                zenodo_ids = re.findall(r'10\.\d+\/zenodo\.\d+', content)
+                zenodo_ids = re.findall(r"10\.\d+\/zenodo\.\d+", content)
 
                 if zenodo_ids:
-                    unique_zenodo_ids = list(
-                        set(zenodo_ids))  # Remove Duplicates
+                    unique_zenodo_ids = list(set(zenodo_ids))  # Remove Duplicates
 
                     if len(unique_zenodo_ids) > 1:
                         for zenodo_id in unique_zenodo_ids:
@@ -195,12 +200,10 @@ def search_databases(url):
 
         if "figshare" in content:
             # search for Figshare database identifiers using regular expressions
-            figshare_ids = re.findall(
-                r"(?i)figshare.com/articles/\w+/\d+", content)
+            figshare_ids = re.findall(r"(?i)figshare.com/articles/\w+/\d+", content)
 
             if figshare_ids:
-                unique_figshare_ids = list(
-                    set(figshare_ids))  # Remove Duplicates
+                unique_figshare_ids = list(set(figshare_ids))  # Remove Duplicates
 
                 if len(unique_figshare_ids) > 1:
                     for figshare_id in unique_figshare_ids:

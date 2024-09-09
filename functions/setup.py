@@ -2,6 +2,7 @@ from setuptools import setup
 import pathlib
 
 from functions.version import __version__
+
 here = pathlib.Path(__file__).parent.resolve()
 
 long_description = (here / "README.md").read_text(encoding="utf-8")
@@ -18,9 +19,9 @@ setup(
     long_description_content_type="text/markdown",
     classifiers=[
         "License :: OSI Approved :: MIT License",
-        "Programming Language :: Python :: 3"
+        "Programming Language :: Python :: 3",
     ],
-    packages=['papers-with-code'],
+    packages=["papers-with-code"],
     python_requires=">=3.7",
     project_urls={  # Optional
         "Bug Reports": "https://github.com/mengxu98/papers-with-code/issues",

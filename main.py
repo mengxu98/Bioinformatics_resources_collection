@@ -33,13 +33,15 @@ If you encounter any problems when using this script, please issue on GitHub or 
 from functions.extract_information import extract_paper_infor
 
 # The URL of paper obtain from: https://www.semanticscholar.org/
-url_paper = "https://api.semanticscholar.org/v1/paper/3388f6923348fa24ba7f11a79b6aa4fdbd3b4392"
-# https://www.semanticscholar.org/paper/Genes-associated-with-cognitive-ability-and-HAR-in-Driessens-Galakhova/c2971ece5f70f24bf65c828506cf17fe6cd20212
-doi_paper = ['']
-code_language = ['Java']
-url_code = ['https://github.com/perslab/depict']
-data_database = ['Null']  # If no new data provided in this paper, please set to 'Null'
-url_data = ['']
+url_paper = (
+    "https://api.semanticscholar.org/v1/paper/58e4d63a4572ec930429ee65e82ef7c5bf7c593b"
+)
+
+doi_paper = [""]
+code_language = ["R"]
+url_code = ["https://github.com/Lan-lab/COMSE"]
+data_database = ["Null"]  # If data is not provided in this paper, please set to 'Null'
+url_data = [""]
 
 extract_paper_infor(
     url_paper,
@@ -48,4 +50,5 @@ extract_paper_infor(
     url_code,
     data_database,
     url_data,
-    file="test.md")  # website/content/posts/papers-with-method.md
+    file="website/content/posts/methods.md",
+)

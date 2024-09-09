@@ -42,6 +42,7 @@ def check_color(string):
 
 import unittest
 
+
 class TestCheckColor(unittest.TestCase):
     def test_check_color(self):
         self.assertEqual(check_color("R"), "198ce7")
@@ -61,5 +62,6 @@ class TestCheckColor(unittest.TestCase):
         self.assertEqual(check_color("Unknown"), "ADADAD")
         self.assertEqual(check_color("Null"), "FAFAFA")
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()
