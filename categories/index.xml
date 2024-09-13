@@ -13,7 +13,7 @@
     <item>
       <title>Blogs</title>
       <link>https://mengxu98.github.io/Bioinformatics_resources_collection/posts/blogs/</link>
-      <pubDate>Wed, 03 Jul 2024 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 13 Sep 2024 00:00:00 +0000</pubDate>
       
       <guid>https://mengxu98.github.io/Bioinformatics_resources_collection/posts/blogs/</guid>
       <description>&lt;p&gt;Here is a list of some &lt;em&gt;&lt;strong&gt;Bolgs&lt;/strong&gt;&lt;/em&gt; that I think useful for who want to learn about single cell RNA sequencing (scRNA-seq) and related information and tools.&lt;/p&gt;
@@ -89,6 +89,147 @@
           &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;Enrichment analysis&lt;/code&gt;&lt;/td&gt;
           &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://mp.weixin.qq.com/s?__biz=MzI5MTcwNjA4NQ==&amp;amp;mid=2247488358&amp;amp;idx=1&amp;amp;sn=4c1c15b6467ff7f8bd7fe95400bbc1df&amp;amp;scene=21#wechat_redirect&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;一文掌握GSEA)&lt;/a&gt;
 &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;Cell fate transition&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;http://cqb.pku.edu.cn/zyli/info/1041/1196.htm&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;从基因调控逻辑解码细胞命运决定的基本原理&lt;/a&gt;
+&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+    </item>
+    
+    <item>
+      <title>Labs</title>
+      <link>https://mengxu98.github.io/Bioinformatics_resources_collection/posts/labs/</link>
+      <pubDate>Fri, 13 Sep 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mengxu98.github.io/Bioinformatics_resources_collection/posts/labs/</guid>
+      <description>&lt;p&gt;Here is a list of some &lt;em&gt;&lt;strong&gt;Labs&lt;/strong&gt;&lt;/em&gt; that I think useful for who want to learn about single cell RNA sequencing (scRNA-seq) and related information and tools.&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Field&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Lab&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Masterpiece&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;Bioinformatics tools&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://satijalab.org/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;satijalab&lt;/a&gt;
+&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://github.com/satijalab/seurat&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;seurat&lt;/a&gt;
+&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;Bioinformatics tools&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://sqsun.github.io/index.html&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Sun Lab&lt;/a&gt;
+&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://github.com/fanyue322/TDEseq&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;TDEseq&lt;/a&gt;
+&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;scRNA-seq tools&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://github.com/theislab&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;theislab&lt;/a&gt;
+&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://github.com/theislab/scvelo&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;scvelo&lt;/a&gt;
+&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;Brain Imaging&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://sites.google.com/view/yeolab&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Computational Brain Imaging Group&lt;/a&gt;
+&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://github.com/ThomasYeoLab/CBIG&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;CBIG&lt;/a&gt;
+&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;Gene regulatory network&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://github.com/zpliulab&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;zpliulab&lt;/a&gt;
+&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://github.com/zpliulab/scGENA&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;scGENA&lt;/a&gt;
+&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;Gene regulatory network&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://github.com/zpliulab&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;netbiolab&lt;/a&gt;
+&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://github.com/netbiolab/scHumanNet&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;scHumanNet&lt;/a&gt;
+&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;Gene regulatory network&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://github.com/zpliulab&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;aertslab&lt;/a&gt;
+&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://github.com/aertslab/SCENIC&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;SCENIC&lt;/a&gt;
+&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;Gene regulatory network&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://lusystemsbio.northeastern.edu/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;LULAB&lt;/a&gt;
+&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://lusystemsbio.northeastern.edu/publications/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;here&lt;/a&gt;
+&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;Gene regulatory network&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://sites.google.com/a/channing.harvard.edu/kimberlyglass/home&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;The Glass Group&lt;/a&gt;
+&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://github.com/kuijjerlab/lionessR&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;lionessR&lt;/a&gt;
+&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;Gene regulatory network&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://netzoo.github.io/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;THE NETWORK ZOO&lt;/a&gt;
+&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;R · statistics&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://yihui.org/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Yihui Xie&lt;/a&gt;
+&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://yihui.org/en/vitae/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;here&lt;/a&gt;
+&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;Bioinformation&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;http://lab.malab.cn/~zq/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Quan Zou&lt;/a&gt;
+&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;http://lab.malab.cn/~zq/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;here&lt;/a&gt;
+&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;Bioinformation&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://fzhang.bioinfo-lab.com/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Feng Zhang&lt;/a&gt;
+&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://github.com/jumphone/Vector/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;VECTOR&lt;/a&gt;
+&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;Similarity Network Fusion&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;http://compbio.cs.toronto.edu/SNF/SNF/Software.html/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Similarity Network Fusion&lt;/a&gt;
+&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://rdrr.io/cran/SNFtool/man/SNF.html/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;SNFtool&lt;/a&gt;
+&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;scRNA-seq and gene networks&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://bsse.ethz.ch/qdb/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;QuaDBio Group&lt;/a&gt;
+&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://github.com/quadbio/Pando/tree/main/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Pando&lt;/a&gt;
+&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;GWAS&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://gwaslab.org/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;em&gt;&lt;strong&gt;GWASLab&lt;/strong&gt;&lt;/em&gt;&lt;/a&gt;
+&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;Network dynamics&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;http://cqb.pku.edu.cn/zyli/index.htm&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;em&gt;&lt;strong&gt;ZhiyuanLi lab&lt;/strong&gt;&lt;/em&gt;&lt;/a&gt;
+&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;</description>
@@ -321,136 +462,6 @@ You can choose one of the following ways:&lt;/p&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;</description>
-    </item>
-    
-    <item>
-      <title>Labs</title>
-      <link>https://mengxu98.github.io/Bioinformatics_resources_collection/posts/labs/</link>
-      <pubDate>Wed, 03 Jul 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://mengxu98.github.io/Bioinformatics_resources_collection/posts/labs/</guid>
-      <description>&lt;p&gt;Here is a list of some &lt;em&gt;&lt;strong&gt;Labs&lt;/strong&gt;&lt;/em&gt; that I think useful for who want to learn about single cell RNA sequencing (scRNA-seq) and related information and tools.&lt;/p&gt;
-&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th style=&#34;text-align: left&#34;&gt;Field&lt;/th&gt;
-          &lt;th style=&#34;text-align: left&#34;&gt;Lab&lt;/th&gt;
-          &lt;th style=&#34;text-align: left&#34;&gt;Masterpiece&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;Bioinformatics tools&lt;/code&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://satijalab.org/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;satijalab&lt;/a&gt;
-&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://github.com/satijalab/seurat&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;seurat&lt;/a&gt;
-&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;Bioinformatics tools&lt;/code&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://sqsun.github.io/index.html&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Sun Lab&lt;/a&gt;
-&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://github.com/fanyue322/TDEseq&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;TDEseq&lt;/a&gt;
-&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;scRNA-seq tools&lt;/code&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://github.com/theislab&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;theislab&lt;/a&gt;
-&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://github.com/theislab/scvelo&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;scvelo&lt;/a&gt;
-&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;Brain Imaging&lt;/code&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://sites.google.com/view/yeolab&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Computational Brain Imaging Group&lt;/a&gt;
-&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://github.com/ThomasYeoLab/CBIG&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;CBIG&lt;/a&gt;
-&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;Gene regulatory network&lt;/code&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://github.com/zpliulab&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;zpliulab&lt;/a&gt;
-&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://github.com/zpliulab/scGENA&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;scGENA&lt;/a&gt;
-&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;Gene regulatory network&lt;/code&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://github.com/zpliulab&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;netbiolab&lt;/a&gt;
-&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://github.com/netbiolab/scHumanNet&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;scHumanNet&lt;/a&gt;
-&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;Gene regulatory network&lt;/code&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://github.com/zpliulab&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;aertslab&lt;/a&gt;
-&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://github.com/aertslab/SCENIC&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;SCENIC&lt;/a&gt;
-&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;Gene regulatory network&lt;/code&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://lusystemsbio.northeastern.edu/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;LULAB&lt;/a&gt;
-&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://lusystemsbio.northeastern.edu/publications/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;here&lt;/a&gt;
-&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;Gene regulatory network&lt;/code&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://sites.google.com/a/channing.harvard.edu/kimberlyglass/home&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;The Glass Group&lt;/a&gt;
-&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://github.com/kuijjerlab/lionessR&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;lionessR&lt;/a&gt;
-&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;Gene regulatory network&lt;/code&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://netzoo.github.io/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;THE NETWORK ZOO&lt;/a&gt;
-&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;R · statistics&lt;/code&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://yihui.org/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Yihui Xie&lt;/a&gt;
-&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://yihui.org/en/vitae/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;here&lt;/a&gt;
-&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;Bioinformation&lt;/code&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;http://lab.malab.cn/~zq/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Quan Zou&lt;/a&gt;
-&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;http://lab.malab.cn/~zq/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;here&lt;/a&gt;
-&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;Bioinformation&lt;/code&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://fzhang.bioinfo-lab.com/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Feng Zhang&lt;/a&gt;
-&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://github.com/jumphone/Vector/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;VECTOR&lt;/a&gt;
-&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;Similarity Network Fusion&lt;/code&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;http://compbio.cs.toronto.edu/SNF/SNF/Software.html/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Similarity Network Fusion&lt;/a&gt;
-&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://rdrr.io/cran/SNFtool/man/SNF.html/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;SNFtool&lt;/a&gt;
-&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;scRNA-seq and gene networks&lt;/code&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://bsse.ethz.ch/qdb/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;QuaDBio Group&lt;/a&gt;
-&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://github.com/quadbio/Pando/tree/main/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Pando&lt;/a&gt;
-&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;GWAS&lt;/code&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://gwaslab.org/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;em&gt;&lt;strong&gt;GWASLab&lt;/strong&gt;&lt;/em&gt;&lt;/a&gt;
-&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;</description>
     </item>
     
     <item>
