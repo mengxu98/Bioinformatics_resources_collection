@@ -1,7 +1,7 @@
 ---
 title: "Labs"
 author: "Mengxu"
-date: 2024-07-03
+date: 2024-09-13
 ---
 
 <!--more-->
@@ -26,3 +26,4 @@ Here is a list of some ***Labs*** that I think useful for who want to learn abou
 | `Similarity Network Fusion` | [Similarity Network Fusion](http://compbio.cs.toronto.edu/SNF/SNF/Software.html/) | [SNFtool](https://rdrr.io/cran/SNFtool/man/SNF.html/) |
 | `scRNA-seq and gene networks` | [QuaDBio Group](https://bsse.ethz.ch/qdb/) | [Pando](https://github.com/quadbio/Pando/tree/main/) |
 | `GWAS` | [***GWASLab***](https://gwaslab.org/) |  |  |
+| `Network dynamics` | [***ZhiyuanLi lab***](http://cqb.pku.edu.cn/zyli/index.htm) |  |  ｜

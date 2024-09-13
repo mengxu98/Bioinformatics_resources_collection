@@ -1,7 +1,7 @@
 ---
 title: "Blogs"
 author: "Mengxu"
-date: 2024-07-03
+date: 2024-09-13
 ---
 
 <!--more-->
@@ -23,3 +23,4 @@ Here is a list of some ***Bolgs*** that I think useful for who want to learn abo
 | `scRNA-seq` | [Bioinformatics Training at the Harvard Chan Bioinformatics Core](https://hbctraining.github.io/main/) |
 | `scRNA-seq` | [Bioinformatics Training at the Harvard Chan Bioinformatics Core (Chinese note)](https://wap.sciencenet.cn/home.php?mod=space&do=blog&id=1241283) |
 | `Enrichment analysis` | [一文掌握GSEA)](https://mp.weixin.qq.com/s?__biz=MzI5MTcwNjA4NQ==&mid=2247488358&idx=1&sn=4c1c15b6467ff7f8bd7fe95400bbc1df&scene=21#wechat_redirect) |
+| `Cell fate transition` | [从基因调控逻辑解码细胞命运决定的基本原理](http://cqb.pku.edu.cn/zyli/info/1041/1196.htm) |
