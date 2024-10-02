@@ -307,6 +307,14 @@
   &lt;/thead&gt;
   &lt;tbody&gt;
       &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;Single-cell&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://mai.fudan.edu.cn/stab2/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;STAB&lt;/a&gt;
+&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;STAB2 (Spatio-Temporal Cell Atlas of Brain) provides a landscape of cell types as well as their regional heterogeneity and temporal dynamics across the human and mouse brain&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://academic.oup.com/nar/article/52/D1/D1033/7334093&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;paper&lt;/a&gt;
+&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
           &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;Single-cell&lt;/code&gt;, &lt;code&gt;AD&lt;/code&gt;&lt;/td&gt;
           &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://portal.brain-map.org/explore/seattle-alzheimers-disease&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;SEA-AD&lt;/a&gt;
 &lt;/td&gt;
