@@ -9,10 +9,10 @@ long_description = (here / "README.md").read_text(encoding="utf-8")
 
 
 setup(
-    name="papers-with-code",
+    name="Bioinformatics_resources_collection",
     version=__version__,
     description="This tool is used to auto record paper information.",
-    url="https://github.com/mengxu98/papers-with-code",
+    url="https://github.com/mengxu98/Bioinformatics_resources_collection",
     author="Alan Shi",
     author_email="mengxu98@qq.com",
     long_description=long_description,
@@ -21,10 +21,10 @@ setup(
         "License :: OSI Approved :: MIT License",
         "Programming Language :: Python :: 3",
     ],
-    packages=["papers-with-code"],
+    packages=["Bioinformatics_resources_collection"],
     python_requires=">=3.7",
     project_urls={  # Optional
-        "Bug Reports": "https://github.com/mengxu98/papers-with-code/issues",
-        "Source": "https://github.com/mengxu98/papers-with-code/",
+        "Bug Reports": "https://github.com/mengxu98/Bioinformatics_resources_collection/issues",
+        "Source": "https://github.com/mengxu98/Bioinformatics_resources_collection/",
     },
 )
