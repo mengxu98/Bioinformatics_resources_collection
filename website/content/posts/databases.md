@@ -1,27 +1,41 @@
 ---
 title: "Databases"
 author: "Mengxu"
-date: 2024-07-03
+date: 2024-11-22
+lastmod: 2024-11-22
 ---
 
 <!--more-->
 
-Here is a list of some ***Databases*** that I think useful for who want to learn about single cell RNA sequencing (scRNA-seq) and related information and tools.
+Here is a curated list of ***Databases*** covering various topics in bioinformatics, including single-cell RNA sequencing (scRNA-seq), genomics, and related fields. These resources are regularly updated and maintained.
 
-| Field | Database | Description | Related paper |
-| -- | -- | -- | -- |
-| `Single-cell` | [STAB](https://mai.fudan.edu.cn/stab2/) | STAB2 (Spatio-Temporal Cell Atlas of Brain) provides a landscape of cell types as well as their regional heterogeneity and temporal dynamics across the human and mouse brain | [paper](https://academic.oup.com/nar/article/52/D1/D1033/7334093) |
-| `Single-cell`, `AD` | [SEA-AD](https://portal.brain-map.org/explore/seattle-alzheimers-disease) | The Seattle Alzheimer’s Disease Brain Cell Atlas | [paper](https://www.biorxiv.org/content/10.1101/2023.05.08.539485v3) |
-| `Single-cell` | [scRNASeqDB](https://bioinfo.uth.edu/scrnaseqdb/) | Human Single Cell Transcriptome Database | |
-| `Single-cell` | [Azimuth](https://azimuth.hubmapconsortium.org/) | App for reference based single-cell analysis | [paper](https://doi.org/10.1016/j.cell.2021.04.048) |
-| `Single-cell` | [CancerSCEM](https://ngdc.cncb.ac.cn/cancerscem/) | Cancer Single-cell Expression Map | [paper (PMID: 34643725)](https://pubmed.ncbi.nlm.nih.gov/34643725/) |
-| `Single-cell` | [Curated cancer cell atlas (3CA)](https://www.weizmann.ac.il/sites/3CA/) | Collected, annotated and analyzed cancer scRNA-seq datasets | [paper](https://www.nature.com/articles/s41586-023-06130-4) |
-| `GWAS` | [GWAS Catalog](https://www.ebi.ac.uk/gwas/home) | The NHGRI-EBI Catalog of human genome-wide association studies | |
-| `GWAS` | [UK Biobank](https://www.ukbiobank.ac.uk/) | The world’s most important health research database | |
-| `GWAS` | [ieu_MR-base](https://gwas.mrcieu.ac.uk/) | MR-base is a database and analytical platform for Mendelian randomization | |
-| `GWAS` | [ezQTL](https://analysistools.cancer.gov/ezqtl/#/home) | ezQTL is a web-based tool for integrative QTL (Quantitative Trait Loci) visualization and colocalization with GWAS data for individual loci to aid GWAS annotation. | |
-| `GWAS` | [GWAS Summary Statistics](https://github.com/BIG-S2/GWAS) | GWAS Summary Statistics for Brain Imaging Phenotypes | [paper](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-022-04947-w) |
-| `GWAS` | [SSGAC Data Portal](https://thessgac.com/) | The NHGRI-EBI Catalog of human genome-wide association studies | [paper](https://www.nature.com/articles/s41588-018-0147-3) |
-| `Brain` | [CHCP](https://www.scidb.cn/en/detail?dataSetId=f512d085f3d3452a9b14689e9997ca94#p2) | Chinese Human Connectome Project | [paper](https://www.nature.com/articles/s41593-022-01215-1) |
-| `Network` | [EnhFFL](https://lcbb.swjtu.edu.cn/EnhFFL/) | A Database of Enhancer Mediated Feed-Forward Loops | [paper](https://doi.org/10.1093/pcmedi/pbab006) |
-| `Network` | [CellNetdb](http://www.bioailab.com:3838/CellNetdb) | A Database of Enhancer Mediated Feed-Forward Loops | [paper (PMID: 38347596)](https://pubmed.ncbi.nlm.nih.gov/38347596/) |
+## AD
+
+| Database | Description | Related Paper |
+| -- | -- | -- |
+| [SEA-AD](https://portal.brain-map.org/explore/seattle-alzheimers-disease) | The Seattle Alzheimer's Disease Brain Cell Atlas | [paper](https://www.biorxiv.org/content/10.1101/2023.05.08.539485v3) |
+
+
+## GWAS
+
+| Database | Description | Related Paper |
+| -- | -- | -- |
+| [SSGAC Data Portal](https://thessgac.com/) | The NHGRI-EBI Catalog of human genome-wide association studies | [paper](https://www.nature.com/articles/s41588-018-0147-3) |
+
+
+## Network
+
+| Database | Description | Related Paper |
+| -- | -- | -- |
+| [CellNetdb](http://www.bioailab.com:3838/CellNetdb) | A comprehensive database for cell network analysis | [paper](https://pubmed.ncbi.nlm.nih.gov/38347596/) |
+
+
+## Single-cell
+
+| Database | Description | Related Paper |
+| -- | -- | -- |
+| [Azimuth](https://azimuth.hubmapconsortium.org/) | App for reference based single-cell analysis | [paper](https://doi.org/10.1016/j.cell.2021.04.048) |
+| [SEA-AD](https://portal.brain-map.org/explore/seattle-alzheimers-disease) | The Seattle Alzheimer's Disease Brain Cell Atlas | [paper](https://www.biorxiv.org/content/10.1101/2023.05.08.539485v3) |
+| [STAB](https://mai.fudan.edu.cn/stab2/) | STAB2 (Spatio-Temporal Cell Atlas of Brain) provides a landscape of cell types as well as their regional heterogeneity and temporal dynamics across the human and mouse brain | [paper](https://academic.oup.com/nar/article/52/D1/D1033/7334093) |
+| [scRNASeqDB](https://bioinfo.uth.edu/scrnaseqdb/) | Human Single Cell Transcriptome Database |  |
+

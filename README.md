@@ -1,60 +1,88 @@
-# *Bioinformatics_resources_collection*
-This repository is used to record same papers with different categories, such as, bioinformatics methods (main) in [***`Methods`***](posts/methods/index.html) and biology stories in [***`Articles`***](posts/articles/index.html) of single-cell omics data.
-Now, I make a new category: [***`Blogs, Books and labs`***](posts/blogsbookslabs/index.html), to introduce ***Bolgs***, ***Books*** and ***Labs*** that I think useful for who want to learn about single cell RNA sequencing (scRNA-seq) and related information and tools.
+# Bioinformatics Resources Collection
 
-## Articles
+A comprehensive collection of bioinformatics resources, focusing on single-cell RNA sequencing (scRNA-seq) and related fields. This repository organizes resources into different categories for easy access and reference.
+
+## 📚 Categories
+
+### [Articles](posts/articles/index.html)
+Research papers focusing on biological insights and discoveries using single-cell omics data.
+
+**Latest Highlights:**
 | Journal | Date | Title | Code | Data | Citation |
 | -- | -- | -- | -- | -- | -- |
-|||||||
-| Nature communications | 2023 | [Single-cell analysis reveals prognostic fibroblast subpopulations linked to molecular and immunological subtypes of lung cancer](https://doi.org/10.1038/s41467-023-35832-6) | [![R](https://img.shields.io/badge/-R-198ce7)](https://github.com/cjh-lab/NCOMMS_NSCLC_scFibs) | [![GEO](https://img.shields.io/badge/-GEO-336699)](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE153935) [![Zenodo](https://img.shields.io/badge/-Zenodo-024dad)](https://zenodo.org/record/7400873#.ZCZBDl5LgQ8) | [![citation](https://img.shields.io/badge/dynamic/json?label=citation&query=citationCount&url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2Fa5b158dbafff3ade8a9779c134441e5f3db18e2d%3Ffields%3DcitationCount)](https://www.semanticscholar.org/paper/Single-cell-analysis-reveals-prognostic-fibroblast-Hanley-Waise/a5b158dbafff3ade8a9779c134441e5f3db18e2d) |
-|||||||
+|  |  | []() |  |  |  |
 
-More see [*`Articles`*](posts/articles/index.html)
+[View all articles →](posts/articles/index.html)
 
-## Methods
+### [Methods](posts/methods/index.html)
+Computational methods and tools for analyzing single-cell data.
+
+**Latest Highlights:**
 | Journal | Date | Title | Code | Data | Citation |
 | -- | -- | -- | -- | -- | -- |
-|||||||
-| Nature Communications | 2022 | [Elucidating tumor heterogeneity from spatially resolved transcriptomics data by multi-view graph collaborative learning](https://doi.org/10.1038/s41467-022-33619-9) | [![Python](https://img.shields.io/badge/-Python-3572a5)](https://github.com/cmzuo11/stMVC) | [![GEO](https://img.shields.io/badge/-GEO-336699)](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE176078) | [![citation](https://img.shields.io/badge/dynamic/json?label=citation&query=citationCount&url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2F09690abc5440dec515c14256dccf7fe45acee988%3Ffields%3DcitationCount)](https://www.semanticscholar.org/paper/09690abc5440dec515c14256dccf7fe45acee988) |
-|||||||
+|  |  | []() |  |  |  |
 
-More see [*`Methods`*](posts/methods/index.html)
+[View all methods →](posts/methods/index.html)
 
-## Blogs
+### Learning Resources
+
+#### [Blogs](posts/blogs/index.html)
+Curated blog posts and articles about scRNA-seq and related topics.
+
+**Featured Blog:**
 | Field | Title |
 | -- | -- |
-|||
 | `Aging` | [FIGHT AGING!](https://www.fightaging.org/) |
-|||
 
-More see [*`Blogs`*](posts/blogs/index.html)
+[View all blogs →](posts/blogs/index.html)
 
-## Books
+#### [Books](posts/books/index.html)
+Recommended books and learning materials.
+
+**Featured Book:**
 | Field | Title |
 | -- | -- |
-|||
-| `R` | [Advanced R](https://adv-r.hadley.nz/index.html) |
-|||
+| `Causal Inference` | [A First Course in Causal Inference](https://arxiv.org/abs/2305.18793) |
 
-More see [*`Books`*](posts/books/index.html)
+[View all books →](posts/books/index.html)
 
-## Databases
+#### [Databases](posts/databases/index.html)
+Useful databases for bioinformatics research.
+
+**Featured Database:**
 | Field | Database | Description | Related paper |
 | -- | -- | -- | -- |
-||||
-| `Single-cell` | [scRNASeqDB](https://bioinfo.uth.edu/scrnaseqdb/) | Human Single Cell Transcriptome Database | |
-||||
+| `Single-cell` | [STAB](https://mai.fudan.edu.cn/stab2/) | STAB2 (Spatio-Temporal Cell Atlas of Brain) provides a landscape of cell types as well as their regional heterogeneity and temporal dynamics across the human and mouse brain | [paper](https://academic.oup.com/nar/article/52/D1/D1033/7334093) |
 
-More see [*`Databases`*](posts/databases/index.html)
+[View all databases →](posts/databases/index.html)
 
-## Labs
+#### [Labs](posts/labs/index.html)
+Research laboratories and groups in the field.
+
+**Featured Lab:**
 | Field | Lab | Masterpiece |
 | -- | -- | -- |
-||||
-| `Bioinformatics tools` | [satijalab](https://satijalab.org/) | [seurat](https://github.com/satijalab/seurat)  |
-||||
+| `Bioinformatics tools` | [satijalab](https://satijalab.org/) | [seurat](https://github.com/satijalab/seurat) |
 
-More see [*`Labs`*](posts/labs/index.html)
+[View all labs →](posts/labs/index.html)
 
-## Maintenance
-If you interested this project and want to maintenance it, please see [*`here`*](posts/description/index.html) or [*`s2-folks`*](https://github.com/allenai/s2-folks/tree/main) for more information.
+## 🤝 Contributing
+Interested in contributing? We welcome contributions of all kinds:
+1. Add new resources through pull requests
+2. Report issues or suggest improvements
+3. Help with documentation and examples
+
+See [contribution guidelines](posts/description/index.html) for more details.
+
+## 📝 Maintenance
+For information about maintaining this project, please see:
+- [Maintenance Guide](posts/description/index.html)
+- [S2-folks Reference](https://github.com/allenai/s2-folks/tree/main)
+
+## 📄 License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 🌟 Acknowledgments
+Special thanks to all contributors and the bioinformatics community for their valuable resources and support.
+
+*Last updated: 2024-11-22*
