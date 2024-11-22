@@ -1,0 +1,49 @@
+- field: "Causal Inference"
+  title: "A First Course in Causal Inference"
+  url: "https://arxiv.org/abs/2305.18793"
+  description: "A comprehensive introduction to causal inference methods and their applications."
+
+- field: "GWAS"
+  title: "GWASLab"
+  url: "https://gwaslab.org/2021/11/14/twosamplemr/"
+  description: "Practical tutorials and resources for genome-wide association studies."
+
+- field: "GWAS"
+  title: "GWASTutorial"
+  url: "https://cloufield.github.io/GWASTutorial/"
+  description: "Step-by-step guide to conducting genome-wide association studies."
+
+- field: "Python"
+  title: "Python for Data Analysis"
+  url: "https://wesmckinney.com/book/"
+  description: "Comprehensive guide to data analysis using Python, by the creator of pandas."
+
+- field: "R"
+  title: "Advanced R"
+  url: "https://adv-r.hadley.nz/index.html"
+  description: "Deep dive into R programming by Hadley Wickham."
+
+- field: "R"
+  title: "Deep R Programming"
+  url: "https://deepr.gagolewski.com/"
+  description: "Advanced concepts and techniques in R programming."
+
+- field: "scRNA-seq"
+  title: "Analysis of single cell RNA-seq data"
+  url: "https://www.singlecellcourse.org/index.html"
+  description: "Comprehensive course on single-cell RNA sequencing analysis methods."
+
+- field: "scRNA-seq"
+  title: "Single-cell best practices"
+  url: "www.sc-best-practices.org"
+  description: "Best practices and guidelines for single-cell RNA sequencing analysis."
+
+- field: "scRNA-seq"
+  title: "Single-cell best practices"
+  url: "www.sc-best-practices.org"
+  description: "Best practices and guidelines for single-cell RNA sequencing analysis"
+
+- field: "GWAS"
+  title: "GWASTutorial"
+  url: "https://cloufield.github.io/GWASTutorial/"
+  description: "Comprehensive tutorial for genome-wide association studies"
