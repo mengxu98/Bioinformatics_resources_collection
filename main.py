@@ -4,6 +4,8 @@ from functions.blogs_updater import BlogsUpdater
 from functions.databases_updater import DatabasesUpdater
 from functions.labs_updater import LabsUpdater
 from functions.readme_updater import ReadmeUpdater
+from functions.articles_updater import ArticlesUpdater
+from functions.methods_updater import MethodsUpdater
 
 
 def setup_logging():
@@ -20,6 +22,8 @@ def main():
 
     try:
         updaters = [
+            ("articles.md", ArticlesUpdater(), "update_articles"),
+            ("methods.md", MethodsUpdater(), "update_methods"),
             ("books.md", BooksUpdater(), "update_books"),
             ("blogs.md", BlogsUpdater(), "update_blogs"),
             ("databases.md", DatabasesUpdater(), "update_databases"),
@@ -28,16 +32,10 @@ def main():
         ]
 
         for name, updater, method_name in updaters:
-            if name.endswith(".md"):
-                logger.info(f"Updating {name}...")
-            else:
-                logger.info(f"Updating {name}...")
-
+            logger.info(f"Updating {name}...")
             update_method = getattr(updater, method_name)
             update_method()
-
-            if name.endswith(".md"):
-                logger.info(f"{name} updated successfully")
+            logger.info(f"{name} updated successfully")
 
     except Exception as e:
         logger.error(f"Error during update: {str(e)}")
