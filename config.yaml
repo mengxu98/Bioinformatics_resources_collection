@@ -1,8 +1,0 @@
-paper:
-  url: "https://api.semanticscholar.org/v1/paper/58e4d63a4572ec930429ee65e82ef7c5bf7c593b"
-  doi: [""]
-  code_language: ["R"]
-  url_code: ["https://github.com/Lan-lab/COMSE"]
-  data_database: ["Null"]
-  url_data: [""]
-  output_file: "website/content/posts/test.md"

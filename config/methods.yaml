@@ -1,0 +1,120 @@
+- citation: https://api.semanticscholar.org/graph/v1/paper/7957b93e72b7775066da09cf9fb742eb2707b1f8
+  code: https://github.com/ZJUFanLab/SpaTalk
+  data:
+  - type: Website
+    url: https://www.nature.com/articles/s41467-022-32111-8#data-availability
+  date: '2022'
+  field: Cell-cell communication
+  journal: Nature Communications
+  language: R
+  title: Knowledge-graph-based cell-cell communication inference for spatially resolved
+    transcriptomic data with SpaTalk
+  url: https://doi.org/10.1038/s41467-022-32111-8
+- citation: https://api.semanticscholar.org/graph/v1/paper/631e4db76fb0fd5ac6e1d7029627d0b99373540c
+  code: https://github.com/wanglabtongji/CCI
+  data:
+  - type: Website
+    url: https://genomebiology.biomedcentral.com/articles/10.1186/s13059-022-02783-y#availability-of-data-and-materials
+  date: '2022'
+  field: Data integration
+  journal: Genome Biology
+  language: R Python
+  title: Evaluation of cell-cell interaction methods by integrating single-cell RNA
+    sequencing data with spatial information
+  url: https://doi.org/10.1186/s13059-022-02783-y
+- citation: https://api.semanticscholar.org/graph/v1/paper/09690abc5440dec515c14256dccf7fe45acee988
+  code: https://github.com/cmzuo11/stMVC
+  data:
+  - type: GEO
+    url: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE176078
+  date: '2022'
+  field: Data integration
+  journal: Nature Communications
+  language: Python
+  title: Elucidating tumor heterogeneity from spatially resolved transcriptomics data
+    by multi-view graph collaborative learning
+  url: https://doi.org/10.1038/s41467-022-33619-9
+- citation: https://api.semanticscholar.org/graph/v1/paper/58e4d63a4572ec930429ee65e82ef7c5bf7c593b
+  code: https://github.com/Lan-lab/COMSE
+  data: []
+  date: '2024'
+  field: Feature selection
+  journal: BMC Biology
+  language: R
+  title: 'COMSE: analysis of single-cell RNA-seq data using community detection-based
+    feature selection'
+  url: https://doi.org/10.1186/s12915-024-01963-5
+- citation: https://api.semanticscholar.org/graph/v1/paper/59447739b7dda29ef919184cc8246cbbbd5e8938
+  code: https://github.com/zhanglab-wbgcas/STGRNS
+  data: []
+  date: '2023'
+  field: Gene regulatory network
+  journal: Bioinformatics
+  language: Python
+  title: 'STGRNS: an interpretable transformer-based method for inferring gene regulatory
+    networks from single-cell transcriptomic data'
+  url: https://doi.org/10.1093/bioinformatics/btad165
+- citation: https://api.semanticscholar.org/graph/v1/paper/e55822f9277e715529f816ed5e4fbb3f77f8d6ea
+  code: https://github.com/yetianmed/BioAge
+  data:
+  - type: UK Biobank
+    url: https://bbams.ndph.ox.ac.uk/ams/
+  - type: ADNI
+    url: https://adni.loni.usc.edu/
+  date: '2023'
+  field: BioAge
+  journal: Nature Medicine
+  language: MATLAB
+  title: Heterogeneous aging across multiple organ systems and prediction of chronic
+    disease and mortality (BioAge)
+  url: https://doi.org/10.1038/s41591-023-02296-6
+- citation: https://api.semanticscholar.org/graph/v1/paper/d7f5a9db5d6fe9564077f2ee783e4baa93111311
+  code: https://github.com/tobias-kaufmann/brainage
+  data:
+  - type: Github
+    url: https://github.com/tobias-kaufmann/brainage
+  date: '2019'
+  field: BioAge
+  journal: Nature Neuroscience
+  language: R
+  title: Common brain disorders are associated with heritable patterns of apparent
+    aging of the brain
+  url: https://doi.org/10.1038/s41593-019-0471-7
+- citation: https://api.semanticscholar.org/graph/v1/paper/806cfebf4f12d190197101608d7fe140f8edadb8
+  code: https://github.com/One-Biosciences/MAYA/
+  data: []
+  date: '2022'
+  field: Enrichment analysis
+  journal: Nature Communications
+  language: R
+  title: Multi-modal quantification of pathway activity with MAYA
+  url: https://doi.org/10.1038/s41467-023-37410-2
+- citation: https://api.semanticscholar.org/graph/v1/paper/8b9c1b99a5b857331da15cdca3ab74f78e3f2d2f
+  code: https://github.com/carmonalab/UCell
+  data: []
+  date: '2021'
+  field: Enrichment analysis
+  journal: Computational and Structural Biotechnology Journal
+  language: R
+  title: 'UCell: Robust and scalable single-cell gene signature scoring'
+  url: https://doi.org/10.1016/j.csbj.2021.06.043
+- citation: https://api.semanticscholar.org/graph/v1/paper/3388f6923348fa24ba7f11a79b6aa4fdbd3b4392
+  code: https://github.com/perslab/depict
+  data: []
+  date: '2015'
+  field: Enrichment analysis
+  journal: Nature Communications
+  language: Java
+  title: Biological interpretation of genome-wide association studies using predicted
+    gene functions
+  url: https://doi.org/10.1038/ncomms6890
+- citation: https://api.semanticscholar.org/graph/v1/paper/c0c31205de416f6c859c95de19d3c2a468e4c74c
+  code: https://github.com/NathanSkene/EWCE
+  data: []
+  date: '2016'
+  field: Celltype Enrichment
+  journal: Frontiers in Neuroscience
+  language: R
+  title: Identification of Vulnerable Cell Types in Major Brain Disorders Using Single
+    Cell Transcriptomes and Expression Weighted Cell Type Enrichment
+  url: https://doi.org/10.3389/fnins.2016.00016

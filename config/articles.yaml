@@ -1,0 +1,122 @@
+- citation: https://api.semanticscholar.org/graph/v1/paper/a5b158dbafff3ade8a9779c134441e5f3db18e2d
+  code: https://github.com/cjh-lab/NCOMMS_NSCLC_scFibs
+  data:
+  - type: GEO
+    url: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE153935
+  - type: Zenodo
+    url: https://zenodo.org/record/7400873#.ZCZBDl5LgQ8
+  date: '2023'
+  field: Tumor
+  journal: Nature communications
+  language: R
+  title: Single-cell analysis reveals prognostic fibroblast subpopulations linked
+    to molecular and immunological subtypes of lung cancer
+  url: https://doi.org/10.1038/s41467-023-35832-6
+- citation: https://api.semanticscholar.org/graph/v1/paper/eda76900f3954e1930080779b5cfb92274a11da3
+  code: https://zenodo.org/record/5461803#.ZCknc15LgQ8
+  data:
+  - type: PKU
+    url: http://cancer-pku.cn:3838/PanC_T/
+  date: '2021'
+  field: Tumor
+  journal: Science
+  language: R Python Shell
+  title: Pan-cancer single-cell landscape of tumor-infiltrating T cells
+  url: https://www.science.org/doi/10.1126/science.abe6474
+- citation: https://api.semanticscholar.org/graph/v1/paper/41b3c17dcaad2d25cad02c93d0d57e2b3a67e0f2
+  code: https://github.com/rajewsky-lab/planarian_lineages
+  data: []
+  date: '2018'
+  field: Tumor
+  journal: Science
+  language: Jupyter Notebook
+  title: Cell type atlas and lineage tree of a whole complex animal by single-cell
+    transcriptomics
+  url: https://www.science.org/doi/10.1126/science.aaq1723
+- citation: https://api.semanticscholar.org/graph/v1/paper/2e68442733604d3ff3f9fe5e62201ffc4f1ea951
+  code: https://figshare.com/articles/online_resource/NSCLC_data_reanalysis_codes/22106201
+  data:
+  - type: figshare
+    url: https://figshare.com/collections/An_integrated_single-cell_transcriptomic_dataset_for1_non-small_cell_lung_cancer/6222221/3
+  date: '2023'
+  field: Tumor
+  journal: scientific data
+  language: R
+  title: An integrated single-cell transcriptomic dataset for non-small cell lung
+    cancer
+  url: https://www.nature.com/articles/s41597-023-02074-6
+- citation: https://api.semanticscholar.org/graph/v1/paper/66d79bafce806798b72b4333854b8761073221cc
+  code:
+  - https://doi.org/10.24433/CO.0121060.v1
+  - https://github.com/bischofp/single_cell_lung_adenocarcinoma
+  data: []
+  date: '2020'
+  field: Tumor
+  journal: Oncogene
+  language:
+  - R
+  - Jupyter Notebook
+  title: Single-cell RNA sequencing reveals distinct tumor microenvironmental patterns
+    in lung adenocarcinoma
+  url: https://doi.org/10.1038/s41388-021-02054-3
+- citation: https://api.semanticscholar.org/graph/v1/paper/dfb50b723e402caac70b0dcbe21ca58e34401505
+  code: https://github.com/Junjie-Hu/NSCLC-immunotherapy
+  data:
+  - type: GEO
+    url: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE207422
+  date: '2023'
+  field: Tumor
+  journal: Genome Medicine
+  language: R Python
+  title: Tumor microenvironment remodeling after neoadjuvant immunotherapy in non-small
+    cell lung cancer revealed by single-cell RNA sequencing
+  url: https://doi.org/10.1186/s13073-023-01164-9
+- citation: https://api.semanticscholar.org/graph/v1/paper/99fdbe369f58bacbdb3e4394499060fe03813706
+  code: https://github.com/HantaoShu/DeepSEM
+  data:
+  - type: GEO
+    url: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi
+  - type: Zenodo
+    url: https://zenodo.org/record/3378975
+  date: '2021'
+  field: Tumor
+  journal: Nature Computational Science
+  language: Python
+  title: Modeling gene regulatory networks using neural network architectures
+  url: https://www.nature.com/articles/s43588-021-00099-8
+- citation: https://api.semanticscholar.org/graph/v1/paper/a81789d2afa4f26b870cd2d9937d25e45f2153b5
+  code: https://www.cell.com/cms/10.1016/j.devcel.2022.04.006/attachment/94171a16-fac1-4d9e-b7e0-bd4909baf4f0/mmc6
+  data:
+  - type: Website
+    url: https://db.cngb.org/stomics/flysta3d/
+  date: '2022'
+  field: Spatiotemporal transcriptomic
+  journal: Developmental cell
+  language: R Python
+  title: High-resolution 3D spatiotemporal transcriptomic maps of developing Drosophila
+    embryos and larvae
+  url: https://www.ncbi.nlm.nih.gov/pubmed/35512700
+- citation: https://api.semanticscholar.org/graph/v1/paper/fa40c4ea0810be27e974e0d97cf6eeaf2ef85973
+  code: https://doi.org/10.5281/zenodo.6002321
+  data:
+  - type: figshare
+    url: https://doi.org/10.6084/m9.figshare.19085156
+  date: '2022'
+  field: BioAge
+  journal: Cell Reports
+  language: R
+  title: Distinct biological ages of organs and systems identified from a multi-omics
+    study
+  url: https://doi.org/10.1016/j.celrep.2022.110459
+- citation: https://api.semanticscholar.org/graph/v1/paper/c2971ece5f70f24bf65c828506cf17fe6cd20212
+  code: https://github.com/AnnaGalakhova/Driessens_Galakhova_Heyer_2022
+  data:
+  - type: Website
+    url: https://www.nature.com/articles/s41467-023-39946-9#data-availability
+  date: '2023'
+  field: HAR
+  journal: Nature Communications
+  language: MATLAB
+  title: Genes associated with cognitive ability and HAR show overlapping expression
+    patterns in human cortical neuron types
+  url: https://doi.org/10.1038/s41467-023-39946-9
