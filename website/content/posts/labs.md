@@ -1,8 +1,8 @@
 ---
 title: "Labs"
 author: "Mengxu"
-date: 2024-11-23
-lastmod: 2024-11-23
+date: 2024-11-24
+lastmod: 2024-11-24
 ---
 
 <!--more-->
@@ -106,3 +106,26 @@ Here is a curated list of ***Labs*** conducting research in bioinformatics, sing
 | -- | -- | -- |
 | [Similarity Network Fusion](http://compbio.cs.toronto.edu/SNF/SNF/Software.html/) | [SNFtool](https://rdrr.io/cran/SNFtool/man/SNF.html/) | Methods for integrating multiple data types through network fusion |
 
+| **Name** | **PI** | **Institution** | **Research** |
+| -- | -- | -- | -- |
+| **`Other`** |  |  |  |
+| [Computational Brain Imaging Group](https://sites.google.com/view/yeolab) |  |  |  |
+| [Feng Zhang](https://fzhang.bioinfo-lab.com/) |  |  |  |
+| [GWASLab](https://gwaslab.org/) |  |  |  |
+| [LULAB](https://lusystemsbio.northeastern.edu/) |  |  |  |
+| [QuaDBio Group](https://bsse.ethz.ch/qdb/) |  |  |  |
+| [Quan Zou](http://lab.malab.cn/~zq/) |  |  |  |
+| [Similarity Network Fusion](http://compbio.cs.toronto.edu/SNF/SNF/Software.html/) |  |  |  |
+| [Sun Lab](https://sqsun.github.io/index.html) |  |  |  |
+| [THE NETWORK ZOO](https://netzoo.github.io/) |  |  |  |
+| [The Glass Group](https://sites.google.com/a/channing.harvard.edu/kimberlyglass/home) |  |  |  |
+| [Yihui Xie](https://yihui.org/) |  |  |  |
+| [ZhiyuanLi lab](http://cqb.pku.edu.cn/zyli/index.htm) |  |  |  |
+| [aertslab](https://github.com/zpliulab) |  |  |  |
+| [netbiolab](https://github.com/zpliulab) |  |  |  |
+| [satijalab](https://satijalab.org/) |  |  |  |
+| [theislab](https://github.com/theislab) |  |  |  |
+| [zpliulab](https://github.com/zpliulab) |  |  |  |
+| [一文掌握GSEA](https://mp.weixin.qq.com/s?__biz=MzI5MTcwNjA4NQ==&mid=2247488358&idx=1&sn=4c1c15b6467ff7f8bd7fe95400bbc1df&scene=21#wechat_redirect) |  |  |  |
+| [丰富环境对儿童大脑发育的影响](https://zhuanlan.zhihu.com/p/532096885) |  |  |  |
+| [从基因调控逻辑解码细胞命运决定的基本原理](http://cqb.pku.edu.cn/zyli/info/1041/1196.htm) |  |  |  |

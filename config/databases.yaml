@@ -32,3 +32,9 @@
   url: "https://thessgac.com/"
   description: "The NHGRI-EBI Catalog of human genome-wide association studies"
   paper_url: "https://www.nature.com/articles/s41588-018-0147-3"
+
+- field: "Single-cell, Brain"
+  title: "Brain Cell Atlas"
+  url: "https://www.braincellatlas.org/index"
+  description: "A comprehensive and unified atlas of the brain that was built across studies, regions, diseases and sequencing platforms"
+  paper_url: "https://www.nature.com/articles/s41591-024-03150-z"

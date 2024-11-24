@@ -120,3 +120,15 @@
   title: Genes associated with cognitive ability and HAR show overlapping expression
     patterns in human cortical neuron types
   url: https://doi.org/10.1038/s41467-023-39946-9
+- citation: https://api.semanticscholar.org/graph/v1/paper/30b9f44100aa393b95cdc337d83e5c09ec57b223
+  code: https://github.com/rnacentre/BrainCellAtlas-reproducibility
+  data:
+  - type: Website
+    url: https://www.braincellatlas.org/dataSet
+  date: '2024'
+  field: Medicine
+  journal: Nature Network Boston
+  language: Jupyter Notebook
+  title: A brain cell atlas integrating single-cell transcriptomes across human brain
+    regions
+  url: https://www.nature.com/articles/s41591-024-03150-z

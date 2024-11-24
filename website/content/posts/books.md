@@ -1,8 +1,8 @@
 ---
 title: "Books"
 author: "Mengxu"
-date: 2024-11-23
-lastmod: 2024-11-23
+date: 2024-11-24
+lastmod: 2024-11-24
 ---
 
 <!--more-->
@@ -48,3 +48,16 @@ Here is a curated list of ***Books*** covering various topics in bioinformatics,
 | [Single-cell best practices](www.sc-best-practices.org) | Best practices and guidelines for single-cell RNA sequencing analysis. |
 | [Single-cell best practices](www.sc-best-practices.org) | Best practices and guidelines for single-cell RNA sequencing analysis |
 
+| **Title** | **Authors** | **Publisher** | **Year** | **Link** |
+| -- | -- | -- | -- | -- |
+| **`Other`** |  |  |  |  |
+| [A First Course in Causal Inference](https://arxiv.org/abs/2305.18793) |  |  |  |  |
+| [Advanced R](https://adv-r.hadley.nz/index.html) |  |  |  |  |
+| [Analysis of single cell RNA-seq data](https://www.singlecellcourse.org/index.html) |  |  |  |  |
+| [Deep R Programming](https://deepr.gagolewski.com/) |  |  |  |  |
+| [GWASLab](https://gwaslab.org/2021/11/14/twosamplemr/) |  |  |  |  |
+| [GWASTutorial](https://cloufield.github.io/GWASTutorial/) |  |  |  |  |
+| [GWASTutorial](https://cloufield.github.io/GWASTutorial/) |  |  |  |  |
+| [Python for Data Analysis](https://wesmckinney.com/book/) |  |  |  |  |
+| [Single-cell best practices](www.sc-best-practices.org) |  |  |  |  |
+| [Single-cell best practices](www.sc-best-practices.org) |  |  |  |  |
