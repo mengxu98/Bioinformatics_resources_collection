@@ -1,79 +1,153 @@
+from .base_updater import BaseUpdater
 import yaml
-import os
-from datetime import datetime
-import re
-from itertools import groupby
-import logging
 
-class DatabasesUpdater:
-    """Handler for updating databases.md"""
-    def __init__(self, config_dir="config", content_dir="website/content/posts"):
-        self.config_dir = config_dir
-        self.content_dir = content_dir
-        self.yaml_path = os.path.join(config_dir, "databases.yaml")
-        self.md_path = os.path.join(content_dir, "databases.md")
-        self.logger = logging.getLogger(__name__)
-
-    def update_databases(self):
-        """Main method to update databases.md file"""
-        databases_data = self._read_databases_yaml()
-        grouped_databases = self._group_databases_by_field(databases_data)
-        md_content = self._generate_databases_md(grouped_databases)
-        self._write_databases_md(md_content)
-
-    def _read_databases_yaml(self):
-        """Read database entries from databases.yaml"""
-        with open(self.yaml_path, 'r', encoding='utf-8') as f:
-            return yaml.safe_load(f)
-
-    def _group_databases_by_field(self, databases):
-        """Group databases by their field"""
-        # Split combined fields and create separate entries
-        expanded_databases = []
-        for db in databases:
-            fields = [f.strip() for f in db['field'].split(',')]
-            for field in fields:
-                db_copy = db.copy()
-                db_copy['field'] = field
-                expanded_databases.append(db_copy)
+class DatabasesUpdater(BaseUpdater):
+    def __init__(self):
+        """Initialize databases updater"""
+        super().__init__('config/databases.yaml')
+        self.md_file = 'website/content/posts/databases.md'
         
-        sorted_databases = sorted(expanded_databases, key=lambda x: (x['field'].lower(), x['title']))
-        return {k: list(g) for k, g in groupby(sorted_databases, key=lambda x: x['field'])}
-
-    def _generate_databases_md(self, grouped_databases):
-        """Generate content for databases.md with fields as sections"""
-        current_time = datetime.now().strftime('%Y-%m-%d')
-        header = f"""---
-title: "Databases"
-author: "Mengxu"
-date: {current_time}
-lastmod: {current_time}
----
-
-<!--more-->
-
-Here is a curated list of ***Databases*** covering various topics in bioinformatics, including single-cell RNA sequencing (scRNA-seq), genomics, and related fields. These resources are regularly updated and maintained.
-
-"""
-        content = []
-        
-        # Generate content for each field
-        for field, databases in grouped_databases.items():
-            # Add field as section header
-            content.append(f"## {field}\n")
-            content.append("| Database | Description | Related Paper |")
-            content.append("| -- | -- | -- |")
+    def update_content(self, data=None):
+        """
+        Update content in both yaml and md files
+        Args:
+            data: Optional data to update yaml with
+        Returns:
+            bool: Success status
+        """
+        try:
+            self.logger.info("Starting databases update")
             
-            # Add databases in this field
-            for db in databases:
-                paper_link = f"[paper]({db['paper_url']})" if 'paper_url' in db and db['paper_url'] else ""
-                content.append(f"| [{db['title']}]({db['url']}) | {db['description']} | {paper_link} |")
+            # First ensure yaml file is up to date
+            if data is None:
+                yaml_data = self._load_yaml()
+                if yaml_data is None:
+                    return False
+            else:
+                # Update yaml file if new data provided
+                with open(self.config_file, 'w', encoding='utf-8') as f:
+                    yaml.safe_dump(data, f, sort_keys=False, allow_unicode=True)
+                yaml_data = data
             
-            content.append("\n")  # Add space between sections
-        
-        return header + '\n'.join(content)
+            self.logger.info(f"Loaded {len(yaml_data)} entries from YAML")
 
-    def _write_databases_md(self, content):
-        """Write content to databases.md file"""
-        with open(self.md_path, 'w', encoding='utf-8') as f:
-            f.write(content) 
+            # Validate and normalize entries
+            valid_entries = []
+            for entry in yaml_data:
+                if not isinstance(entry, dict):
+                    self.logger.warning(f"Skipping invalid entry: {entry}")
+                    continue
+                    
+                # Use title as name if name is not provided
+                if 'name' not in entry and 'title' in entry:
+                    entry['name'] = entry['title']
+                
+                # Check required fields
+                if 'name' not in entry or 'url' not in entry:
+                    self.logger.warning(f"Skipping entry without name or url: {entry}")
+                    continue
+                    
+                # Convert paper_url to citation if needed
+                if 'paper_url' in entry and 'citation' not in entry:
+                    entry['citation'] = entry['paper_url']
+                
+                valid_entries.append(entry)
+            
+            self.logger.info(f"Found {len(valid_entries)} valid entries")
+
+            # Create or update MD file
+            try:
+                with open(self.md_file, 'r', encoding='utf-8') as f:
+                    content = f.readlines()
+                self.logger.info(f"Reading existing MD file: {self.md_file}")
+            except FileNotFoundError:
+                # Create new file with default content
+                content = [
+                    '---\n',
+                    'title: "Databases"\n',
+                    'date: 2024-01-01\n',
+                    'draft: false\n',
+                    '---\n',
+                    '\n',
+                    'This page lists biological databases and data resources.\n',
+                    '\n'
+                ]
+                self.logger.info(f"Creating new MD file: {self.md_file}")
+
+            # Find or create table section
+            table_start = None
+            for i, line in enumerate(content):
+                if line.startswith('| **Name**'):
+                    table_start = i
+                    self.logger.debug(f"Found table start at line {i}")
+                    break
+
+            # Create new table content
+            self.logger.info("Creating new table content")
+            new_table = ['| **Name** | **Description** | **Type** | **Access** | **Citation** |\n',
+                        '| -- | -- | -- | -- | -- |\n']
+            
+            # Group entries by category
+            entries_by_category = {}
+            for entry in valid_entries:
+                category = entry.get('category', 'Other')
+                if category not in entries_by_category:
+                    entries_by_category[category] = []
+                entries_by_category[category].append(entry)
+            
+            self.logger.info(f"Found {len(entries_by_category)} categories")
+
+            # Add entries by category
+            for category in sorted(entries_by_category.keys()):
+                self.logger.debug(f"Processing category: {category}")
+                new_table.append(f'| **`{category}`** |  |  |  |  |\n')
+                for entry in sorted(entries_by_category[category], key=lambda x: x['name']):
+                    self.logger.debug(f"Processing entry: {entry['name']}")
+                    
+                    # Create name with link
+                    name_cell = f"[{entry['name']}]({entry['url']})"
+                    
+                    # Create access badge
+                    access_badge = ''
+                    if entry.get('access'):
+                        access_type = entry['access']
+                        color = 'green' if access_type.lower() == 'free' else 'yellow'
+                        access_badge = f"![{access_type}](https://img.shields.io/badge/-{access_type}-{color})"
+                    
+                    # Create citation badge
+                    citation_badge = ''
+                    if entry.get('citation'):
+                        citation_id = entry['citation'].split('/')[-1]
+                        citation_badge = f"[![citation](https://img.shields.io/badge/dynamic/json?label=citation&query=citationCount&url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2F{citation_id}%3Ffields%3DcitationCount)]({entry['citation']})"
+
+                    line = f"| {name_cell} | {entry.get('description', '')} | {entry.get('type', '')} | {access_badge} | {citation_badge} |\n"
+                    new_table.append(line)
+
+            # Replace or append table
+            if table_start is not None:
+                # Find table end
+                table_end = table_start
+                while table_end < len(content) and content[table_end].startswith('|'):
+                    table_end += 1
+                
+                self.logger.info(f"Replacing table content from line {table_start} to {table_end}")
+                content[table_start:table_end] = new_table
+            else:
+                # Append table to end of file
+                self.logger.info("Appending new table to end of file")
+                if content and not content[-1].endswith('\n'):
+                    content.append('\n')
+                content.extend(new_table)
+
+            # Write back to file
+            self.logger.info(f"Writing updated content to {self.md_file}")
+            with open(self.md_file, 'w', encoding='utf-8') as f:
+                f.writelines(content)
+
+            self.logger.info(f"Successfully updated {self.md_file}")
+            return True
+
+        except Exception as e:
+            self.logger.error(f"Error updating content: {str(e)}")
+            self.logger.exception("Full traceback:")
+            return False 

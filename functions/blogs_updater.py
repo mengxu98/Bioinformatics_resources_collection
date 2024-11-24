@@ -1,79 +1,137 @@
+from .base_updater import BaseUpdater
 import yaml
-import os
-from datetime import datetime
-import re
-from itertools import groupby
-from typing import Optional
-import logging
 
-class BlogsUpdater:
-    """Handler for updating blogs.md"""
-    def __init__(self, config_dir="config", content_dir="website/content/posts"):
-        self.config_dir = config_dir
-        self.content_dir = content_dir
-        self.yaml_path = os.path.join(config_dir, "blogs.yaml")
-        self.md_path = os.path.join(content_dir, "blogs.md")
-        self.logger = logging.getLogger(__name__)
-
-    def update_blogs(self):
-        """Main method to update blogs.md file"""
-        blogs_data = self._read_blogs_yaml()
-        grouped_blogs = self._group_blogs_by_field(blogs_data)
-        md_content = self._generate_blogs_md(grouped_blogs)
-        self._write_blogs_md(md_content)
-
-    def _read_blogs_yaml(self):
-        """Read blog entries from blogs.yaml"""
-        with open(self.yaml_path, 'r', encoding='utf-8') as f:
-            return yaml.safe_load(f)
-
-    def _group_blogs_by_field(self, blogs):
-        """Group blogs by their field"""
-        sorted_blogs = sorted(blogs, key=lambda x: (x['field'].lower(), x['title']))
-        return {k: list(g) for k, g in groupby(sorted_blogs, key=lambda x: x['field'])}
-
-    def _get_description(self, blog: dict) -> str:
-        """Get blog description from yaml or return a default one"""
-        if 'description' in blog and blog['description']:
-            return blog['description']
+class BlogsUpdater(BaseUpdater):
+    def __init__(self):
+        """Initialize blogs updater"""
+        super().__init__('config/blogs.yaml')
+        self.md_file = 'website/content/posts/blogs.md'
         
-        # Return a simple description based on title
-        return f"A blog post about {blog['field'].lower()}."
-
-    def _generate_blogs_md(self, grouped_blogs):
-        """Generate content for blogs.md with fields as sections"""
-        current_time = datetime.now().strftime('%Y-%m-%d')
-        header = f"""---
-title: "Blogs"
-author: "Mengxu"
-date: {current_time}
-lastmod: {current_time}
----
-
-<!--more-->
-
-Here is a curated list of ***Blogs*** covering various topics in bioinformatics, including single-cell RNA sequencing (scRNA-seq), genomics, and related fields. These resources are regularly updated and maintained.
-
-"""
-        content = []
-        
-        # Generate content for each field
-        for field, blogs in grouped_blogs.items():
-            # Add field as section header
-            content.append(f"## {field}\n")
-            content.append("| Title | Description |")
-            content.append("| -- | -- |")
+    def update_content(self, data=None):
+        """
+        Update content in both yaml and md files
+        Args:
+            data: Optional data to update yaml with
+        Returns:
+            bool: Success status
+        """
+        try:
+            self.logger.info("Starting blogs update")
             
-            # Add blogs in this field
-            for blog in blogs:
-                description = self._get_description(blog)
-                content.append(f"| [{blog['title']}]({blog['url']}) | {description} |")
+            # First ensure yaml file is up to date
+            if data is None:
+                yaml_data = self._load_yaml()
+                if yaml_data is None:
+                    return False
+            else:
+                # Update yaml file if new data provided
+                with open(self.config_file, 'w', encoding='utf-8') as f:
+                    yaml.safe_dump(data, f, sort_keys=False, allow_unicode=True)
+                yaml_data = data
             
-            content.append("\n")  # Add space between sections
-        
-        return header + '\n'.join(content)
+            self.logger.info(f"Loaded {len(yaml_data)} entries from YAML")
 
-    def _write_blogs_md(self, content):
-        """Write content to blogs.md file"""
-        with open(self.md_path, 'w', encoding='utf-8') as f:
-            f.write(content)
+            # Validate entries
+            valid_entries = []
+            for entry in yaml_data:
+                if not isinstance(entry, dict):
+                    self.logger.warning(f"Skipping invalid entry: {entry}")
+                    continue
+                    
+                # Check required fields
+                if 'title' not in entry or 'url' not in entry:
+                    self.logger.warning(f"Skipping entry without title or url: {entry}")
+                    continue
+                    
+                valid_entries.append(entry)
+            
+            self.logger.info(f"Found {len(valid_entries)} valid entries")
+
+            # Create or update MD file
+            try:
+                with open(self.md_file, 'r', encoding='utf-8') as f:
+                    content = f.readlines()
+                self.logger.info(f"Reading existing MD file: {self.md_file}")
+            except FileNotFoundError:
+                # Create new file with default content
+                content = [
+                    '---\n',
+                    'title: "Blogs"\n',
+                    'date: 2024-01-01\n',
+                    'draft: false\n',
+                    '---\n',
+                    '\n',
+                    'This page lists blogs and personal websites related to bioinformatics.\n',
+                    '\n'
+                ]
+                self.logger.info(f"Creating new MD file: {self.md_file}")
+
+            # Find or create table section
+            table_start = None
+            for i, line in enumerate(content):
+                if line.startswith('| **Title**'):
+                    table_start = i
+                    self.logger.debug(f"Found table start at line {i}")
+                    break
+
+            # Create new table content
+            self.logger.info("Creating new table content")
+            new_table = ['| **Title** | **Author** | **Description** | **RSS** |\n',
+                        '| -- | -- | -- | -- |\n']
+            
+            # Group entries by category
+            entries_by_category = {}
+            for entry in valid_entries:
+                category = entry.get('category', 'Other')
+                if category not in entries_by_category:
+                    entries_by_category[category] = []
+                entries_by_category[category].append(entry)
+            
+            self.logger.info(f"Found {len(entries_by_category)} categories")
+
+            # Add entries by category
+            for category in sorted(entries_by_category.keys()):
+                self.logger.debug(f"Processing category: {category}")
+                new_table.append(f'| **`{category}`** |  |  |  |\n')
+                for entry in sorted(entries_by_category[category], key=lambda x: x['title']):
+                    self.logger.debug(f"Processing entry: {entry['title']}")
+                    
+                    # Create title with link
+                    title_cell = f"[{entry['title']}]({entry['url']})"
+                    
+                    # Create RSS badge if available
+                    rss_badge = ''
+                    if entry.get('rss'):
+                        rss_badge = f"[![RSS](https://img.shields.io/badge/-RSS-FFA500)]({entry['rss']})"
+
+                    line = f"| {title_cell} | {entry.get('author', '')} | {entry.get('description', '')} | {rss_badge} |\n"
+                    new_table.append(line)
+
+            # Replace or append table
+            if table_start is not None:
+                # Find table end
+                table_end = table_start
+                while table_end < len(content) and content[table_end].startswith('|'):
+                    table_end += 1
+                
+                self.logger.info(f"Replacing table content from line {table_start} to {table_end}")
+                content[table_start:table_end] = new_table
+            else:
+                # Append table to end of file
+                self.logger.info("Appending new table to end of file")
+                if content and not content[-1].endswith('\n'):
+                    content.append('\n')
+                content.extend(new_table)
+
+            # Write back to file
+            self.logger.info(f"Writing updated content to {self.md_file}")
+            with open(self.md_file, 'w', encoding='utf-8') as f:
+                f.writelines(content)
+
+            self.logger.info(f"Successfully updated {self.md_file}")
+            return True
+
+        except Exception as e:
+            self.logger.error(f"Error updating content: {str(e)}")
+            self.logger.exception("Full traceback:")
+            return False

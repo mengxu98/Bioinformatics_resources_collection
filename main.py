@@ -1,64 +1,98 @@
 import logging
+import yaml
+from functions.articles_updater import ArticlesUpdater
+from functions.methods_updater import MethodsUpdater
 from functions.books_updater import BooksUpdater
 from functions.blogs_updater import BlogsUpdater
 from functions.databases_updater import DatabasesUpdater
 from functions.labs_updater import LabsUpdater
 from functions.readme_updater import ReadmeUpdater
-from functions.articles_updater import ArticlesUpdater
-from functions.methods_updater import MethodsUpdater
-import yaml
-import os
 
+# Set up logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
 
-def setup_logging():
-    """Configure logging settings"""
-    logging.basicConfig(
-        level=logging.INFO,
-        format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
-    )
-
+def get_articles_data():
+    """Get articles data from yaml file"""
+    with open('config/articles.yaml', 'r', encoding='utf-8') as f:
+        return yaml.safe_load(f)
 
 def main():
-    """Main function to update all resource files"""
-    logger = logging.getLogger(__name__)
-
+    """Main function to update all files"""
     try:
-        yaml_path = os.path.join("config", "articles.yaml")
-        try:
-            with open(yaml_path, 'r', encoding='utf-8') as f:
-                articles_data = yaml.safe_load(f) or []
-        except Exception as e:
-            logger.error(f"Error reading articles.yaml: {str(e)}")
-            articles_data = []
+        # Update articles
+        logger.info("Updating articles.md...")
+        articles_data = get_articles_data()
+        articles_updater = ArticlesUpdater()
+        if articles_updater.update_content(articles_data):
+            logger.info("articles.md updated successfully")
+        else:
+            logger.error("Failed to update articles.md")
+            return False
 
-        updaters = [
-            ("articles.md", ArticlesUpdater(), "update_content", articles_data),
-            ("methods.md", MethodsUpdater(), "update_content"),
-            ("books.md", BooksUpdater(), "update_books"),
-            ("blogs.md", BlogsUpdater(), "update_blogs"),
-            ("databases.md", DatabasesUpdater(), "update_databases"),
-            ("labs.md", LabsUpdater(), "update_labs"),
-            ("readme files", ReadmeUpdater(), "update_content"),
-        ]
+        # Update methods
+        logger.info("Updating methods.md...")
+        methods_updater = MethodsUpdater()
+        if methods_updater.update_content():
+            logger.info("methods.md updated successfully")
+        else:
+            logger.error("Failed to update methods.md")
+            return False
 
-        for update_info in updaters:
-            name = update_info[0]
-            updater = update_info[1]
-            method_name = update_info[2]
-            logger.info(f"Updating {name}...")
-            
-            if isinstance(updater, ArticlesUpdater):
-                getattr(updater, method_name)(articles_data)
-            else:
-                getattr(updater, method_name)()
-                
-            logger.info(f"{name} updated successfully")
+        # Update books
+        logger.info("Updating books.md...")
+        books_updater = BooksUpdater()
+        if books_updater.update_content():
+            logger.info("books.md updated successfully")
+        else:
+            logger.error("Failed to update books.md")
+            return False
+
+        # Update blogs
+        logger.info("Updating blogs.md...")
+        blogs_updater = BlogsUpdater()
+        if blogs_updater.update_content():
+            logger.info("blogs.md updated successfully")
+        else:
+            logger.error("Failed to update blogs.md")
+            return False
+
+        # Update databases
+        logger.info("Updating databases.md...")
+        databases_updater = DatabasesUpdater()
+        if databases_updater.update_content():
+            logger.info("databases.md updated successfully")
+        else:
+            logger.error("Failed to update databases.md")
+            return False
+
+        # Update labs
+        logger.info("Updating labs.md...")
+        labs_updater = LabsUpdater()
+        if labs_updater.update_content():
+            logger.info("labs.md updated successfully")
+        else:
+            logger.error("Failed to update labs.md")
+            return False
+
+        # Update readme files
+        logger.info("Updating readme files...")
+        readme_updater = ReadmeUpdater()
+        if readme_updater.update_content():
+            logger.info("readme files updated successfully")
+        else:
+            logger.error("Failed to update readme files")
+            return False
+
+        return True
 
     except Exception as e:
         logger.error(f"Error during update: {str(e)}")
-        raise
+        logger.exception("Full traceback:")
+        return False
 
-
-if __name__ == "__main__":
-    setup_logging()
+if __name__ == '__main__':
     main()

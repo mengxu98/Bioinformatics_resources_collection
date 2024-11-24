@@ -6,70 +6,44 @@ import time
 import random
 
 class BaseUpdater(ABC):
-    def __init__(self, yaml_file):
-        """Initialize the updater with yaml file path"""
+    def __init__(self, config_file):
+        self.config_file = config_file
         self.logger = logging.getLogger(__name__)
-        self.sch = SemanticScholar()
-        self.yaml_file = yaml_file
-        
+
     def _load_yaml(self):
-        """Load existing YAML file"""
+        """Load data from yaml file"""
         try:
-            with open(self.yaml_file, 'r') as f:
-                return yaml.safe_load(f) or []
-        except FileNotFoundError:
-            return []
-
-    def _save_yaml(self, data):
-        """Save data to YAML file"""
-        with open(self.yaml_file, 'w') as f:
-            yaml.dump(data, f, allow_unicode=True)
-
-    def _get_paper_info(self, title):
-        """
-        Get paper information from Semantic Scholar API
-        Args:
-            title: Paper title to search for
-        Returns:
-            dict: Paper information or None if not found
-        """
-        try:
-            # Add delay to avoid rate limiting
-            time.sleep(random.uniform(1, 2))
-            papers = self.sch.search_paper(title, limit=1)
-            
-            if not papers:
-                return None
-
-            paper = papers[0]
-            paper_detail = self.sch.get_paper(paper.paperId)
-
-            if not paper_detail:
-                return None
-
-            return {
-                'title': str(paper_detail.title),
-                'url': str(paper_detail.url),
-                'date': str(paper_detail.year),
-                'journal': str(paper_detail.venue),
-                'field': str(paper_detail.fieldsOfStudy[0]) if paper_detail.fieldsOfStudy else '',
-                'citation': f"https://api.semanticscholar.org/graph/v1/paper/{paper_detail.paperId}",
-                'code': '',  # Keep empty for manual input
-                'data': [],  # Keep empty for manual input
-                'language': []  # Keep empty for manual input
-            }
-
+            with open(self.config_file, 'r', encoding='utf-8') as f:
+                return yaml.safe_load(f)
         except Exception as e:
-            self.logger.error(f"Error getting info for paper {title}: {str(e)}")
+            self.logger.error(f"Error loading YAML file: {str(e)}")
             return None
 
-    @abstractmethod
     def update_content(self, data=None):
         """
-        Update the content file
+        Update content in yaml file
         Args:
             data: Optional data to update with
         Returns:
             bool: Success status
         """
-        pass
+        try:
+            self.logger.info("Starting articles update")
+            
+            # If no new data provided, just read existing data
+            if data is None:
+                yaml_data = self._load_yaml()
+                if yaml_data is None:
+                    return False
+                return True
+                
+            # Update yaml file if new data provided
+            with open(self.config_file, 'w', encoding='utf-8') as f:
+                yaml.safe_dump(data, f, sort_keys=False, allow_unicode=True)
+            self.logger.info(f"Successfully updated {self.config_file}")
+            return True
+
+        except Exception as e:
+            self.logger.error(f"Error updating YAML file: {str(e)}")
+            self.logger.exception("Full traceback:")
+            return False

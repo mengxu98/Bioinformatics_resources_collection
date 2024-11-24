@@ -1,77 +1,134 @@
+from .base_updater import BaseUpdater
 import yaml
-import os
-from datetime import datetime
-import re
-from itertools import groupby
-import logging
 
-class BooksUpdater:
-    """Handler for updating books.md"""
-    def __init__(self, config_dir="config", content_dir="website/content/posts"):
-        self.config_dir = config_dir
-        self.content_dir = content_dir
-        self.yaml_path = os.path.join(config_dir, "books.yaml")
-        self.md_path = os.path.join(content_dir, "books.md")
-        self.logger = logging.getLogger(__name__)
-
-    def update_books(self):
-        """Main method to update books.md file"""
-        books_data = self._read_books_yaml()
-        grouped_books = self._group_books_by_field(books_data)
-        md_content = self._generate_books_md(grouped_books)
-        self._write_books_md(md_content)
-
-    def _read_books_yaml(self):
-        """Read book entries from books.yaml"""
-        with open(self.yaml_path, 'r', encoding='utf-8') as f:
-            return yaml.safe_load(f)
-
-    def _group_books_by_field(self, books):
-        """Group books by their field"""
-        sorted_books = sorted(books, key=lambda x: (x['field'].lower(), x['title']))
-        return {k: list(g) for k, g in groupby(sorted_books, key=lambda x: x['field'])}
-
-    def _get_description(self, book: dict) -> str:
-        """Get book description from yaml or return a default one"""
-        if 'description' in book and book['description']:
-            return book['description']
+class BooksUpdater(BaseUpdater):
+    def __init__(self):
+        """Initialize books updater"""
+        super().__init__('config/books.yaml')
+        self.md_file = 'website/content/posts/books.md'
         
-        return f"A book about {book['field'].lower()}."
-
-    def _generate_books_md(self, grouped_books):
-        """Generate content for books.md with fields as sections"""
-        current_time = datetime.now().strftime('%Y-%m-%d')
-        header = f"""---
-title: "Books"
-author: "Mengxu"
-date: {current_time}
-lastmod: {current_time}
----
-
-<!--more-->
-
-Here is a curated list of ***Books*** covering various topics in bioinformatics, including single-cell RNA sequencing (scRNA-seq), genomics, and related fields. These resources are regularly updated and maintained.
-
-"""
-        content = []
-        
-        # Generate content for each field
-        for field, books in grouped_books.items():
-            # Add field as section header
-            content.append(f"## {field}\n")
-            content.append("| Title | Description |")
-            content.append("| -- | -- |")
+    def update_content(self, data=None):
+        """
+        Update content in both yaml and md files
+        Args:
+            data: Optional data to update yaml with
+        Returns:
+            bool: Success status
+        """
+        try:
+            self.logger.info("Starting books update")
             
-            # Add books in this field
-            for book in books:
-                description = self._get_description(book)
-                content.append(f"| [{book['title']}]({book['url']}) | {description} |")
+            # First ensure yaml file is up to date
+            if data is None:
+                yaml_data = self._load_yaml()
+                if yaml_data is None:
+                    return False
+            else:
+                # Update yaml file if new data provided
+                with open(self.config_file, 'w', encoding='utf-8') as f:
+                    yaml.safe_dump(data, f, sort_keys=False, allow_unicode=True)
+                yaml_data = data
             
-            content.append("\n")  # Add space between sections
-        
-        return header + '\n'.join(content)
+            self.logger.info(f"Loaded {len(yaml_data)} entries from YAML")
 
-    def _write_books_md(self, content):
-        """Write content to books.md file"""
-        with open(self.md_path, 'w', encoding='utf-8') as f:
-            f.write(content) 
+            # Validate entries
+            valid_entries = []
+            for entry in yaml_data:
+                if not isinstance(entry, dict):
+                    self.logger.warning(f"Skipping invalid entry: {entry}")
+                    continue
+                    
+                # Check required fields
+                if 'title' not in entry:
+                    self.logger.warning(f"Skipping entry without title: {entry}")
+                    continue
+                    
+                valid_entries.append(entry)
+            
+            self.logger.info(f"Found {len(valid_entries)} valid entries")
+
+            # Create or update MD file
+            try:
+                with open(self.md_file, 'r', encoding='utf-8') as f:
+                    content = f.readlines()
+                self.logger.info(f"Reading existing MD file: {self.md_file}")
+            except FileNotFoundError:
+                # Create new file with default content
+                content = [
+                    '---\n',
+                    'title: "Books"\n',
+                    'date: 2024-01-01\n',
+                    'draft: false\n',
+                    '---\n',
+                    '\n',
+                    'This page lists books related to bioinformatics and computational biology.\n',
+                    '\n'
+                ]
+                self.logger.info(f"Creating new MD file: {self.md_file}")
+
+            # Find or create table section
+            table_start = None
+            for i, line in enumerate(content):
+                if line.startswith('| **Title**'):
+                    table_start = i
+                    self.logger.debug(f"Found table start at line {i}")
+                    break
+
+            # Create new table content
+            self.logger.info("Creating new table content")
+            new_table = ['| **Title** | **Authors** | **Publisher** | **Year** | **Link** |\n',
+                        '| -- | -- | -- | -- | -- |\n']
+            
+            # Group entries by category
+            entries_by_category = {}
+            for entry in valid_entries:
+                category = entry.get('category', 'Other')
+                if category not in entries_by_category:
+                    entries_by_category[category] = []
+                entries_by_category[category].append(entry)
+            
+            self.logger.info(f"Found {len(entries_by_category)} categories")
+
+            # Add entries by category
+            for category in sorted(entries_by_category.keys()):
+                self.logger.debug(f"Processing category: {category}")
+                new_table.append(f'| **`{category}`** |  |  |  |  |\n')
+                for entry in sorted(entries_by_category[category], key=lambda x: x['title']):
+                    self.logger.debug(f"Processing entry: {entry['title']}")
+                    
+                    # Create link
+                    title_cell = entry['title']
+                    if 'url' in entry:
+                        title_cell = f"[{entry['title']}]({entry['url']})"
+
+                    line = f"| {title_cell} | {entry.get('authors', '')} | {entry.get('publisher', '')} | {entry.get('year', '')} | {entry.get('link', '')} |\n"
+                    new_table.append(line)
+
+            # Replace or append table
+            if table_start is not None:
+                # Find table end
+                table_end = table_start
+                while table_end < len(content) and content[table_end].startswith('|'):
+                    table_end += 1
+                
+                self.logger.info(f"Replacing table content from line {table_start} to {table_end}")
+                content[table_start:table_end] = new_table
+            else:
+                # Append table to end of file
+                self.logger.info("Appending new table to end of file")
+                if content and not content[-1].endswith('\n'):
+                    content.append('\n')
+                content.extend(new_table)
+
+            # Write back to file
+            self.logger.info(f"Writing updated content to {self.md_file}")
+            with open(self.md_file, 'w', encoding='utf-8') as f:
+                f.writelines(content)
+
+            self.logger.info(f"Successfully updated {self.md_file}")
+            return True
+
+        except Exception as e:
+            self.logger.error(f"Error updating content: {str(e)}")
+            self.logger.exception("Full traceback:")
+            return False 
