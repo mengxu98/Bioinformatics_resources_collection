@@ -25,6 +25,22 @@ class ReadmeUpdater:
             self.logger.error(f"Error loading {file_path}: {str(e)}")
             return None
 
+    def format_data_links(self, data_list):
+        """Format data links into readable format for README"""
+        if not data_list:
+            return ""
+        
+        formatted_links = []
+        for data in data_list:
+            if isinstance(data, dict):
+                if 'type' in data and 'url' in data:
+                    # Format as a badge with direct URL
+                    data_type = data['type']
+                    data_url = data['url']
+                    formatted_links.append(f"[![{data_type}](https://img.shields.io/badge/-{data_type}-c62764)]({data_url})")
+        
+        return "<br>".join(formatted_links) if formatted_links else ""
+
     def update_content(self):
         try:
             # Load all yaml files
@@ -101,7 +117,7 @@ class ReadmeUpdater:
                 article.get('date', ''),
                 f"[{article['title']}]({article['url']})",
                 f"[![R](https://img.shields.io/badge/-R-198ce7)]({article['code']})" if 'code' in article else '',
-                f"[![figshare](https://img.shields.io/badge/-figshare-c62764)]({article['data']})" if 'data' in article else '',
+                self.format_data_links(article.get('data', [])),
                 f"[![citation](https://img.shields.io/badge/dynamic/json?label=citation&query=citationCount&url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2F{article['citation']}%3Ffields%3DcitationCount)](https://api.semanticscholar.org/graph/v1/paper/{article['citation']})" if 'citation' in article else ''
             ]
             table.append(f"| {' | '.join(row)} |\n")
@@ -118,7 +134,7 @@ class ReadmeUpdater:
                 method.get('date', ''),
                 f"[{method['title']}]({method['url']})",
                 f"[![R](https://img.shields.io/badge/-R-198ce7)]({method['code']})" if 'code' in method else '',
-                f"[![Github](https://img.shields.io/badge/-Github-336699)]({method['data']})" if 'data' in method else '',
+                self.format_data_links(method.get('data', [])),
                 f"[![citation](https://img.shields.io/badge/dynamic/json?label=citation&query=citationCount&url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2F{method['citation']}%3Ffields%3DcitationCount)](https://api.semanticscholar.org/graph/v1/paper/{method['citation']})" if 'citation' in method else ''
             ]
             table.append(f"| {' | '.join(row)} |\n")

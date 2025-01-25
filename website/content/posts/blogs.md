@@ -80,4 +80,5 @@ Here is a curated list of ***Blogs*** covering various topics in bioinformatics,
 | [孟德尔随机化推断暴露因素与健康结局的因果关系](https://www.jianshu.com/p/8ac31267d3d8) |  | 介绍使用孟德尔随机化方法研究健康因果关系。 |  |
 | [浅谈孟德尔随机化法与经济学研究的渊源](https://zhuanlan.zhihu.com/p/507997457/) |  | 探讨孟德尔随机化方法在经济学研究中的应用。 |  |
 | [自然感觉刺激对脑发育的影响](https://www.cas.cn/kxcb/kpwz/201401/t20140129_4031024.shtml) |  | 探讨自然环境刺激对大脑发育的影响机制及其重要性。 |  |
+| [表观遗传的遗传与重编程！](https://mp.weixin.qq.com/s/r5UzfMlXocgtl3J8clzDlg) |  | 表观遗传的遗传与重编程！ |  |
 | [青少年脑发育的个体差异性](https://zhuanlan.zhihu.com/p/307358952) |  | 分析青少年时期大脑发育的个体差异及其影响因素。 |  |
