@@ -28,7 +28,7 @@ def check_color(string):
         "Website": "B03060",
         "Failed": "c02f31",
         "Unknown": "ADADAD",
-        "Null": "FAFAFA"
+        "Null": "FAFAFA",
     }
 
     # Check if the argument is in the dictionary
