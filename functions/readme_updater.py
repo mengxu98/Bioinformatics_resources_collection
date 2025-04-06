@@ -230,7 +230,7 @@ class ReadmeUpdater:
         """Update single readme file"""
         try:
             # Create the basic structure
-            new_text = """# Bioinformatics Resources Collection
+            new_text = f"""# Bioinformatics Resources Collection
 
 A comprehensive collection of bioinformatics resources, focusing on single-cell RNA sequencing (scRNA-seq) and related fields. This repository organizes resources into different categories for easy access and reference.
 
@@ -297,7 +297,7 @@ Computational methods and tools for analyzing single-cell data.
                     new_text += f"\n[View all {section} →](https://mengxu98.github.io/Bioinformatics_resources_collection/posts/{section}/index.html)\n\n"
 
             # Add remaining sections
-            new_text += """## 🤝 Contributing
+            new_text += f"""## 🤝 Contributing
 Interested in contributing? We welcome contributions of all kinds:
 1. Add new resources through pull requests
 2. Report issues or suggest improvements

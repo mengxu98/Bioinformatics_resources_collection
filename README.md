@@ -75,4 +75,4 @@ For information about maintaining this project, please see:
 - [Maintenance Guide](https://mengxu98.github.io/Bioinformatics_resources_collection/posts/description/index.html)
 - [S2-folks Reference](https://github.com/allenai/s2-folks/tree/main)
 
-*Last updated: 2024-11-23*
+*Last updated: 2025-04-06*
