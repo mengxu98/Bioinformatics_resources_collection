@@ -120,3 +120,12 @@
   journal: Genome Biology
   language: R
   url: https://doi.org/10.1186/s13059-024-03237-3
+- title: BoolNet—an R package for generation, reconstruction and analysis of Boolean networks
+  citation:
+  code: https://cran.r-project.org/web/packages/BoolNet/index.html
+  data: []
+  date: '2010'
+  field: Boolean network
+  journal: Bioinformatics
+  language: R
+  url: https://doi.org/10.1093/bioinformatics/btq124
