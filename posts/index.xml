@@ -1684,6 +1684,16 @@
           &lt;td&gt;&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
+          &lt;td&gt;BoolNet—an R package for generation, reconstruction and analysis of Boolean networks&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://cran.r-project.org/web/packages/BoolNet/index.html&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/-Code-444444&#34;
+        alt=&#34;Code&#34;/&gt;&lt;/a&gt;
+&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
           &lt;td&gt;COMSE: analysis of single-cell RNA-seq data using community detection-based feature selection&lt;/td&gt;
           &lt;td&gt;&lt;/td&gt;
           &lt;td&gt;&lt;a href=&#34;https://github.com/Lan-lab/COMSE&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;img  src=&#34;https://img.shields.io/badge/-Code-444444&#34;
