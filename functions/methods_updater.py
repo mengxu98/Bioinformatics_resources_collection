@@ -19,11 +19,10 @@ class MethodsUpdater(BaseUpdater):
         try:
             self.logger.info("Starting methods update")
 
-            # First ensure yaml file is up to date
+            # If no new data provided, just read existing data
             if data is None:
-                yaml_data = self._load_yaml()
-                if yaml_data is None:
-                    return False
+                with open(self.config_file, "r", encoding="utf-8") as f:
+                    yaml_data = yaml.safe_load(f)
             else:
                 # Update yaml file if new data provided
                 with open(self.config_file, "w", encoding="utf-8") as f:
@@ -44,10 +43,6 @@ class MethodsUpdater(BaseUpdater):
                     self.logger.warning(f"Skipping entry without title: {entry}")
                     continue
 
-                # Use title as name if name is not provided
-                if "name" not in entry:
-                    entry["name"] = entry["title"]
-
                 valid_entries.append(entry)
 
             self.logger.info(f"Found {len(valid_entries)} valid entries")
@@ -62,19 +57,17 @@ class MethodsUpdater(BaseUpdater):
                 content = [
                     "---\n",
                     'title: "Methods"\n',
-                    "date: 2024-01-01\n",
-                    "draft: false\n",
+                    'author: "Mengxu"\n',
+                    "date: 2024-11-23\n",
                     "---\n",
-                    "\n",
-                    "This page lists computational methods for bioinformatics analysis.\n",
-                    "\n",
+                    "<!--more-->\n",
                 ]
                 self.logger.info(f"Creating new MD file: {self.md_file}")
 
-            # Find or create table section
+            # Find table section
             table_start = None
             for i, line in enumerate(content):
-                if line.startswith("| **Name**"):
+                if line.startswith("| **Journal**"):
                     table_start = i
                     self.logger.debug(f"Found table start at line {i}")
                     break
@@ -82,41 +75,79 @@ class MethodsUpdater(BaseUpdater):
             # Create new table content
             self.logger.info("Creating new table content")
             new_table = [
-                "| **Name** | **Description** | **Code** | **Citation** |\n",
-                "| -- | -- | -- | -- |\n",
+                "| **Journal** | **Date** | **Title** | **Code** | **Data** | **Citation** |\n",
+                "| -- | -- | -- | -- | -- | -- |\n",
             ]
 
-            # Group entries by category
-            entries_by_category = {}
+            # Group entries by field
+            entries_by_field = {}
             for entry in valid_entries:
-                category = entry.get("category", "Other")
-                if category not in entries_by_category:
-                    entries_by_category[category] = []
-                entries_by_category[category].append(entry)
+                field = entry.get("field", "Other")
+                if field not in entries_by_field:
+                    entries_by_field[field] = []
+                entries_by_field[field].append(entry)
 
-            self.logger.info(f"Found {len(entries_by_category)} categories")
+            self.logger.info(f"Found {len(entries_by_field)} fields")
 
-            # Add entries by category
-            for category in sorted(entries_by_category.keys()):
-                self.logger.debug(f"Processing category: {category}")
-                new_table.append(f"| **`{category}`** |  |  |  |\n")
-                for entry in sorted(
-                    entries_by_category[category], key=lambda x: x["name"]
-                ):
-                    self.logger.debug(f"Processing entry: {entry['name']}")
+            # Add entries by field
+            for field in sorted(entries_by_field.keys()):
+                self.logger.debug(f"Processing field: {field}")
+                new_table.append(f"| **`{field}`** |  |  |  |  |  |\n")
+                for entry in sorted(entries_by_field[field], key=lambda x: x["title"]):
+                    self.logger.debug(f"Processing entry: {entry['title']}")
 
-                    # Create badges
-                    code_badge = (
-                        f"[![Code](https://img.shields.io/badge/-Code-444444)]({entry['code']})"
-                        if entry.get("code")
-                        else ""
-                    )
+                    # Create code badge
+                    code_badge = ""
+                    if entry.get("code"):
+                        lang = entry.get("language", "Code")
+                        if isinstance(lang, list):
+                            lang = " ".join(lang)
+                        # Use language-specific colors
+                        color_map = {
+                            "Python": "3572a5",
+                            "R": "198ce7", 
+                            "Java": "b0721a",
+                            "JavaScript": "f1e05a",
+                            "MATLAB": "e16737",
+                            "R Python": "444444"
+                        }
+                        color = color_map.get(lang, "444444")
+                        code_badge = f"[![{lang}](https://img.shields.io/badge/-{lang.replace(' ', '%20')}-{color})]({entry['code']})"
+
+                    # Create data badges
+                    data_badges = []
+                    if entry.get("data") and isinstance(entry["data"], list):
+                        for data_item in entry["data"]:
+                            if isinstance(data_item, dict) and "type" in data_item and "url" in data_item:
+                                # Use different colors for different data types
+                                data_color_map = {
+                                    "GEO": "336699",
+                                    "Website": "B03060",
+                                    "Github": "336699",
+                                    "Zenodo": "336699",
+                                    "UK Biobank": "336699",
+                                    "ADNI": "336699"
+                                }
+                                data_color = data_color_map.get(data_item["type"], "336699")
+                                data_badges.append(
+                                    f"[![{data_item['type']}](https://img.shields.io/badge/-{data_item['type'].replace(' ', '%20')}-{data_color})]({data_item['url']})"
+                                )
+
+                    # Create citation badge
                     citation_badge = ""
                     if entry.get("citation"):
-                        citation_id = entry["citation"].split("/")[-1]
+                        citation_id = entry["citation"].split("/")[-1].split("?")[0]  # Remove query parameters
                         citation_badge = f"[![citation](https://img.shields.io/badge/dynamic/json?label=citation&query=citationCount&url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2F{citation_id}%3Ffields%3DcitationCount)]({entry['citation']})"
 
-                    line = f"| {entry['name']} | {entry.get('description', '')} | {code_badge} | {citation_badge} |\n"
+                    # Create the table row
+                    journal = entry.get("journal", "")
+                    date = entry.get("date", "")
+                    title = entry.get("title", "")
+                    url = entry.get("url", "")
+                    
+                    title_link = f"[{title}]({url})" if url else title
+                    
+                    line = f"| {journal} | {date} | {title_link} | {code_badge} | {' '.join(data_badges)} | {citation_badge} |\n"
                     new_table.append(line)
 
             # Replace or append table
