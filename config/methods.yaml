@@ -1,4 +1,5 @@
-- title: Knowledge-graph-based cell-cell communication inference for spatially resolved transcriptomic data with SpaTalk
+- title: Knowledge-graph-based cell-cell communication inference for spatially resolved
+    transcriptomic data with SpaTalk
   citation: https://api.semanticscholar.org/graph/v1/paper/7957b93e72b7775066da09cf9fb742eb2707b1f8
   code: https://github.com/ZJUFanLab/SpaTalk
   data:
@@ -9,7 +10,8 @@
   journal: Nature Communications
   language: R
   url: https://doi.org/10.1038/s41467-022-32111-8
-- title: Evaluation of cell-cell interaction methods by integrating single-cell RNA sequencing data with spatial information
+- title: Evaluation of cell-cell interaction methods by integrating single-cell RNA
+    sequencing data with spatial information
   citation: https://api.semanticscholar.org/graph/v1/paper/631e4db76fb0fd5ac6e1d7029627d0b99373540c
   code: https://github.com/wanglabtongji/CCI
   data:
@@ -20,7 +22,8 @@
   journal: Genome Biology
   language: R Python
   url: https://doi.org/10.1186/s13059-022-02783-y
-- title: Elucidating tumor heterogeneity from spatially resolved transcriptomics data by multi-view graph collaborative learning
+- title: Elucidating tumor heterogeneity from spatially resolved transcriptomics data
+    by multi-view graph collaborative learning
   citation: https://api.semanticscholar.org/graph/v1/paper/09690abc5440dec515c14256dccf7fe45acee988
   code: https://github.com/cmzuo11/stMVC
   data:
@@ -31,7 +34,8 @@
   journal: Nature Communications
   language: Python
   url: https://doi.org/10.1038/s41467-022-33619-9
-- title: 'COMSE: analysis of single-cell RNA-seq data using community detection-based feature selection'
+- title: 'COMSE: analysis of single-cell RNA-seq data using community detection-based
+    feature selection'
   citation: https://api.semanticscholar.org/graph/v1/paper/58e4d63a4572ec930429ee65e82ef7c5bf7c593b
   code: https://github.com/Lan-lab/COMSE
   data: []
@@ -40,7 +44,8 @@
   journal: BMC Biology
   language: R
   url: https://doi.org/10.1186/s12915-024-01963-5
-- title: 'STGRNS: an interpretable transformer-based method for inferring gene regulatory networks from single-cell transcriptomic data'
+- title: 'STGRNS: an interpretable transformer-based method for inferring gene regulatory
+    networks from single-cell transcriptomic data'
   citation: https://api.semanticscholar.org/graph/v1/paper/59447739b7dda29ef919184cc8246cbbbd5e8938
   code: https://github.com/zhanglab-wbgcas/STGRNS
   data: []
@@ -62,7 +67,8 @@
   journal: Nature Medicine
   language: MATLAB
   url: https://doi.org/10.1038/s41591-023-02296-6
-- title: Common brain disorders are associated with heritable patterns of apparent aging of the brain
+- title: Common brain disorders are associated with heritable patterns of apparent
+    aging of the brain
   citation: https://api.semanticscholar.org/graph/v1/paper/d7f5a9db5d6fe9564077f2ee783e4baa93111311
   code: https://github.com/tobias-kaufmann/brainage
   data:
@@ -91,7 +97,8 @@
   journal: Computational and Structural Biotechnology Journal
   language: R
   url: https://doi.org/10.1016/j.csbj.2021.06.043
-- title: Biological interpretation of genome-wide association studies using predicted gene functions
+- title: Biological interpretation of genome-wide association studies using predicted
+    gene functions
   citation: https://api.semanticscholar.org/graph/v1/paper/3388f6923348fa24ba7f11a79b6aa4fdbd3b4392
   code: https://github.com/perslab/depict
   data: []
@@ -100,7 +107,8 @@
   journal: Nature Communications
   language: Java
   url: https://doi.org/10.1038/ncomms6890
-- title: Identification of Vulnerable Cell Types in Major Brain Disorders Using Single Cell Transcriptomes and Expression Weighted Cell Type Enrichment
+- title: Identification of Vulnerable Cell Types in Major Brain Disorders Using Single
+    Cell Transcriptomes and Expression Weighted Cell Type Enrichment
   citation: https://api.semanticscholar.org/graph/v1/paper/c0c31205de416f6c859c95de19d3c2a468e4c74c
   code: https://github.com/NathanSkene/EWCE
   data: []
@@ -109,7 +117,8 @@
   journal: Frontiers in Neuroscience
   language: R
   url: https://doi.org/10.3389/fnins.2016.00016
-- title: Powerful and accurate detection of temporal gene expression patterns from multi-sample multi-stage single-cell transcriptomics data with TDEseq
+- title: Powerful and accurate detection of temporal gene expression patterns from
+    multi-sample multi-stage single-cell transcriptomics data with TDEseq
   citation: https://api.semanticscholar.org/graph/v1/paper/33bdedf99ff51fac3e2862b18aab126b9338ea05
   code: https://github.com/fanyue322/TDEseq
   data:
@@ -120,8 +129,9 @@
   journal: Genome Biology
   language: R
   url: https://doi.org/10.1186/s13059-024-03237-3
-- title: BoolNet—an R package for generation, reconstruction and analysis of Boolean networks
-  citation:
+- title: BoolNet—an R package for generation, reconstruction and analysis of Boolean
+    networks
+  citation: null
   code: https://cran.r-project.org/web/packages/BoolNet/index.html
   data: []
   date: '2010'
@@ -129,3 +139,15 @@
   journal: Bioinformatics
   language: R
   url: https://doi.org/10.1093/bioinformatics/btq124
+- title: Diffusion-based generation of gene regulatory networks from scRNA-seq data
+    with DigNet
+  url: https://doi.org/10.1101/gr.279551.124
+  field: Medicine
+  journal: Genome Research
+  date: '2024'
+  language: Python
+  code: https://github.com/zpliulab/DigNet
+  citation: https://api.semanticscholar.org/graph/v1/paper/52924b1368747196a1ae014c007d8bc344d70c73?fields=citationCount
+  data:
+  - type: Zenodo
+    url: https://doi.org/10.5281/zenodo.10907470

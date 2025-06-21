@@ -1,0 +1,600 @@
+{% extends "base.html" %}
+
+{% block title %}添加{{ category.title() }} - 生物信息学资源管理界面{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1>
+                {% if category == 'articles' %}
+                    <i class="bi bi-file-earmark-text text-primary"></i>
+                {% elif category == 'methods' %}
+                    <i class="bi bi-gear text-success"></i>
+                {% elif category == 'books' %}
+                    <i class="bi bi-book text-warning"></i>
+                {% elif category == 'blogs' %}
+                    <i class="bi bi-chat-quote text-info"></i>
+                {% elif category == 'databases' %}
+                    <i class="bi bi-database text-danger"></i>
+                {% elif category == 'labs' %}
+                    <i class="bi bi-people text-secondary"></i>
+                {% endif %}
+                添加新{{ category.title() }}
+            </h1>
+            <div>
+                <a href="{{ url_for('view_category', category=category) }}" class="btn btn-outline-secondary">
+                    <i class="bi bi-arrow-left"></i>
+                    返回{{ category.title() }}列表
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 表单区域 -->
+<div class="row">
+    <div class="col-lg-8">
+        <form id="addForm">
+            <input type="hidden" id="category" value="{{ category }}">
+            
+            {% if category in ['articles', 'methods'] %}
+                <!-- 智能论文信息提取区域 -->
+                <div class="form-section">
+                    <h5>
+                        <i class="bi bi-magic"></i>
+                        {{ t('smart_extract') }}
+                    </h5>
+                    <p class="text-muted">{{ t('smart_extract_desc') }}</p>
+                    
+                    <div class="row g-3">
+                        <div class="col-md-8">
+                            <label for="paperInput" class="form-label">{{ t('paper_input') }}</label>
+                            <input type="text" class="form-control" id="paperInput" 
+                                   placeholder="{{ t('paper_input_placeholder') }}">
+                            <div class="field-help">支持论文标题、DOI、Semantic Scholar链接等</div>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">&nbsp;</label>
+                            <button type="button" class="btn btn-info d-block w-100" onclick="extractPaperInfo()">
+                                <i class="bi bi-download"></i>
+                                {{ t('extract_info') }}
+                            </button>
+                        </div>
+                        <div class="col-12">
+                            <div id="extractLoading" class="loading">
+                                <div class="spinner-border spinner-border-sm" role="status">
+                                    <span class="visually-hidden">{{ t('extracting') }}</span>
+                                </div>
+                                {{ t('extracting') }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+
+            <!-- 基本信息 -->
+            <div class="form-section">
+                <h5>
+                    <i class="bi bi-info-circle"></i>
+                    基本信息
+                </h5>
+                
+                <div class="row g-3">
+                    <div class="col-12">
+                        <label for="title" class="form-label">标题 *</label>
+                        <input type="text" class="form-control" id="title" required>
+                        <div class="field-help">
+                            {% if category == 'articles' %}文章标题
+                            {% elif category == 'methods' %}方法名称
+                            {% elif category == 'books' %}书籍标题
+                            {% elif category == 'blogs' %}博客标题
+                            {% elif category == 'databases' %}数据库名称
+                            {% elif category == 'labs' %}实验室名称
+                            {% endif %}
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <label for="url" class="form-label">链接 *</label>
+                        <input type="url" class="form-control" id="url" required>
+                        <div class="field-help">官方网站或资源链接</div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <label for="field" class="form-label">研究领域</label>
+                        <input type="text" class="form-control" id="field" 
+                               placeholder="例如：Single-cell, Bioinformatics">
+                        <div class="field-help">相关的研究领域或分类</div>
+                    </div>
+                    
+                    <div class="col-12">
+                        <label for="description" class="form-label">描述</label>
+                        <textarea class="form-control" id="description" rows="3"></textarea>
+                        <div class="field-help">简要描述资源的内容和用途</div>
+                    </div>
+                </div>
+            </div>
+
+            {% if category in ['articles', 'methods'] %}
+                <!-- 学术信息 -->
+                <div class="form-section">
+                    <h5>
+                        <i class="bi bi-journal"></i>
+                        学术信息
+                    </h5>
+                    
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="journal" class="form-label">期刊/会议</label>
+                            <input type="text" class="form-control" id="journal">
+                            <div class="field-help">发表的期刊或会议名称</div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <label for="date" class="form-label">发表年份</label>
+                            <input type="number" class="form-control" id="date" min="1990" max="2030">
+                            <div class="field-help">论文发表年份</div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <label for="language" class="form-label">编程语言</label>
+                            <input type="text" class="form-control" id="language" 
+                                   placeholder="例如：R, Python, JavaScript">
+                            <div class="field-help">代码实现的主要编程语言</div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <label for="code" class="form-label">代码链接</label>
+                            <input type="url" class="form-control" id="code">
+                            <div class="field-help">GitHub或其他代码托管链接</div>
+                        </div>
+                        
+                        <div class="col-12">
+                            <label for="citation" class="form-label">引用链接</label>
+                            <input type="url" class="form-control" id="citation">
+                            <div class="field-help">Semantic Scholar API链接</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 数据信息 -->
+                <div class="form-section">
+                    <h5>
+                        <i class="bi bi-database"></i>
+                        数据信息
+                    </h5>
+                    <div id="dataContainer">
+                        <div class="data-entry">
+                            <div class="row g-3">
+                                <div class="col-md-4">
+                                    <label class="form-label">数据类型</label>
+                                    <select class="form-select data-type">
+                                        <option value="">选择类型</option>
+                                        <option value="GEO">GEO</option>
+                                        <option value="Website">Website</option>
+                                        <option value="Zenodo">Zenodo</option>
+                                        <option value="figshare">figshare</option>
+                                        <option value="Github">Github</option>
+                                        <option value="Other">其他</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">数据链接</label>
+                                    <input type="url" class="form-control data-url">
+                                </div>
+                                <div class="col-md-2">
+                                    <label class="form-label">&nbsp;</label>
+                                    <button type="button" class="btn btn-outline-success d-block" onclick="addDataEntry()">
+                                        <i class="bi bi-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+
+            {% if category == 'labs' %}
+                <!-- 实验室特殊字段 -->
+                <div class="form-section">
+                    <h5>
+                        <i class="bi bi-people"></i>
+                        实验室信息
+                    </h5>
+                    
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="masterpiece" class="form-label">代表作</label>
+                            <input type="text" class="form-control" id="masterpiece">
+                            <div class="field-help">实验室的代表性工作或工具</div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <label for="masterpiece_url" class="form-label">代表作链接</label>
+                            <input type="url" class="form-control" id="masterpiece_url">
+                            <div class="field-help">代表作的链接地址</div>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+
+            {% if category == 'databases' %}
+                <!-- 数据库特殊字段 -->
+                <div class="form-section">
+                    <h5>
+                        <i class="bi bi-database"></i>
+                        数据库信息
+                    </h5>
+                    
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <label for="paper_url" class="form-label">相关论文</label>
+                            <input type="url" class="form-control" id="paper_url">
+                            <div class="field-help">介绍该数据库的相关论文链接</div>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+
+            <!-- 提交区域 -->
+            <div class="form-section">
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <button type="button" class="btn btn-outline-secondary" onclick="resetForm()">
+                        <i class="bi bi-arrow-clockwise"></i>
+                        重置表单
+                    </button>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="bi bi-check-circle"></i>
+                        添加{{ category.title() }}
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    <!-- 预览区域 -->
+    <div class="col-lg-4">
+        <div class="sticky-top" style="top: 20px;">
+            <div class="card">
+                <div class="card-header">
+                    <h6 class="card-title mb-0">
+                        <i class="bi bi-eye"></i>
+                        数据预览
+                    </h6>
+                </div>
+                <div class="card-body">
+                    <div id="jsonPreview" class="json-preview">
+                        <em class="text-muted">请填写表单字段，这里将显示生成的数据结构</em>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+// 表单数据实时预览
+let formData = {};
+
+// 监听表单变化
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('addForm');
+    const inputs = form.querySelectorAll('input, textarea, select');
+    
+    inputs.forEach(input => {
+        input.addEventListener('input', updatePreview);
+        input.addEventListener('change', updatePreview);
+    });
+    
+    updatePreview();
+});
+
+function updatePreview() {
+    const category = document.getElementById('category').value;
+    formData = {};
+    
+    // 基本字段
+    const title = document.getElementById('title').value;
+    const url = document.getElementById('url').value;
+    const field = document.getElementById('field').value;
+    const description = document.getElementById('description').value;
+    
+    if (title) formData.title = title;
+    if (url) formData.url = url;
+    if (field) formData.field = field;
+    if (description) formData.description = description;
+    
+    // 根据类别添加特殊字段
+    if (category === 'articles' || category === 'methods') {
+        const journal = document.getElementById('journal').value;
+        const date = document.getElementById('date').value;
+        const language = document.getElementById('language').value;
+        const code = document.getElementById('code').value;
+        const citation = document.getElementById('citation').value;
+        
+        if (journal) formData.journal = journal;
+        if (date) formData.date = date;
+        if (language) formData.language = language;
+        if (code) formData.code = code;
+        if (citation) formData.citation = citation;
+        
+        // 数据字段
+        const dataEntries = collectDataEntries();
+        if (dataEntries.length > 0) {
+            formData.data = dataEntries;
+        }
+    }
+    
+    if (category === 'labs') {
+        const masterpiece = document.getElementById('masterpiece').value;
+        const masterpiece_url = document.getElementById('masterpiece_url').value;
+        
+        if (masterpiece) formData.masterpiece = masterpiece;
+        if (masterpiece_url) formData.masterpiece_url = masterpiece_url;
+    }
+    
+    if (category === 'databases') {
+        const paper_url = document.getElementById('paper_url').value;
+        if (paper_url) formData.paper_url = paper_url;
+    }
+    
+    // 更新预览
+    const preview = document.getElementById('jsonPreview');
+    if (Object.keys(formData).length > 0) {
+        preview.textContent = JSON.stringify(formData, null, 2);
+    } else {
+        preview.innerHTML = '<em class="text-muted">请填写表单字段，这里将显示生成的数据结构</em>';
+    }
+}
+
+function collectDataEntries() {
+    const entries = [];
+    const dataEntries = document.querySelectorAll('.data-entry');
+    
+    dataEntries.forEach(entry => {
+        const type = entry.querySelector('.data-type').value;
+        const url = entry.querySelector('.data-url').value;
+        
+        if (type && url) {
+            entries.push({ type: type, url: url });
+        }
+    });
+    
+    return entries;
+}
+
+function addDataEntry() {
+    const container = document.getElementById('dataContainer');
+    const newEntry = document.createElement('div');
+    newEntry.className = 'data-entry mt-3';
+    newEntry.innerHTML = `
+        <div class="row g-3">
+            <div class="col-md-4">
+                <select class="form-select data-type">
+                    <option value="">选择类型</option>
+                    <option value="GEO">GEO</option>
+                    <option value="Website">Website</option>
+                    <option value="Zenodo">Zenodo</option>
+                    <option value="figshare">figshare</option>
+                    <option value="Github">Github</option>
+                    <option value="Other">其他</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <input type="url" class="form-control data-url">
+            </div>
+            <div class="col-md-2">
+                <button type="button" class="btn btn-outline-danger" onclick="removeDataEntry(this)">
+                    <i class="bi bi-trash"></i>
+                </button>
+            </div>
+        </div>
+    `;
+    
+    container.appendChild(newEntry);
+    
+    // 添加事件监听
+    const inputs = newEntry.querySelectorAll('input, select');
+    inputs.forEach(input => {
+        input.addEventListener('input', updatePreview);
+        input.addEventListener('change', updatePreview);
+    });
+}
+
+function removeDataEntry(button) {
+    button.closest('.data-entry').remove();
+    updatePreview();
+}
+
+function fillDataEntries(dataArray) {
+    // 清除现有的数据条目（除了第一个）
+    const dataEntries = document.querySelectorAll('.data-entry');
+    for (let i = 1; i < dataEntries.length; i++) {
+        dataEntries[i].remove();
+    }
+    
+    // 填充数据
+    dataArray.forEach((dataItem, index) => {
+        let entry;
+        if (index === 0) {
+            // 使用第一个现有条目
+            entry = document.querySelector('.data-entry');
+        } else {
+            // 添加新条目
+            addDataEntry();
+            entry = document.querySelectorAll('.data-entry')[index];
+        }
+        
+        if (entry) {
+            const typeSelect = entry.querySelector('.data-type');
+            const urlInput = entry.querySelector('.data-url');
+            
+            // 根据URL自动判断类型
+            let dataType = 'Other';
+            if (typeof dataItem === 'string') {
+                // 如果是字符串，直接作为URL处理
+                urlInput.value = dataItem;
+                if (dataItem.includes('geo/query')) dataType = 'GEO';
+                else if (dataItem.includes('zenodo.org')) dataType = 'Zenodo';
+                else if (dataItem.includes('figshare.com')) dataType = 'figshare';
+                else if (dataItem.includes('github.com')) dataType = 'Github';
+            } else if (typeof dataItem === 'object') {
+                // 如果是对象，有type和url字段
+                if (dataItem.type) dataType = dataItem.type;
+                if (dataItem.url) urlInput.value = dataItem.url;
+            }
+            
+            typeSelect.value = dataType;
+        }
+    });
+    
+    updatePreview();
+}
+
+// 智能提取论文信息
+async function extractPaperInfo() {
+    const inputText = document.getElementById('paperInput').value.trim();
+    
+    if (!inputText) {
+        showAlert('请输入论文标题、DOI或链接', 'warning');
+        return;
+    }
+    
+    const loading = document.getElementById('extractLoading');
+    const button = event.target;
+    const originalText = button.innerHTML;
+    
+    button.disabled = true;
+    button.innerHTML = '<span class="spinner-border spinner-border-sm" role="status"></span> 提取中...';
+    loading.classList.add('show');
+    
+    try {
+        const response = await fetch('/api/extract_paper_info', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                input_text: inputText
+            })
+        });
+        
+        const result = await response.json();
+        
+        if (result.success) {
+            // 填充表单
+            const data = result.data;
+            if (data.title) document.getElementById('title').value = data.title;
+            if (data.journal) document.getElementById('journal').value = data.journal;
+            if (data.date) document.getElementById('date').value = data.date;
+            if (data.url) document.getElementById('url').value = data.url;
+            if (data.field) document.getElementById('field').value = data.field;
+            if (data.language) document.getElementById('language').value = data.language;
+            if (data.code) document.getElementById('code').value = data.code;
+            if (data.citation) document.getElementById('citation').value = data.citation;
+            
+            // 填充数据链接
+            if (data.data && data.data.length > 0) {
+                fillDataEntries(data.data);
+            }
+            
+            updatePreview();
+            showAlert(result.message || '论文信息提取成功！', 'success');
+            
+            // 显示额外信息
+            if (data.authors && data.authors.length > 0) {
+                showAlert('作者: ' + data.authors.slice(0, 3).join(', '), 'info');
+            }
+            if (data.citation_count) {
+                showAlert('引用次数: ' + data.citation_count, 'info');
+            }
+        } else {
+            showAlert(result.error || '提取失败', 'danger');
+            
+            // 显示建议
+            if (result.suggestions && result.suggestions.length > 0) {
+                const suggestions = result.suggestions.map(s => 
+                    `"${s.title}" (${s.year}) - ${s.venue}`
+                ).join('\n');
+                if (confirm('未找到精确匹配，但找到了一些相似的论文。是否查看建议？\n\n' + suggestions)) {
+                    // 可以在这里实现显示建议的逻辑
+                }
+            }
+        }
+    } catch (error) {
+        showAlert('网络错误：' + error.message, 'danger');
+    } finally {
+        button.disabled = false;
+        button.innerHTML = originalText;
+        loading.classList.remove('show');
+    }
+}
+
+// 重置表单
+function resetForm() {
+    document.getElementById('addForm').reset();
+    
+    // 清除除第一个以外的数据条目
+    const dataEntries = document.querySelectorAll('.data-entry');
+    for (let i = 1; i < dataEntries.length; i++) {
+        dataEntries[i].remove();
+    }
+    
+    updatePreview();
+    showAlert('表单已重置', 'info');
+}
+
+// 提交表单
+document.getElementById('addForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
+    const category = document.getElementById('category').value;
+    
+    if (Object.keys(formData).length === 0) {
+        showAlert('请填写必要的表单字段', 'warning');
+        return;
+    }
+    
+    if (!formData.title || !formData.url) {
+        showAlert('标题和链接是必填字段', 'warning');
+        return;
+    }
+    
+    try {
+        const response = await fetch('/api/add_entry', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                category: category,
+                entry_data: formData
+            })
+        });
+        
+        const result = await response.json();
+        
+        if (result.success) {
+            showAlert(result.message, 'success');
+            
+            // 询问是否返回列表页
+            setTimeout(() => {
+                if (confirm('添加成功！是否返回' + category + '列表页？')) {
+                    window.location.href = '/category/' + category;
+                } else {
+                    resetForm();
+                }
+            }, 1000);
+        } else {
+            showAlert('添加失败：' + result.error, 'danger');
+        }
+    } catch (error) {
+        showAlert('网络错误：' + error.message, 'danger');
+    }
+});
+</script>
+{% endblock %} 

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="{{ 'zh-CN' if lang == 'zh' else 'en' }}" data-bs-theme="{{ theme if theme and theme != 'auto' else 'light' }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{{ t('site_title') }}{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        .navbar-brand {
+            font-weight: bold;
+        }
+        .card-hover:hover {
+            transform: translateY(-2px);
+            transition: transform 0.2s;
+        }
+        .category-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        .footer {
+            margin-top: 50px;
+            padding: 20px 0;
+            background-color: #f8f9fa;
+            border-top: 1px solid #dee2e6;
+        }
+        .alert-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1050;
+            max-width: 400px;
+        }
+        .form-section {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .field-help {
+            font-size: 0.875rem;
+            color: #6c757d;
+        }
+        .json-preview {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+            padding: 10px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.875rem;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        .loading {
+            display: none;
+        }
+        .loading.show {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url_for('index') }}">
+                <i class="bi bi-journal-medical"></i>
+                {{ t('site_title') }}
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" title="{{ t('manage_resources') }}">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('index') }}">{{ t('home') }}</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" title="{{ t('manage_resources') }}">
+                            {{ t('manage_resources') }}
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{{ url_for('view_category', category='articles') }}">
+                                <i class="bi bi-file-earmark-text text-primary"></i> {{ t('articles') }}
+                            </a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('view_category', category='methods') }}">
+                                <i class="bi bi-gear text-success"></i> {{ t('methods') }}
+                            </a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('view_category', category='books') }}">
+                                <i class="bi bi-book text-warning"></i> {{ t('books') }}
+                            </a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('view_category', category='blogs') }}">
+                                <i class="bi bi-chat-quote text-info"></i> {{ t('blogs') }}
+                            </a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('view_category', category='databases') }}">
+                                <i class="bi bi-database text-danger"></i> {{ t('databases') }}
+                            </a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('view_category', category='labs') }}">
+                                <i class="bi bi-people text-secondary"></i> {{ t('labs') }}
+                            </a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <!-- 语言切换 -->
+                    <li class="nav-item dropdown me-2">
+                        <button class="btn btn-outline-light btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                            <i class="bi bi-translate"></i>
+                            {{ t('language') }}
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" onclick="setLanguage('zh')">
+                                <i class="bi bi-check{{ '' if lang == 'zh' else '-empty' }}"></i>
+                                中文
+                            </a></li>
+                            <li><a class="dropdown-item" href="#" onclick="setLanguage('en')">
+                                <i class="bi bi-check{{ '' if lang == 'en' else '-empty' }}"></i>
+                                English
+                            </a></li>
+                        </ul>
+                    </li>
+                    
+                    <!-- 主题切换 -->
+                    <li class="nav-item dropdown me-2">
+                        <button class="btn btn-outline-light btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                            <i class="bi bi-palette"></i>
+                            {{ t('theme') }}
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" onclick="setTheme('light')">
+                                <i class="bi bi-check{{ '' if theme == 'light' else '-empty' }}"></i>
+                                <i class="bi bi-sun"></i>
+                                {{ t('light_mode') }}
+                            </a></li>
+                            <li><a class="dropdown-item" href="#" onclick="setTheme('dark')">
+                                <i class="bi bi-check{{ '' if theme == 'dark' else '-empty' }}"></i>
+                                <i class="bi bi-moon"></i>
+                                {{ t('dark_mode') }}
+                            </a></li>
+                            <li><a class="dropdown-item" href="#" onclick="setTheme('auto')">
+                                <i class="bi bi-check{{ '' if theme == 'auto' else '-empty' }}"></i>
+                                <i class="bi bi-circle-half"></i>
+                                {{ t('auto_mode') }}
+                            </a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <button class="btn btn-outline-light btn-sm" onclick="updateAllFiles()">
+                            <i class="bi bi-arrow-clockwise"></i>
+                            {{ t('update_all_files') }}
+                        </button>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <a class="btn btn-outline-light btn-sm" href="https://mengxu98.github.io/Bioinformatics_resources_collection/" target="_blank" rel="noopener">
+                            <i class="bi bi-box-arrow-up-right"></i>
+                            {{ t('view_website') }}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 消息提示区域 -->
+    <div class="alert-container" id="alertContainer">
+    </div>
+
+    <!-- 主要内容 -->
+    <div class="container mt-4">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ 'danger' if category == 'error' else 'success' }} alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" title="关闭提示"></button>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        {% block content %}{% endblock %}
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="footer mt-auto">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="text-muted mb-0">
+                        <i class="bi bi-github"></i>
+                        <a href="https://github.com/mengxu98/Bioinformatics_resources_collection" target="_blank" rel="noopener" class="text-decoration-none">
+                            Bioinformatics Resources Collection
+                        </a>
+                        - {{ t('web_admin_interface') }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- 通用JavaScript函数 -->
+    <script>
+        // 显示提示消息
+        function showAlert(message, type = 'success') {
+            const alertContainer = document.getElementById('alertContainer');
+            const alertDiv = document.createElement('div');
+            alertDiv.className = `alert alert-${type} alert-dismissible fade show`;
+            alertDiv.innerHTML = `
+                ${message}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" title="关闭"></button>
+            `;
+            alertContainer.appendChild(alertDiv);
+            
+            // 5秒后自动隐藏
+            setTimeout(() => {
+                if (alertDiv.parentNode) {
+                    alertDiv.remove();
+                }
+            }, 5000);
+        }
+
+        // 更新所有文件
+        async function updateAllFiles() {
+            const button = event.target.closest('button');
+            const originalText = button.innerHTML;
+            
+            button.disabled = true;
+            button.innerHTML = '<i class="bi bi-arrow-clockwise spin"></i> {{ t("updating") }}...';
+            
+            try {
+                const response = await fetch('/api/update_all', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    }
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    showAlert('{{ t("all_markdown_updated") }}', 'success');
+                } else {
+                    showAlert('{{ t("update_failed") }}：' + result.error, 'danger');
+                }
+            } catch (error) {
+                showAlert('{{ t("network_error") }}：' + error.message, 'danger');
+            } finally {
+                button.disabled = false;
+                button.innerHTML = originalText;
+            }
+        }
+
+        // 删除条目
+        async function deleteEntry(category, index, title) {
+            if (!confirm(`{{ t("confirm_delete") }} "${title}"?`)) {
+                return;
+            }
+
+            try {
+                const response = await fetch('/api/delete_entry', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        category: category,
+                        index: index
+                    })
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    showAlert(result.message, 'success');
+                    // 刷新页面
+                    setTimeout(() => {
+                        location.reload();
+                    }, 1000);
+                } else {
+                    showAlert('{{ t("delete_failed") }}：' + result.error, 'danger');
+                }
+            } catch (error) {
+                showAlert('{{ t("network_error") }}：' + error.message, 'danger');
+            }
+        }
+
+        // 设置语言
+        async function setLanguage(language) {
+            try {
+                const response = await fetch('/api/set_language', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        language: language
+                    })
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    location.reload(); // 重新加载页面以应用新语言
+                } else {
+                    showAlert('{{ t("language_failed") }}：' + result.error, 'danger');
+                }
+            } catch (error) {
+                showAlert('{{ t("network_error") }}：' + error.message, 'danger');
+            }
+        }
+
+        // 设置主题
+        async function setTheme(theme) {
+            try {
+                const response = await fetch('/api/set_theme', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        theme: theme
+                    })
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    // 立即应用主题
+                    applyTheme(theme);
+                    showAlert('{{ t("theme_saved") }}', 'success');
+                } else {
+                    showAlert('{{ t("theme_failed") }}：' + result.error, 'danger');
+                }
+            } catch (error) {
+                showAlert('{{ t("network_error") }}：' + error.message, 'danger');
+            }
+        }
+
+        // 应用主题
+        function applyTheme(theme) {
+            const html = document.documentElement;
+            
+            if (theme === 'auto') {
+                // 检测系统主题偏好
+                const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                html.setAttribute('data-bs-theme', prefersDark ? 'dark' : 'light');
+            } else {
+                html.setAttribute('data-bs-theme', theme);
+            }
+        }
+
+        // 页面加载时初始化主题
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentTheme = '{{ theme or "light" }}';
+            console.log('Current theme:', currentTheme);
+            applyTheme(currentTheme);
+            
+            // 监听系统主题变化
+            if (window.matchMedia) {
+                const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+                mediaQuery.addListener(function(e) {
+                    const currentTheme = '{{ theme or "light" }}';
+                    if (currentTheme === 'auto') {
+                        applyTheme('auto');
+                    }
+                });
+            }
+        });
+
+        // 添加CSS动画
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+            .spin {
+                animation: spin 1s linear infinite;
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+
+    {% block scripts %}{% endblock %}
+</body>
+</html> 

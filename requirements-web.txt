@@ -1,0 +1,6 @@
+Flask==2.3.3
+PyYAML==6.0.1
+requests==2.31.0
+beautifulsoup4==4.12.2
+semanticscholar==0.7.0
+Werkzeug==2.3.7 

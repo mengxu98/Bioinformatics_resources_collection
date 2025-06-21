@@ -1,0 +1,212 @@
+{% extends "base.html" %}
+
+{% block title %}{{ t('home') }} - {{ t('site_title') }}{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1>
+                <i class="bi bi-house-door"></i>
+                {{ t('resource_management_panel') }}
+            </h1>
+            <div>
+                <span class="text-muted">{{ t('total_resources') }}：</span>
+                <span class="badge bg-primary fs-6">{{ stats.values() | sum }}</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12 mb-4">
+        <div class="alert alert-info" role="alert">
+            <h5 class="alert-heading">
+                <i class="bi bi-info-circle"></i>
+                {{ t('welcome_title') }}
+            </h5>
+            <p class="mb-3">{{ t('welcome_desc') }}</p>
+            <hr>
+            <p class="mb-0">
+                <strong>{{ t('usage_instructions') }}：</strong>
+                {{ t('usage_desc') }}
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="row g-4">
+    <!-- Articles -->
+    <div class="col-md-6 col-lg-4">
+        <div class="card h-100 card-hover">
+            <div class="card-body text-center">
+                <div class="category-icon text-primary">
+                    <i class="bi bi-file-earmark-text"></i>
+                </div>
+                <h5 class="card-title">{{ t('articles') }}</h5>
+                <p class="card-text text-muted">
+                    {{ t('articles_desc') }}
+                </p>
+                <div class="d-grid gap-2">
+                    <span class="badge bg-primary rounded-pill fs-6 mb-2">{{ stats.articles }} {{ t('article_count') }}</span>
+                    <a href="{{ url_for('view_category', category='articles') }}" class="btn btn-outline-primary">{{ t('manage') }}{{ t('articles') }}</a>
+                    <a href="{{ url_for('add_form', category='articles') }}" class="btn btn-primary btn-sm">
+                        <i class="bi bi-plus-circle"></i> {{ t('add') }}{{ t('articles') }}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Methods -->
+    <div class="col-md-6 col-lg-4">
+        <div class="card h-100 card-hover">
+            <div class="card-body text-center">
+                <div class="category-icon text-success">
+                    <i class="bi bi-gear"></i>
+                </div>
+                <h5 class="card-title">{{ t('methods') }}</h5>
+                <p class="card-text text-muted">
+                    {{ t('methods_desc') }}
+                </p>
+                <div class="d-grid gap-2">
+                    <span class="badge bg-success rounded-pill fs-6 mb-2">{{ stats.methods }} {{ t('method_count') }}</span>
+                    <a href="{{ url_for('view_category', category='methods') }}" class="btn btn-outline-success">{{ t('manage') }}{{ t('methods') }}</a>
+                    <a href="{{ url_for('add_form', category='methods') }}" class="btn btn-success btn-sm">
+                        <i class="bi bi-plus-circle"></i> {{ t('add') }}{{ t('methods') }}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Books -->
+    <div class="col-md-6 col-lg-4">
+        <div class="card h-100 card-hover">
+            <div class="card-body text-center">
+                <div class="category-icon text-warning">
+                    <i class="bi bi-book"></i>
+                </div>
+                <h5 class="card-title">{{ t('books') }}</h5>
+                <p class="card-text text-muted">
+                    {{ t('books_desc') }}
+                </p>
+                <div class="d-grid gap-2">
+                    <span class="badge bg-warning rounded-pill fs-6 mb-2">{{ stats.books }} {{ t('book_count') }}</span>
+                    <a href="{{ url_for('view_category', category='books') }}" class="btn btn-outline-warning">{{ t('manage') }}{{ t('books') }}</a>
+                    <a href="{{ url_for('add_form', category='books') }}" class="btn btn-warning btn-sm">
+                        <i class="bi bi-plus-circle"></i> {{ t('add') }}{{ t('books') }}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Blogs -->
+    <div class="col-md-6 col-lg-4">
+        <div class="card h-100 card-hover">
+            <div class="card-body text-center">
+                <div class="category-icon text-info">
+                    <i class="bi bi-chat-quote"></i>
+                </div>
+                <h5 class="card-title">{{ t('blogs') }}</h5>
+                <p class="card-text text-muted">
+                    {{ t('blogs_desc') }}
+                </p>
+                <div class="d-grid gap-2">
+                    <span class="badge bg-info rounded-pill fs-6 mb-2">{{ stats.blogs }} {{ t('blog_count') }}</span>
+                    <a href="{{ url_for('view_category', category='blogs') }}" class="btn btn-outline-info">{{ t('manage') }}{{ t('blogs') }}</a>
+                    <a href="{{ url_for('add_form', category='blogs') }}" class="btn btn-info btn-sm">
+                        <i class="bi bi-plus-circle"></i> {{ t('add') }}{{ t('blogs') }}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Databases -->
+    <div class="col-md-6 col-lg-4">
+        <div class="card h-100 card-hover">
+            <div class="card-body text-center">
+                <div class="category-icon text-danger">
+                    <i class="bi bi-database"></i>
+                </div>
+                <h5 class="card-title">{{ t('databases') }}</h5>
+                <p class="card-text text-muted">
+                    {{ t('databases_desc') }}
+                </p>
+                <div class="d-grid gap-2">
+                    <span class="badge bg-danger rounded-pill fs-6 mb-2">{{ stats.databases }} {{ t('database_count') }}</span>
+                    <a href="{{ url_for('view_category', category='databases') }}" class="btn btn-outline-danger">{{ t('manage') }}{{ t('databases') }}</a>
+                    <a href="{{ url_for('add_form', category='databases') }}" class="btn btn-danger btn-sm">
+                        <i class="bi bi-plus-circle"></i> {{ t('add') }}{{ t('databases') }}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Labs -->
+    <div class="col-md-6 col-lg-4">
+        <div class="card h-100 card-hover">
+            <div class="card-body text-center">
+                <div class="category-icon text-secondary">
+                    <i class="bi bi-people"></i>
+                </div>
+                <h5 class="card-title">{{ t('labs') }}</h5>
+                <p class="card-text text-muted">
+                    {{ t('labs_desc') }}
+                </p>
+                <div class="d-grid gap-2">
+                    <span class="badge bg-secondary rounded-pill fs-6 mb-2">{{ stats.labs }} {{ t('lab_count') }}</span>
+                    <a href="{{ url_for('view_category', category='labs') }}" class="btn btn-outline-secondary">{{ t('manage') }}{{ t('labs') }}</a>
+                    <a href="{{ url_for('add_form', category='labs') }}" class="btn btn-secondary btn-sm">
+                        <i class="bi bi-plus-circle"></i> {{ t('add') }}{{ t('labs') }}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 快速操作区域 -->
+<div class="row mt-5">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title mb-0">
+                    <i class="bi bi-lightning"></i>
+                    {{ t('quick_actions') }}
+                </h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6>{{ t('file_operations') }}</h6>
+                        <div class="d-grid gap-2 d-md-block">
+                            <button class="btn btn-success" onclick="updateAllFiles()">
+                                <i class="bi bi-arrow-clockwise"></i>
+                                {{ t('update_all_markdown') }}
+                            </button>
+                            <a href="https://mengxu98.github.io/Bioinformatics_resources_collection/" 
+                               target="_blank" rel="noopener" class="btn btn-outline-primary">
+                                <i class="bi bi-box-arrow-up-right"></i>
+                                {{ t('view_generated_website') }}
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h6>{{ t('system_info') }}</h6>
+                        <ul class="list-unstyled">
+                            <li><strong>{{ t('config_location') }}：</strong> <code>config/</code></li>
+                            <li><strong>{{ t('website_content') }}：</strong> <code>website/content/posts/</code></li>
+                            <li><strong>{{ t('auto_deploy') }}：</strong> GitHub Actions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %} 

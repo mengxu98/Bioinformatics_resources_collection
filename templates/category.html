@@ -1,0 +1,322 @@
+{% extends "base.html" %}
+
+{% block title %}{{ t(category) }} {{ t('management') }} - {{ t('site_title') }}{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1>
+                {% if category == 'articles' %}
+                    <i class="bi bi-file-earmark-text text-primary"></i>
+                {% elif category == 'methods' %}
+                    <i class="bi bi-gear text-success"></i>
+                {% elif category == 'books' %}
+                    <i class="bi bi-book text-warning"></i>
+                {% elif category == 'blogs' %}
+                    <i class="bi bi-chat-quote text-info"></i>
+                {% elif category == 'databases' %}
+                    <i class="bi bi-database text-danger"></i>
+                {% elif category == 'labs' %}
+                    <i class="bi bi-people text-secondary"></i>
+                {% endif %}
+                {{ t(category) }} {{ t('management') }}
+            </h1>
+            <div>
+                <a href="{{ url_for('add_form', category=category) }}" class="btn btn-primary">
+                    <i class="bi bi-plus-circle"></i>
+                    {{ t('add_new') }}{{ t(category) }}
+                </a>
+                <a href="{{ url_for('index') }}" class="btn btn-outline-secondary">
+                    <i class="bi bi-arrow-left"></i>
+                    {{ t('return_home') }}
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12 mb-3">
+        <div class="alert alert-light border" role="alert">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <strong>{{ t('current_total') }} {{ data|length }} {{ t('entries_count') }}</strong>
+                </div>
+                <div>
+                    <small class="text-muted">
+                        {{ t('config_file_label') }}：<code>config/{{ category }}.yaml</code>
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% if data %}
+<div class="row">
+    <div class="col-12">
+        {% if category == 'articles' %}
+            <!-- Articles Table -->
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead class="table-light">
+                        <tr>
+                            <th>{{ t('title_column') }}</th>
+                            <th>{{ t('journal_column') }}</th>
+                            <th>{{ t('year_column') }}</th>
+                            <th>{{ t('field_column') }}</th>
+                            <th>{{ t('language_column') }}</th>
+                            <th>{{ t('action_column') }}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for item in data %}
+                        <tr>
+                            <td>
+                                {% if item.url %}
+                                    <a href="{{ item.url }}" target="_blank" rel="noopener" class="text-decoration-none">
+                                        {{ item.title }}
+                                    </a>
+                                {% else %}
+                                    {{ item.title }}
+                                {% endif %}
+                            </td>
+                            <td>{{ item.journal or '-' }}</td>
+                            <td>{{ item.date or '-' }}</td>
+                            <td><span class="badge bg-secondary">{{ item.field or t('uncategorized') }}</span></td>
+                            <td>{{ item.language or '-' }}</td>
+                            <td>
+                                <button class="btn btn-danger btn-sm" title="{{ t('delete') }}"
+                                        onclick="deleteEntry('{{ category }}', {{ loop.index0 }}, '{{ item.title }}')">
+                                    <i class="bi bi-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+        {% elif category == 'methods' %}
+            <!-- Methods Table -->
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead class="table-light">
+                        <tr>
+                            <th>{{ t('method_name') }}</th>
+                            <th>{{ t('journal_column') }}</th>
+                            <th>{{ t('year_column') }}</th>
+                            <th>{{ t('field_column') }}</th>
+                            <th>{{ t('language_column') }}</th>
+                            <th>{{ t('action_column') }}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for item in data %}
+                        <tr>
+                            <td>
+                                {% if item.url %}
+                                    <a href="{{ item.url }}" target="_blank" rel="noopener" class="text-decoration-none">
+                                        {{ item.title }}
+                                    </a>
+                                {% else %}
+                                    {{ item.title }}
+                                {% endif %}
+                            </td>
+                            <td>{{ item.journal or '-' }}</td>
+                            <td>{{ item.date or '-' }}</td>
+                            <td><span class="badge bg-secondary">{{ item.field or t('uncategorized') }}</span></td>
+                            <td>{{ item.language or '-' }}</td>
+                            <td>
+                                <button class="btn btn-danger btn-sm" title="{{ t('delete') }}"
+                                        onclick="deleteEntry('{{ category }}', {{ loop.index0 }}, '{{ item.title }}')">
+                                    <i class="bi bi-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+        {% elif category == 'books' %}
+            <!-- Books Cards -->
+            <div class="row g-3">
+                {% for item in data %}
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h6 class="card-title">
+                                {% if item.url %}
+                                    <a href="{{ item.url }}" target="_blank" rel="noopener" class="text-decoration-none">
+                                        {{ item.title }}
+                                    </a>
+                                {% else %}
+                                    {{ item.title }}
+                                {% endif %}
+                            </h6>
+                            <p class="card-text text-muted small">{{ item.description or t('no_description') }}</p>
+                            {% if item.field %}
+                                <span class="badge bg-warning text-dark">{{ item.field }}</span>
+                            {% endif %}
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <button class="btn btn-danger btn-sm" title="{{ t('delete') }}"
+                                    onclick="deleteEntry('{{ category }}', {{ loop.index0 }}, '{{ item.title }}')">
+                                <i class="bi bi-trash"></i> {{ t('delete') }}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+        {% elif category == 'blogs' %}
+            <!-- Blogs Cards -->
+            <div class="row g-3">
+                {% for item in data %}
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h6 class="card-title">
+                                {% if item.url %}
+                                    <a href="{{ item.url }}" target="_blank" rel="noopener" class="text-decoration-none">
+                                        {{ item.title }}
+                                    </a>
+                                {% else %}
+                                    {{ item.title }}
+                                {% endif %}
+                            </h6>
+                            <p class="card-text text-muted small">{{ item.description or t('no_description') }}</p>
+                            {% if item.field %}
+                                <span class="badge bg-info">{{ item.field }}</span>
+                            {% endif %}
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <button class="btn btn-danger btn-sm" title="{{ t('delete') }}"
+                                    onclick="deleteEntry('{{ category }}', {{ loop.index0 }}, '{{ item.title }}')">
+                                <i class="bi bi-trash"></i> {{ t('delete') }}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+        {% elif category == 'databases' %}
+            <!-- Databases Table -->
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead class="table-light">
+                        <tr>
+                            <th>{{ t('database_name') }}</th>
+                            <th>{{ t('description_column') }}</th>
+                            <th>{{ t('field_column') }}</th>
+                            <th>{{ t('related_paper') }}</th>
+                            <th>{{ t('action_column') }}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for item in data %}
+                        <tr>
+                            <td>
+                                {% if item.url %}
+                                    <a href="{{ item.url }}" target="_blank" rel="noopener" class="text-decoration-none">
+                                        {{ item.name or item.title }}
+                                    </a>
+                                {% else %}
+                                    {{ item.name or item.title }}
+                                {% endif %}
+                            </td>
+                            <td class="text-muted">{{ item.description or '-' }}</td>
+                            <td><span class="badge bg-danger">{{ item.field or t('uncategorized') }}</span></td>
+                            <td>
+                                {% if item.paper_url %}
+                                    <a href="{{ item.paper_url }}" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm">
+                                        <i class="bi bi-file-earmark-text"></i>
+                                    </a>
+                                {% else %}
+                                    -
+                                {% endif %}
+                            </td>
+                            <td>
+                                <button class="btn btn-danger btn-sm" title="{{ t('delete') }}"
+                                        onclick="deleteEntry('{{ category }}', {{ loop.index0 }}, '{{ item.name or item.title }}')">
+                                    <i class="bi bi-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+        {% elif category == 'labs' %}
+            <!-- Labs Cards -->
+            <div class="row g-3">
+                {% for item in data %}
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h6 class="card-title">
+                                {% if item.url %}
+                                    <a href="{{ item.url }}" target="_blank" rel="noopener" class="text-decoration-none">
+                                        {{ item.name or item.title }}
+                                    </a>
+                                {% else %}
+                                    {{ item.name or item.title }}
+                                {% endif %}
+                            </h6>
+                            <p class="card-text text-muted small">{{ item.description or t('no_description') }}</p>
+                            {% if item.field %}
+                                <span class="badge bg-secondary">{{ item.field }}</span>
+                            {% endif %}
+                            {% if item.masterpiece %}
+                                <div class="mt-2">
+                                    <small class="text-muted">{{ t('masterpiece') }}：</small>
+                                    {% if item.masterpiece_url %}
+                                        <a href="{{ item.masterpiece_url }}" target="_blank" rel="noopener" class="text-decoration-none">
+                                            <code>{{ item.masterpiece }}</code>
+                                        </a>
+                                    {% else %}
+                                        <code>{{ item.masterpiece }}</code>
+                                    {% endif %}
+                                </div>
+                            {% endif %}
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <button class="btn btn-danger btn-sm" title="{{ t('delete') }}"
+                                    onclick="deleteEntry('{{ category }}', {{ loop.index0 }}, '{{ item.name or item.title }}')">
+                                <i class="bi bi-trash"></i> {{ t('delete') }}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+        {% endif %}
+    </div>
+</div>
+
+{% else %}
+<!-- Empty State -->
+<div class="row">
+    <div class="col-12">
+        <div class="text-center py-5">
+            <div class="mb-4">
+                <i class="bi bi-inbox text-muted" style="font-size: 4rem;"></i>
+            </div>
+            <h4 class="text-muted">{{ t('no_data') }}</h4>
+            <p class="text-muted">{{ t('no_resources_added') }}{{ t(category) }}{{ t('resources_suffix') }}</p>
+            <a href="{{ url_for('add_form', category=category) }}" class="btn btn-primary">
+                <i class="bi bi-plus-circle"></i>
+                {{ t('add_first') }}{{ t(category) }}
+            </a>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+{% endblock %} 

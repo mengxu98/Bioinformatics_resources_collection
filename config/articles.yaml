@@ -45,20 +45,6 @@
   title: An integrated single-cell transcriptomic dataset for non-small cell lung
     cancer
   url: https://www.nature.com/articles/s41597-023-02074-6
-- citation: https://api.semanticscholar.org/graph/v1/paper/66d79bafce806798b72b4333854b8761073221cc
-  code:
-  - https://doi.org/10.24433/CO.0121060.v1
-  - https://github.com/bischofp/single_cell_lung_adenocarcinoma
-  data: []
-  date: '2020'
-  field: Tumor
-  journal: Oncogene
-  language:
-  - R
-  - Jupyter Notebook
-  title: Single-cell RNA sequencing reveals distinct tumor microenvironmental patterns
-    in lung adenocarcinoma
-  url: https://doi.org/10.1038/s41388-021-02054-3
 - citation: https://api.semanticscholar.org/graph/v1/paper/dfb50b723e402caac70b0dcbe21ca58e34401505
   code: https://github.com/Junjie-Hu/NSCLC-immunotherapy
   data:

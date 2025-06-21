@@ -2,6 +2,9 @@
 
 A comprehensive collection of bioinformatics resources, focusing on single-cell RNA sequencing (scRNA-seq) and related fields. This repository organizes resources into different categories for easy access and reference.
 
+> [!IMPORTANT]
+> **NEW: Web Admin Interface Available!** We've added a visual web management tool to easily add and update resources. Run `python start_web_admin.py` to access the interface at http://localhost:5001. This tool features smart paper information extraction, bilingual support, and seamless integration with the existing workflow.
+
 ## 📚 Categories
 
 ### [Articles](https://mengxu98.github.io/Bioinformatics_resources_collection/posts/articles/index.html)
@@ -75,4 +78,4 @@ For information about maintaining this project, please see:
 - [Maintenance Guide](https://mengxu98.github.io/Bioinformatics_resources_collection/posts/description/index.html)
 - [S2-folks Reference](https://github.com/allenai/s2-folks/tree/main)
 
-*Last updated: 2025-04-06*
+*Last updated: 2025-06-21*
